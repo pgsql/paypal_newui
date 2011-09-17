@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Admin Page</title>
+    <%= javascript_include_tag 'jquery-1.5.2', 'jquery-ui-1.8.11.custom.min', 'rails' %>
+    <%= stylesheet_link_tag 'jquery-ui' %>
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
+    <div class="login">
+      <% if current_user %>
+        Welcome, <b><%= current_user.login %></b>!
+        | <%= link_to 'Logout', destroy_user_session_path, :class => :item%>
+      <% else %>
+        <%= link_to 'Login', new_user_session_path %>
+      <% end %>
+      
+      | <%= link_to "Dashboard","/admin/dashboard" %>
+    </div>
+    <div>
+      <%= yield %>
+    </div>
+  </body>
+</html>

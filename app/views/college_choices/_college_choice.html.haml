@@ -1,0 +1,4 @@
+%tr{ :class => cycle( "", "stripe" ) }
+  %td.name= college_choice.college.name
+  %td.calc= calculate_link_if_url(college_choice.college)
+  %td.price= net_cost_or_text_field(f, college_choice)

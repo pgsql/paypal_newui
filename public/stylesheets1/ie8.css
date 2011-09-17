@@ -1,0 +1,4 @@
+.selector_box label.selected input[type="radio"],
+.selector_box label.selected input[type="checkbox"]{
+	background:#FFBF3F;
+}

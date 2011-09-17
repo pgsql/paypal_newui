@@ -1,0 +1,30 @@
+
+
+<p>
+  <b>Name:</b>
+  <%= @coupon.name %>
+</p>
+
+<p>
+  <b>Code:</b>
+  <%= @coupon.code %>
+</p>
+
+<p>
+  <b>Max users:</b>
+  <%= @coupon.max_users %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @coupon.value %>
+</p>
+
+<p>
+  <b>Validity:</b>
+  <%= @coupon.validity %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_coupon_path(@coupon) %> |
+<%= link_to 'Back', admin_coupons_path %>

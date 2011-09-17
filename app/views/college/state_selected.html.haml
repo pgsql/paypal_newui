@@ -1,0 +1,21 @@
+#pageContainer
+  = form_tag url_for(:controller => 'college_choices', :action => 'create') do |f|
+
+    %fieldset
+
+      %label
+        Do you have a favorite school? Identify the state where it is located.
+
+        .selector_box
+
+          - @colleges.each do |college|
+
+            %label.checkbox{ :for => "college_choice_ids_#{college.id}" }
+              = check_box :college_choice_ids, college.id
+              %strong= college.name
+
+      = hidden_field_tag :category_id, @category_id
+
+    %fieldset.actions.pagination
+      = link_to '« Previous Step', :back, :class => 'large_button cancel'
+      = submit_tag 'Next Step »', :class => 'large_button ok'

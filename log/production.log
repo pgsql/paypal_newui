@@ -1,0 +1,96 @@
+
+
+Started GET "/orders" for 122.178.210.55 at Sat Sep 03 07:39:42 +0000 2011
+  Processing by OrdersController#index as HTML
+Completed   in 3ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1):
+  
+
+
+
+Started GET "/favicon.ico" for 122.178.210.55 at Sat Sep 03 07:39:42 +0000 2011
+
+ActionController::RoutingError (No route matches "/favicon.ico"):
+  
+
+
+
+Started GET "/orders" for 122.178.210.55 at Sat Sep 03 07:39:48 +0000 2011
+  Processing by OrdersController#index as HTML
+Completed   in 1ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1):
+  
+
+
+
+Started GET "/favicon.ico" for 122.178.210.55 at Sat Sep 03 07:39:48 +0000 2011
+
+ActionController::RoutingError (No route matches "/favicon.ico"):
+  
+
+
+
+Started GET "/" for 122.178.210.55 at Sat Sep 03 07:39:52 +0000 2011
+  Processing by SurveysController#new as HTML
+Completed   in 2ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1):
+  
+
+
+
+Started GET "/favicon.ico" for 122.178.210.55 at Sat Sep 03 07:39:52 +0000 2011
+
+ActionController::RoutingError (No route matches "/favicon.ico"):
+  
+
+
+
+Started GET "/users/sign_out" for 122.178.210.55 at Sat Sep 03 08:17:56 +0000 2011
+  Processing by Devise::SessionsController#destroy as HTML
+Completed   in 2ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1):
+  app/controllers/devise/sessions_controller.rb:23:in `destroy'
+
+
+
+Started GET "/favicon.ico" for 122.178.210.55 at Sat Sep 03 08:17:57 +0000 2011
+
+ActionController::RoutingError (No route matches "/favicon.ico"):
+  
+
+
+
+Started GET "/" for 111.92.17.114 at 2011-09-03 13:45:01 +0000
+  Processing by SurveysController#new as HTML
+Completed   in 8ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1):
+  
+
+
+
+Started GET "/favicon.ico" for 111.92.17.114 at 2011-09-03 13:45:02 +0000
+
+ActionController::RoutingError (No route matches "/favicon.ico"):
+  
+
+
+
+Started GET "/" for 111.92.17.114 at 2011-09-03 16:53:33 +0000
+  Processing by SurveysController#new as HTML
+Completed   in 1ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1):
+  
+
+
+
+Started GET "/favicon.ico" for 111.92.17.114 at 2011-09-03 16:53:34 +0000
+
+ActionController::RoutingError (No route matches "/favicon.ico"):
+  
+

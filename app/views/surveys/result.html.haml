@@ -1,0 +1,14 @@
+#pageContainer
+
+  %form#surveyresult.question_slides
+
+    %fieldset
+      %h2
+        Congratulations, your affordability is
+        %strong #{number_to_currency(@result)}
+        %br
+        Now let's find your financial fits.
+
+    %fieldset.pagination
+      = link_to '« Previous Step', :back,        :class => 'large_button cancel'
+      = link_to 'Next Step »',     college_choices_path, :class => 'large_button ok'

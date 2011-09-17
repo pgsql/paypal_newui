@@ -1,0 +1,52 @@
+<%= form_for( [:admin, @user]) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this admin_user from being saved:</h2>
+			
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :login, "Login *" %>
+    <%= f.text_field :login %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email, "Email *" %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, "Password *" %>
+    <%= f.text_field :password %>
+		<% unless @user.new_record? %>
+		  <em>Leave this field blank if you don't want to change password</em>
+		<% end %>
+  </div>
+	
+  <div class="field">
+    <%= f.label :access_until %>
+    <%= f.text_field :access_until, :class => :datepicker %>
+  </div>
+
+  <%= javascript_tag do %>
+	  $(function() {
+	    $( ".datepicker" ).datepicker({ dateFormat: 'yy-mm-dd' });
+	  });
+  <% end %>
+
+
+
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+	
+<% end %>

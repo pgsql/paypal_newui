@@ -1,0 +1,28 @@
+<h2>Listing colleges</h2>
+<%= link_to 'New College', new_admin_college_path %> | 
+<%= link_to 'Import from CSV', import_admin_colleges_path %>
+
+<table>
+  <tr>
+    <th>State</th>
+    <th>Name</th>
+    <th>URL</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @colleges.each do |college| %>
+  <tr>
+    <td><%= college.state.name %></td>
+    <td><%= college.name %></td>
+    <td><%= link_to 'Link', college.url  unless college.url.blank? %></td>
+    <td><%= link_to 'Edit', edit_admin_college_path(college) %></td>
+    <td><%= link_to 'Destroy', [:admin, college], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= will_paginate @colleges %>
+
+<br />
+

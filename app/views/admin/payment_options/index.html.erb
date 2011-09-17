@@ -1,0 +1,27 @@
+<h1>Listing Payment Options</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Duration (In Months)</th>
+    <th>Amount</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @payment_options.each do |payment_option| %>
+  <tr>
+    <td><%= payment_option.name %></td>
+    <td><%= payment_option.duration %></td>
+    <td><%= payment_option.amount %></td>
+    <td><%= link_to 'Show', [:admin, payment_option] %></td>
+    <td><%= link_to 'Edit', edit_admin_payment_option_path(payment_option) %></td>
+    <td><%= link_to 'Destroy', [:admin,payment_option], :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Payment option', new_admin_payment_option_path %> | <%= link_to "back to home","/admin/dashboard"%>

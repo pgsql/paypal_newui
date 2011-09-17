@@ -1,0 +1,621 @@
+/*** COLORS ***/
+/*** colors ***/
+/*** COLUMNS, SPACING & BASELINE ***/
+/*** columns, spacing & baseline ***/
+/*** FONTS ***/
+/*** fonts ***/
+/*** MIXINS ***/
+/*** mixins ***/
+/*** DEFAULT FONT & TEXT STYLES ***/
+/* line 2, ../src/_content.scss */
+body {
+  font-family: Tahoma, Helvetica, Arial, sans-serif, sans;
+  font: 14px/20px;
+  color: #222;
+}
+
+/*** default font & text styles ***/
+/*** UTILITY CLASSES ***/
+/* line 11, ../src/_content.scss */
+.col2 {
+  width: 172px;
+}
+
+/* line 12, ../src/_content.scss */
+.col3 {
+  width: 268px;
+}
+
+/* line 13, ../src/_content.scss */
+.col4 {
+  width: 364px;
+}
+
+/* line 14, ../src/_content.scss */
+.col5 {
+  width: 460px;
+}
+
+/*** utility calsses ***/
+/*** HEADINGS ***/
+/* line 19, ../src/_content.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Times New Roman', Georgia, serif;
+  -moz-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  -webkit-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  -o-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  -ie-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  color: #333;
+}
+
+/* line 26, ../src/_content.scss */
+h2 {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+/* line 27, ../src/_content.scss */
+h3 {
+  margin-bottom: 32px;
+  font-size: 28px;
+  line-height: 32px;
+}
+
+/* line 28, ../src/_content.scss */
+h4 {
+  margin-bottom: 24px;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+/* line 29, ../src/_content.scss */
+h5 {
+  font-size: 16px;
+  color: #777777;
+  text-transform: uppercase;
+}
+
+/*** headings ***/
+/*** INLINE ***/
+/* line 34, ../src/_content.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 36, ../src/_content.scss */
+em {
+  font-style: italic;
+}
+
+/* line 38, ../src/_content.scss */
+a {
+  color: #ff8000;
+  text-decoration: none;
+}
+
+/*** inline ***/
+/*** BUTTONS ***/
+/* line 43, ../src/_content.scss */
+.large_button, .small_button {
+  -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  -ie-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  -moz-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  -webkit-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  -o-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  -ie-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ie-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-transition: background linear 0.2s;
+  -moz-transition: background linear 0.2s;
+  -o-transition: background linear 0.2s;
+  -ie-transition: background linear 0.2s;
+  transition: background linear 0.2s;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  border: #cc5000 1px solid;
+}
+/* line 53, ../src/_content.scss */
+.large_buttonhover, .small_buttonhover {
+  -moz-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  -ie-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* line 56, ../src/_content.scss */
+.large_button {
+  font-family: 'Times New Roman', Georgia, serif;
+  width: 332px;
+  padding: 16px;
+  font-size: 24px;
+}
+/* line 63, ../src/_content.scss */
+.large_button.cancel {
+  margin-right: 20px;
+  background: #999999;
+  border-color: #777777;
+}
+/* line 67, ../src/_content.scss */
+.large_button.cancel:hover {
+  background: #cccccc;
+}
+/* line 70, ../src/_content.scss */
+.large_button.ok {
+  background: #ff8000;
+}
+/* line 73, ../src/_content.scss */
+.large_button.ok:hover {
+  background: #ffa020;
+}
+/* line 76, ../src/_content.scss */
+.large_button.wide {
+  width: 908px;
+}
+
+/* line 81, ../src/_content.scss */
+.small_button {
+  padding: 4px 8px;
+  margin: 4px;
+  font-size: 16px;
+  background: #ffa020;
+  border: 1px solid #ff8000;
+}
+/* line 86, ../src/_content.scss */
+.small_button:hover {
+  background: #ffbf3f;
+}
+
+/*** buttons ***/
+/*** NOTIFICATIONS AND ERROR EXPLANATIONS ***/
+/* line 94, ../src/_content.scss */
+#notice, #error_explanation {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ie-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: 1px 1px 1px #f8f8f8;
+  -webkit-box-shadow: 1px 1px 1px #f8f8f8;
+  -o-box-shadow: 1px 1px 1px #f8f8f8;
+  -ie-box-shadow: 1px 1px 1px #f8f8f8;
+  box-shadow: 1px 1px 1px #f8f8f8;
+  width: 77%;
+  margin: 0 auto 24px;
+  padding: 24px;
+  text-align: center;
+  font-size: 24px;
+  color: #999999;
+}
+
+/* line 102, ../src/_content.scss */
+#notice {
+  border: 3px solid #cccccc;
+  background: #f8f8f8;
+}
+
+/* line 104, ../src/_content.scss */
+#error_explanation {
+  border: 3px solid #ddd;
+  background: #ffeeee;
+}
+
+/*** notifications and error explanations ***/
+/*** PAGINATION ***/
+/* line 109, ../src/_content.scss */
+.pagination {
+  clear: both;
+  padding-top: 24px;
+}
+/* line 112, ../src/_content.scss */
+.pagination .ok {
+  float: right;
+}
+/* line 113, ../src/_content.scss */
+.pagination .cancel {
+  float: left;
+}
+
+/*** pagination ***/
+/*** LISTS ***/
+/* line 119, ../src/_content.scss */
+ul.nav_tabs {
+  height: auto;
+  overflow: hidden;
+  font-family: 'Times New Roman', Georgia, serif;
+  -moz-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  -webkit-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  -o-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  -ie-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  clear: both;
+  font-size: 20px;
+}
+/* line 127, ../src/_content.scss */
+ul.nav_tabs li {
+  float: left;
+  display: block;
+  padding: 8px;
+  margin-right: 20px;
+  line-height: 32px;
+  background: #999999;
+  border-bottom: 3px solid #777777;
+}
+/* line 132, ../src/_content.scss */
+ul.nav_tabs li.active {
+  background: #444444;
+  border-bottom: 3px solid #444444;
+}
+/* line 136, ../src/_content.scss */
+ul.nav_tabs li a {
+  padding: 8px;
+  color: white;
+  text-decoration: none;
+}
+/* line 141, ../src/_content.scss */
+ul.nav_tabs li .icon {
+  float: left;
+  margin-right: 8px;
+}
+
+/*** lists ***/
+/*** TABLES ***/
+/* line 150, ../src/_content.scss */
+table {
+  -moz-box-shadow: 1px 1px 1px #f8f8f8;
+  -webkit-box-shadow: 1px 1px 1px #f8f8f8;
+  -o-box-shadow: 1px 1px 1px #f8f8f8;
+  -ie-box-shadow: 1px 1px 1px #f8f8f8;
+  box-shadow: 1px 1px 1px #f8f8f8;
+  background: white;
+}
+/* line 155, ../src/_content.scss */
+table th, table td {
+  padding: 4px 8px;
+}
+/* line 159, ../src/_content.scss */
+table thead {
+  color: white;
+  font-weight: bold;
+  background: #444444;
+  border: 1px solid #444444;
+}
+/* line 164, ../src/_content.scss */
+table tbody {
+  border: 1px solid #cccccc;
+}
+/* line 169, ../src/_content.scss */
+table tr.stripe {
+  background: #f8f8f8;
+}
+
+/*** tables ***/
+/*** ICONS ***/
+/* line 178, ../src/_content.scss */
+.icon {
+  width: 32px;
+  height: 32px;
+}
+/* line 181, ../src/_content.scss */
+.icon.add {
+  background: url(/images/tpl/add_icon.png) no-repeat center center;
+}
+
+/*** icons ***/
+/*** FORM ELEMENTS ***/
+/* line 2, ../src/_forms.scss */
+input {
+  display: block;
+  clear: both;
+  margin: 8px 0;
+}
+/* line 5, ../src/_forms.scss */
+input[type='text'], input[type='password'] {
+  -moz-box-shadow: 1px 1px 1px #f8f8f8;
+  -webkit-box-shadow: 1px 1px 1px #f8f8f8;
+  -o-box-shadow: 1px 1px 1px #f8f8f8;
+  -ie-box-shadow: 1px 1px 1px #f8f8f8;
+  box-shadow: 1px 1px 1px #f8f8f8;
+  padding: 6px;
+  border: 1px solid #CCC;
+}
+/* line 11, ../src/_forms.scss */
+input[type='text']:hover, input[type='password']:hover {
+  border-color: #AAA;
+}
+/* line 12, ../src/_forms.scss */
+input[type='text']:focus, input[type='password']:focus {
+  border-color: #999;
+}
+/* line 15, ../src/_forms.scss */
+input[type='checkbox'], input[type='radio'] {
+  cursor: pointer;
+}
+
+/* line 20, ../src/_forms.scss */
+fieldset {
+  clear: both;
+  margin-bottom: 8px;
+  padding: 16px 0;
+  border-bottom: #CCC 1px solid;
+}
+/* line 24, ../src/_forms.scss */
+fieldset.actions {
+  border: 0;
+}
+
+/* line 27, ../src/_forms.scss */
+label {
+  display: block;
+}
+/* line 30, ../src/_forms.scss */
+label.radio, label.checkbox {
+  -webkit-transition: background linear 0.15s;
+  -moz-transition: background linear 0.15s;
+  -o-transition: background linear 0.15s;
+  -ie-transition: background linear 0.15s;
+  transition: background linear 0.15s;
+  float: left;
+  clear: both;
+  padding: 5px 20px;
+  min-width: 228px;
+  cursor: pointer;
+}
+/* line 37, ../src/_forms.scss */
+label.radio:hover, label.checkbox:hover {
+  background: #f8f8f8;
+}
+/* line 39, ../src/_forms.scss */
+label.radio strong, label.checkbox strong {
+  margin: 0 12px;
+}
+/* line 40, ../src/_forms.scss */
+label.radio input, label.checkbox input {
+  display: inline;
+  margin-right: 10px;
+}
+/* line 43, ../src/_forms.scss */
+label.selected {
+  -moz-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  -webkit-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  -o-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  -ie-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  -ie-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: -1px;
+  background: #ffbf3f;
+  color: black;
+  border: 0px solid #ff8000 !important;
+  border-width: 1px 0px !important;
+}
+/* line 51, ../src/_forms.scss */
+label.selected:hover {
+  background: #ffbf3f;
+}
+
+/* line 55, ../src/_forms.scss */
+.field_with_errors {
+  display: inline-block;
+  color: #dd3333;
+}
+/* line 59, ../src/_forms.scss */
+.field_with_errors input {
+  color: #dd3333;
+  border-color: #dd3333;
+  background: #ffeeee;
+}
+
+/* line 64, ../src/_forms.scss */
+.selector_box {
+  height: auto;
+  overflow: hidden;
+  -moz-box-shadow: 1px 1px 1px #f8f8f8;
+  -webkit-box-shadow: 1px 1px 1px #f8f8f8;
+  -o-box-shadow: 1px 1px 1px #f8f8f8;
+  -ie-box-shadow: 1px 1px 1px #f8f8f8;
+  box-shadow: 1px 1px 1px #f8f8f8;
+  position: relative;
+  margin-top: 16px;
+  border: 1px solid #CCC;
+  background: #FFF;
+}
+/* line 71, ../src/_forms.scss */
+.selector_box:hover {
+  border-color: #AAA;
+}
+/* line 72, ../src/_forms.scss */
+.selector_box:focus {
+  border-color: #999;
+}
+/* line 74, ../src/_forms.scss */
+.selector_box label {
+  width: 100%;
+}
+/* line 78, ../src/_forms.scss */
+.selector_box input {
+  border-bottom: 1px solid #f8f8f8;
+}
+
+/*** form elements ***/
+/*** QUESTION SLIDER ***/
+/* line 2, ../src/_specific.scss */
+form.question_slides.active {
+  font-family: Georgia, serif;
+  position: relative;
+  color: #444;
+}
+/* line 8, ../src/_specific.scss */
+form.question_slides.active .question_number {
+  color: #ff8000;
+}
+/* line 11, ../src/_specific.scss */
+form.question_slides.active .question_number a.help {
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -o-border-radius: 1em;
+  -ie-border-radius: 1em;
+  border-radius: 1em;
+  -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  -ie-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-left: 20px;
+  text-align: center;
+  font-size: 32px;
+  color: white;
+  text-decoration: none;
+  line-height: 1em;
+  background: #cccccc;
+  border: 1px solid #999999;
+}
+/* line 19, ../src/_specific.scss */
+form.question_slides.active .question_number a.help.disabled {
+  border: 1px solid #cccccc;
+  background: #f8f8f8;
+}
+/* line 26, ../src/_specific.scss */
+form.question_slides.active fieldset {
+  min-height: 280px;
+  padding-bottom: 32px;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+/* line 31, ../src/_specific.scss */
+form.question_slides.active input[type='text'] {
+  width: 548px;
+  margin-top: 16px;
+  padding: 4px;
+}
+/* line 37, ../src/_specific.scss */
+form.question_slides.active .selector_box {
+  font-family: Tahoma, Helvetica, Arial, sans-serif, sans;
+  font-size: 20px;
+}
+/* line 42, ../src/_specific.scss */
+form.question_slides.active .selector_box label {
+  border-top: 1px solid #f8f8f8;
+}
+
+/*** question slider ***/
+/*** TOOLTIP ***/
+/* line 51, ../src/_specific.scss */
+.tooltip {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ie-border-radius: 10px;
+  border-radius: 10px;
+  -moz-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  -webkit-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  -o-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  -ie-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.2);
+  -ie-box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.2);
+  width: 516px;
+  font-family: 'Times New Roman', Georgia, serif;
+  display: block;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  line-height: 24px;
+  background: #999999;
+  border: 2px solid #777777;
+}
+/* line 62, ../src/_specific.scss */
+.tooltip.error {
+  background: #dd3333;
+  border: 2px solid #aa1111;
+}
+
+/*** tooltip ***/
+/*** LIST ITEMS ***/
+/* line 70, ../src/_specific.scss */
+ul.state_list {
+  list-style: none;
+}
+/* line 73, ../src/_specific.scss */
+ul.state_list li.state {
+  clear: both;
+  margin-bottom: 8px;
+}
+/* line 77, ../src/_specific.scss */
+ul.state_list li.state strong {
+  color: #888;
+  text-transform: uppercase;
+}
+
+/* line 84, ../src/_specific.scss */
+ul.college_list {
+  margin: 16px 0;
+  padding: 16px;
+  list-style: none;
+  border-left: 1px dotted #DDD;
+}
+/* line 88, ../src/_specific.scss */
+ul.college_list li.college {
+  float: left;
+  clear: both;
+  margin-bottom: 8px;
+}
+
+/*** form items ***/
+/*** CHOICE TABLE FORM ***/
+/* line 98, ../src/_specific.scss */
+form#choice_table table {
+  width: 940px;
+}
+/* line 101, ../src/_specific.scss */
+form#choice_table table tr.category {
+  padding-top: 8px;
+  text-transform: uppercase;
+  color: #999999;
+  background: #e8e8e8;
+  border-bottom: 1px solid #eeeeee;
+}
+/* line 106, ../src/_specific.scss */
+form#choice_table table tr.category h5 {
+  float: left;
+  margin-top: 8px;
+  line-height: 24px;
+}
+/* line 111, ../src/_specific.scss */
+form#choice_table table tr.category a {
+  display: inline-block;
+  float: right;
+  text-decoration: none;
+  text-transform: none;
+}
+/* line 118, ../src/_specific.scss */
+form#choice_table small {
+  color: #999999;
+}
+/* line 120, ../src/_specific.scss */
+form#choice_table input {
+  width: 156px;
+}
+
+/*** choice table form ***/

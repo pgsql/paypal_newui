@@ -1,0 +1,18 @@
+<div id="pageContainer">
+  <!-- Slideshow HTML -->
+  <div id="slideshow">
+    <div id="slidesContainer">
+
+      <p style="font-size: 25px;color: whitesmoke">
+        Congratulations Your Survey is Complete
+      </p>
+
+      <p style="font-size: 25px;color: whitesmoke">
+        Result:
+        <%= @survey.result %>
+      </p>
+      <%= link_to 'Edit', edit_survey_path(@survey) %> |
+      <%= link_to 'Back', surveys_path %>
+    </div>
+  </div>
+</div>

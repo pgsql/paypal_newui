@@ -1,0 +1,63 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    -# TODO: set @page_title variable in controllers
+    %title
+      myfinancefit.com
+      = ' | ' + @page_title if @page_title
+
+    %meta{:content => "text/html;charset=utf-8", "http-equiv" => "content-type"}
+    = stylesheet_link_tag 'global', 'homepage', 'mff'
+    /[if lt IE 10]
+      = stylesheet_link_tag 'ie9.css', :media => 'screen, projection'
+    /[if lt IE 9]
+      = stylesheet_link_tag 'ie8.css', :media => 'screen, projection'
+    /[if lt IE 8]
+      = stylesheet_link_tag 'ie7.css', :media => 'screen, projection'
+    /[if lt IE 7]
+      = stylesheet_link_tag 'ie6.css', :media => 'screen, projection'
+    
+  %body
+    #container
+      #header
+        %a#logo{ :href => root_path }
+        #banner Matching your affordability with the net price of college.
+        %ul.links
+          - if user_signed_in?
+            - if current_user.admin?
+              %li
+                =link_to "Admin page", admin_users_path
+            %li
+              =link_to "Logout", destroy_user_session_path
+            - else
+              %li
+                =link_to "Login", new_user_session_path
+             
+      #main.forms
+        .flash
+          = flash[:error]
+        - if notice
+          %p#notice.notice= notice
+        - if alert
+          %p#alert.alert= alert
+
+        .main_container
+
+          = yield
+
+      = render :partial => 'layouts/footer'
+
+    -# TODO: Get custom jQuery Tools build instead of all tools
+    = javascript_include_tag 'jquery-1.5.2',
+      'jquery-ui-1.8.11.custom.min',
+      'plugins/tmpl/jquery.tmpl',
+      'plugins/tools/jquery.tools.min',
+      'plugins/escape/jquery.escape',
+      'plugins/form/jquery.form',
+      'plugins/ajaxify/jquery.ajaxify-0.1a',
+      'mff',
+      'behaviours/question_slides',
+      'behaviours/form_effects',
+      'behaviours/help',
+      'behaviours/survey_validator'
+

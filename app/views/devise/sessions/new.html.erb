@@ -1,0 +1,33 @@
+<div id="page">
+	<div class="top"></div>
+	<div class="content">
+		<div class="header page">
+			<h1>Sign In</h1>
+		</div>
+		<div id="signup" class="padding">
+<div>
+			<br />
+			<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+				<p>
+					<%= f.label :login  %><br />
+					<%= f.text_field :login ,:class=> "text_field"%>
+				</p>
+				<p>
+					<%= f.label :password %><br />
+					<%= f.password_field :password ,:class=> "text_field"%>
+				</p>
+				<br />
+				<div class="send_form">
+					<p><a href="#" class="button submit" onClick="document.forms['user_new'].submit();"><span>Sign in</span></a></p>
+				</div>
+				<div class="clear"></div>
+			<% end %>
+			<span style="float:right">
+			<%= render :partial => "devise/shared/links" %>
+			</span>
+</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="bottom"></div>
+</div>

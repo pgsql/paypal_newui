@@ -1,0 +1,14 @@
+%tr{ :class => cycle("", "stripe") + ' category' }
+
+	%td{ :colspan => 3 }
+		%h5= category.name
+
+		= link_to "Add School",
+			new_college_choices_path( category.to_query_for_state_id( @state_id ) ),
+			:class => 'small_button'
+
+
+	-# %td= link_to( [ image_tag('/images/tpl/add_icon.png'),
+	-#	"Add School" ].join.html_safe,
+	-#	,
+	-#	 )

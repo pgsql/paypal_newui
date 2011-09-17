@@ -1,0 +1,124 @@
+= form_for @survey, :html => { :id => 'new_survey_form', :class => 'question_slides' } do |f|
+
+	-# Empty div to indicate JS replacement
+	.question_number
+
+	-if @survey.errors.any?
+
+		#error_explanation
+			%h2
+				= pluralize(@survey.errors.count, "error")
+				prohibited this survey from being saved:
+
+			-# TODO: This error message isn't very friendly
+
+			%ul
+				- @survey.errors.full_messages.each do |msg|
+					%li= msg
+
+	%fieldset.validates
+		%label
+			%small 1.
+			For the purpose of determining your eligibility for a full tax credit of $2500, is your adjusted gross income less than $80,000 filing singly or $160,000 filing jointly?
+
+		.selector_box.col2
+			%label.radio{ :for => 'survey_adjusted_gross_income_2500' }
+				= f.radio_button :adjusted_gross_income, 2500
+				%strong Yes
+
+			%label.radio{ :for => 'survey_adjusted_gross_income_0' }
+				= f.radio_button :adjusted_gross_income, 0
+				%strong No
+
+	%fieldset
+		%label{ :for => :after_adjusted_gross_input }
+			%small 2.
+			If you answered yes to question 1, answer no to question 2.
+			%br/
+			If you answered no to 1, to determine if you are a eligible for a partial tax credit, is your adjusted gross income less than $180,000 jointly or $90,000 singly,
+			but more than $80,000 or $160,000?
+
+		.selector_box.col2
+			%label.radio{ :for => 'survey_after_adjusted_gross_input_1500' }
+				= f.radio_button :after_adjusted_gross_input, 1500
+				%strong Yes
+
+			%label.radio{ :for => 'survey_after_adjusted_gross_input_0' }
+				= f.radio_button :after_adjusted_gross_input, 0
+				%strong No
+
+	%fieldset
+		%label{ :for => :money_contribute_to_college }
+			%small 3.
+			Without change in lifestyle, how much money per month do you believe you could
+			contribute to college out of cash flow? Enter amount here.
+		= f.text_field :money_contribute_to_college , :id => "contribute", :value => 0
+
+	%fieldset
+		%label{ :for => :expense_for_child }
+			%small 4.
+			Is there any expense that you pay for now each month for your child going to college that will no longer be there?
+			Do you have private high school tuition costs? Athletic team costs? Music lessons? Camp activity? Food and living
+			expenses? Enter the monthly amount here.
+		= f.text_field :expense_for_child , :id => "exchild", :value => 0
+
+	%fieldset
+		%label{ :for => :monthly_paid_off }
+			%small 5.
+			Is there current monthly debt that will be paid off by the time the student is ready for college? Credit cards?
+			Car loans? List that monthly savings. Enter amount here.
+		= f.text_field :monthly_paid_off, :id => "monthly", :value => 0
+
+	%fieldset
+		%label{ :for => :something_for_vacation }
+			%small 6.
+			Is there something that you do regularly that you could sacrifice?
+			A summer vacation? Eating out less? List the monthly amount. Enter amount here.
+		= f.text_field :something_for_vacation , :id => "vacation", :value => 0
+
+	%fieldset
+		%label{ :for => :save_after_child_to_college }
+			%small 7.
+			Is there an amount that you commit to savings every month that you could either reduce or eliminate while your
+			child is in college?	Enter that monthly amount here.
+		= f.text_field :save_after_child_to_college , :id => "childcollege", :value => 0
+
+	%fieldset
+		%label{ :for => :money_save_for_college }
+			%small 8.
+			After you keep an amount that you designate for emergencies, is there any savings available that can be used for
+			college? Perhaps a 529 plan, a pre-pay tuition program, a UTMA account, or any vehicle that could be liquidated?
+			List that total here.
+		= f.text_field :money_save_for_college, :id => "savecollege", :value => 0
+
+	%fieldset
+		%label{ :for => :willing_for_pay_college }
+			%small 9.
+			Without disrupting retirement, are there any retirement accounts that you would be willing to withdraw from or
+			borrow against to pay for college? Enter the total amount here.
+		= f.text_field :willing_for_pay_college, :id => "paycollege", :value => 0
+
+	%fieldset
+		%label
+			%small 10.
+			Using PLUS loan standards (fixed interest rate with a 10 year repayment option), which if any of these four amounts
+			would you be willing to borrow assuming a 4 year college program?
+
+		.selector_box.col5
+			- LoanOption.all.each_with_index do |lo, i|
+
+				%label.radio{ :for => "option_#{i}" }
+					= f.radio_button :loan_option_id, lo.id,
+						:id => "option_#{i}"
+
+					%strong= lo.name
+					= lo.range
+
+			%label.radio{ :for => "option_none" }
+				= f.radio_button :loan_option_id, 0,
+					:id => "option_none"
+
+				%strong None
+
+	%fieldset.actions
+		= f.submit "Create Survey »", :id => "survey_submit_button", :class => 'large_button ok'

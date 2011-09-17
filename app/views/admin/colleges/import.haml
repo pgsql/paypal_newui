@@ -1,0 +1,60 @@
+%h2 Import colleges from CSV
+
+- if @lines_count && @lines_count == @colleges[:errors].size
+  %p No valid entries to import. Please check the file format and field separator and try again.
+
+
+- if @lines_count
+  %p
+    = "Schools update complete with #{@lines_count-@colleges[:errors].size-@colleges[:new].size} duplicates" 
+    = ", #{@colleges[:updated].size} 'updated'"  unless @colleges[:updated].empty?
+    = "and #{pluralize @colleges[:errors].size, 'errors'}."  unless @colleges[:errors].empty?
+  %p= "#{pluralize @colleges[:new].size, 'new college'} successfully added"
+
+
+= link_to 'New College', new_admin_college_path
+| 
+= link_to 'Import from CSV', import_admin_colleges_path
+| 
+= link_to "back to home","/admin/dashboard"
+
+=form_tag import_admin_colleges_path, :multipart => true, :method => :post do
+
+  - if @file_uploaded
+    = hidden_field_tag :save, 1
+  - else
+    %p
+      = label_tag :data, "Select CSV file" 
+      = file_field :upload, :datafile  
+  
+  %p
+    = label_tag :colsep, "Columns separator"
+    = text_field_tag :colsep, @colsep || ';', :size => '2'
+  
+  = submit_tag "Upload"
+
+
+%p= "Something went wrong" if @global_error
+
+- if @lines_count && @lines_count > @colleges[:errors].size
+    
+  - unless @colleges[:updated].empty?
+    %h4 Updated colleges:
+    %p= "#{pluralize @colleges[:updated].size, 'college'} updated"
+    %ul
+      - @colleges[:updated].each do |c|
+        %li= "#{c.name}, #{c.state.name}" 
+  
+  - unless @colleges[:new].empty?
+    %h4 New colleges:
+    %p= "#{pluralize @colleges[:new].size, 'college'} imported"
+    %ul
+      - @colleges[:new].each do |c|
+        %li= "#{c.name}, #{c.state.name}" 
+  
+  - unless @colleges[:errors].empty?
+    %h4 Colleges with errors:
+    %p= "#{pluralize @colleges[:errors].size, 'college'} not imported because errors occured"
+    %ul
+      - @colleges[:errors].each do |c|
+        %li= "#{c.name}, (#{c.errors.full_messages*', '})"

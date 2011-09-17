@@ -1,0 +1,152 @@
+<div id="page">
+	<div class="top"></div>
+	<div class="content">
+		<div class="header page">
+			<h1>Step 2: Payment</h1>
+		</div>
+		<div id="signup" class="padding">
+			<div class="left">
+				<br/>
+				<p>
+					You have selected : <b> <%=session[:duration] %></b><br />
+					Actual Price is <b><%=session[:actual_price] %></b>&nbsp;&nbsp;<br/>
+					Discount on you coupon price :  <b><%=session[:coupon].to_i %> % </b><br />
+					Present Price is <b><%=session[:duration_price] %></b>&nbsp;&nbsp;
+					<br />
+					<%= link_to "Click to change the Subscription", coupons_form_orders_path %>
+				</p>
+				<% form_for @order do |f| %>
+					<h2><span>Billing Info</span></h2>
+					<table>
+						<% if @order.errors.any? %>
+							<tr>
+								<td colspan="2">
+									<div id="error_explanation">
+										<h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+										<ul>
+											<% @order.errors.full_messages.each do |msg| %>
+												<li><%= msg %></li>
+											<% end %>
+										</ul>
+									</div>
+								</td>
+							</tr>
+						<% end %>
+						<tr>
+							<td colspan="2">
+								<b>Address Details</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<%= f.label :name, "Name *"%>
+							</td>
+							<td>
+							<%= f.text_field :name,:class=> "text_field" %>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<%= f.label :address1, "Address1 * "%>
+							</td>
+							<td>
+							<%= f.text_field :address1,:class=> "text_field" %>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<%= f.label :address2, "Address2"%>
+							</td>
+							<td>
+							<%= f.text_field :address2,:class=> "text_field" %>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<%= f.label :city, "City * "%>
+							</td>
+							<td>
+							<%= f.text_field :city,:class=> "text_field" %>
+							<%= hidden_field_tag :amount,session[:duration_price].to_s %>
+							<%= hidden_field_tag :duration,session[:duration_months].to_s %>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<%= f.label :state, "State * "%>
+							</td>
+							<td>
+							<%= f.text_field :state,:class=> "text_field" %>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<%= f.label :country, "Country * "%>
+							</td>
+							<td>
+							<%= f.text_field :country ,:class=> "text_field"%>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<%= f.label :zip, "Zip * "%>
+							</td>
+							<td>
+							<%= f.text_field :zip,:class=> "text_field" %>
+							</td>
+						</tr>
+						<tr>
+					</table>
+					<div class="clear"></div>
+					<table>
+						<tr>
+							<td colspan="2">
+								<b>Credit Card Details<b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Card Type</label>
+							</td>
+							<td>
+								<%= f.select :card_type, [["Visa", "visa"], ["MasterCard", "master"], ["Discover", "discover"], ["American Express", "american_express"]],{},{:class=> "text_field"} %>
+								<img src="/images/card_types.png" alt="" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Card Number</label>
+							</td>
+							<td>
+								<%= f.text_field :card_number ,:class=> "text_field"%>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Card Expiration</label>
+							</td>
+							<td>
+								<%= f.date_select :card_expires_on, :discard_day => true, :start_year => Date.today.year, :end_year => (Date.today.year+10), :add_month_numbers => true %>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<%= f.label :card_verification, "CVV *" %>
+							</td>
+							<td>
+								<%= f.password_field :card_verification ,:class=> "text_field"%>
+							</td>
+						</tr>
+					</table>
+					<div class="clear"></div>
+					<div class="send_form">
+						<a href="#" class="button submit" onClick="document.forms['new_order'].submit();"><span>Pay</span></a>
+					</div>
+				</div>
+			<%end %>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="bottom"></div>
+</div>
+

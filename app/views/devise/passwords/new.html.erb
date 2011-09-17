@@ -1,0 +1,59 @@
+
+<div id="page">
+
+  <div class="top"></div>
+  <div class="content">
+
+    <div class="header page">
+      <h1>Forgot your password?</h1>
+    </div>
+
+    <div id="contact" class="padding">
+
+      <div class="left">
+
+
+        <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+
+          <%= devise_error_messages! %>
+
+          <p><%= f.label :email %>
+            <%= f.email_field :email ,:class=> "text_field"%></p>
+          
+        <p><label>&nbsp;</label>
+
+          <p><%= f.submit "Send me reset password instructions" %></p>
+        
+
+        <% end %>
+      </div>
+      <div class="right">
+
+        <br />
+
+        <div class="sidebar_box">
+
+          <h4>Signup Instructions</h4>
+          <p>Quickly create your account on the left to create access to the tools from myfinancialfit.com</p>
+
+        </div>
+
+
+        <div class="sidebar_box">
+          <h4>Contact Us</h4>
+          <p>Still have questions? Looking for a corporate account? <a href="contact.html">Contact us</a></p>
+        </div>
+      </div>
+
+      <div class="clear"></div>
+
+
+    </div>
+
+  </div>
+  <div class="bottom"></div>
+</div>
+
+
+
+

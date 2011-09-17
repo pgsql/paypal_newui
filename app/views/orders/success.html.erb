@@ -1,0 +1,15 @@
+<%
+@order = Order.find(session[:order]) %>
+
+<%session[:order].inspect%>
+
+Congrats !!  <br />
+
+Your Transaction is successful!!   <br />
+
+<%  unless @order.blank? %>
+  Transaction ID : <%= @order.tran %> <br />
+  Paypal Order message ID : <%= @order.tran %><br />
+<% end  %>
+
+   <br /> Click here to go to your <%=link_to "Welcome Page", '/welcome' %>

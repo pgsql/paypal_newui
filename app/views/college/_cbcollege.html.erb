@@ -1,0 +1,16 @@
+<div class="slide">
+  <br class="clear" />
+  <a>Which School in Illinois is your favorite? Also follow<br /> the link and determine the
+    schools net price.
+  </a>
+  <br />
+  <br class="clear" />
+<%#= collection_select :college, :college_id, colleges, :id, :name, {:prompt => "- select college -"} %>
+
+  <% colleges.each do |college| %>
+    <a>
+      <input type="checkbox" name="colleges[]" value="<%= college.id %>"> <%= college.name %> <br />
+    </a>
+  <% end %>
+
+</div>

@@ -1,0 +1,26 @@
+#pageContainer
+
+  %form.question_slides{ :action => college_path, :method => 'post' }
+
+    %fieldset
+      %label
+        Pick your favorite school. To see the list indicate the state below
+
+      .selector_box
+
+        - State.all.each do |state|
+
+          %label.radio
+            = radio_button :state, :state_id, state.id
+            %strong= state.name
+
+    %fieldset.actions.pagination
+      = link_to '« Previous Step', :back, :class => 'large_button cancel'
+      = submit_tag 'Next Step »',  :class => 'large_button ok'
+
+
+      -# = collection_select( :state, :state_id, State.all, :name,
+      -#  { :selected => :state_id , :prompt => "- select state -" } )
+
+      -# collegepick
+      -#   = select( :college, :college_id, [], { :include => "- select college -" } )

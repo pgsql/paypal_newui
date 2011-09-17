@@ -1,0 +1,185 @@
+/*** DEFAULT FONT & TEXT STYLES ***/
+	body{
+		@include sans;
+
+		font:14px/20px; color:#222;
+	}
+/*** default font & text styles ***/
+
+
+/*** UTILITY CLASSES ***/
+	.col2{ @include col_width( 2 ); }
+	.col3{ @include col_width( 3 ); }
+	.col4{ @include col_width( 4 ); }
+	.col5{ @include col_width( 5 ); }
+/*** utility calsses ***/
+
+
+/*** HEADINGS ***/
+	h1,h2,h3,h4,h5,h6{
+		@include serif;
+		@include text_shadow;
+
+		color:#333;
+	}
+
+	h2{ font-size:$baseline * 5; line-height:$baseline * 6; }
+	h3{ margin-bottom:$baseline * 4; font-size:$baseline * 3.5; line-height:$baseline * 4; }
+	h4{ margin-bottom:$baseline * 3; font-size:$baseline * 2.5; line-height:$baseline * 3; }
+	h5{ font-size:$baseline * 2; color:$cancel_dark; text-transform:uppercase; }
+/*** headings ***/
+
+
+/*** INLINE ***/
+	strong{ font-weight:bold; }
+
+	em{ font-style:italic; }
+
+	a{ color:$highlight; text-decoration:none; }
+/*** inline ***/
+
+
+/*** BUTTONS ***/
+	.large_button, .small_button{
+		@include shadow;
+		@include text_shadow;
+		@include rounded( 10px );
+		@include transition( background, 0.2s );
+
+		display:inline-block;
+		color:white; text-decoration:none; text-align:center;
+		cursor:pointer; border:$highlight_dark 1px solid;
+
+		&hover{ @include shadow( 8px ); }
+	}
+
+	.large_button{
+		@include serif;
+		@include col_width( 4, 32px );
+
+		padding:16px;
+		font-size:$baseline * 3;
+
+		&.cancel{
+			margin-right:$gutter;
+			background:$cancel; border-color:$cancel_dark;
+
+			&:hover{ background:$cancel_light; }
+		}
+
+		&.ok{
+			background:$highlight;
+
+			&:hover{ background:$highlight_light; }
+		}
+
+    &.wide{
+      @include col_width(10,32px);
+    }
+	}
+
+	.small_button{
+		padding:4px 8px; margin:4px;
+		font-size:$baseline*2;
+		background:$highlight_light; border:1px solid $highlight;
+
+		&:hover{
+			background:$highlight_lighter;
+		}
+	}
+/*** buttons ***/
+
+
+/*** NOTIFICATIONS AND ERROR EXPLANATIONS ***/
+	#notice, #error_explanation{
+		@include rounded( 10px );
+		@include inset;
+
+		width:77%; margin:0 auto $baseline*3; padding:24px;
+		text-align:center; font-size:$baseline*3; color:$cancel;
+	}
+
+	#notice{ border:3px solid $cancel_light; background:$cancel_subtle; }
+
+	#error_explanation{ border:3px solid #ddd; background:$error_subtle; }
+/*** notifications and error explanations ***/
+
+
+/*** PAGINATION ***/
+	.pagination{
+		clear:both; padding-top:$baseline*3;
+		
+		.ok{ float:right; }
+		.cancel{ float:left; }
+	}
+/*** pagination ***/
+
+
+/*** LISTS ***/
+	ul.nav_tabs{
+		@include clear_fix;
+		@include serif;
+		@include text_shadow;
+
+		clear:both;
+		font-size:$baseline*2.5;
+
+		li{
+			float:left; display:block; padding:$baseline; margin-right:$gutter;
+			line-height:$baseline*4;
+			background:$cancel; border-bottom:3px solid $cancel_dark;
+
+			&.active{
+				background:$cancel_darker; border-bottom:3px solid $cancel_darker;
+			}
+
+			a{
+				padding:$baseline;
+				color:white; text-decoration:none;
+			}
+
+			.icon{
+				float:left; margin-right:$baseline;
+			}
+		}
+	}
+/*** lists ***/
+
+
+/*** TABLES ***/
+	table{
+		@include inset;
+
+		background:white;
+
+		th, td{
+			padding:4px 8px;
+		}
+
+		thead{
+			color:white; font-weight:bold;
+			background:$cancel_darker; border: 1px solid $cancel_darker;
+		}
+
+		tbody{
+			border:1px solid $cancel_light;
+		}
+
+		tr{
+			&.stripe{
+				background:$cancel_subtle;
+			}
+		}
+	}
+/*** tables ***/
+
+
+/*** ICONS ***/
+	.icon{
+		width:32px; height:32px;
+
+		&.add{
+			background:url(/images/tpl/add_icon.png) no-repeat center center;
+		}
+	}
+/*** icons ***/

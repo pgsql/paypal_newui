@@ -1,0 +1,44 @@
+%h4
+  Develop your Net Price Comparison Chart.
+  Find 1 to 3 schools in each category (fill in net prices for each school you choose).
+  You can choose multiple schools per category.
+
+
+= form_for( @user_choice_collection, :as => "user_choice_collection",
+  :html => { :method => :put, :id => 'choice_table' },
+  :url  => { :action => :update } ) do |f|
+
+  %ul.nav_tabs
+
+    %li.active
+      = link_to "My Schools", '#'
+
+  %table
+
+    %thead
+      %th.name
+        School
+      %td.calc
+        Calculator
+      %td.price
+        Net Price
+
+    %tbody
+
+      - Category.all.each do |category|
+
+        = render :partial => 'college_choice_placeholder',
+          :locals => { :category => category }
+        
+        = render :partial => 'college_choice',
+          :collection => @user_choice_collection.for( category ).sort{|a,b| a.college.name <=> b.college.name},
+          :locals => { :f => f, :category => category }
+  %br/
+  = f.submit("Save values", :class => "large_button ok")
+
+  %br/
+  %a.print{ :href => "#", :onclick => "window.print();"   } Print This Page
+
+  %fieldset.actions.pagination
+    = link_to '« Previous Step', :back, :class => 'large_button cancel'
+    = link_to 'Next Step »',     'http://www.managingcollegecost.com', :target => "_blank",  :class => 'large_button ok'

@@ -1,0 +1,82 @@
+/*** FORM ELEMENTS ***/
+	input{
+		display:block; clear:both; margin:8px 0;
+
+		&[type='text'], &[type='password'{
+			@include inset;
+
+			padding:6px;
+			border:1px solid #CCC;
+
+			&:hover{ border-color:#AAA; }
+			&:focus{ border-color:#999; }
+		}
+
+		&[type='checkbox'], &[type='radio']{
+			cursor:pointer;
+		}
+	}
+
+	fieldset{
+		clear:both; margin-bottom:8px; padding:16px 0;
+		border-bottom:#CCC 1px solid;
+
+		&.actions{ border:0; }
+	}
+
+	label{
+		display:block;
+
+		&.radio, &.checkbox{
+			@include transition( background, 0.15s );
+
+			float:left; clear:both; padding:$gutter/4 $gutter;
+			min-width:$col_width * 3;
+			cursor:pointer;
+
+			&:hover{ background:$highlight_subtle; }
+
+			strong{ margin:0 12px; }
+			input{ display:inline; margin-right:$gutter/2; }
+		}
+
+		&.selected{
+			@include text_shadow;
+			@include shadow;
+
+			margin-bottom:-1px;
+			background:$highlight_lighter; color:black;
+			border:0px solid $highlight !important; border-width:1px 0px !important;
+
+			&:hover{ background:$highlight_lighter; }
+		}
+	}
+
+	.field_with_errors{
+		display:inline-block;
+		color:$error;
+
+		input{
+			color:$error; border-color:$error; background:$error_subtle;
+		}
+	}
+
+	.selector_box{
+		@include clear_fix;
+		@include inset;
+
+		position:relative; margin-top:$baseline*2;
+		border:1px solid #CCC; background:#FFF;
+
+		&:hover{ border-color:#AAA; }
+		&:focus{ border-color:#999; }
+
+		label{
+			width:100%;
+		}
+
+		input{
+			border-bottom:1px solid $cancel_subtle;
+		}
+	}
+/*** form elements ***/

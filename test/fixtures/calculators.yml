@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  adjusted_gross_income: 1.5
+  after_adjusted_gross_input: 1.5
+  tax_credit: 1.5
+  money_contribute_to_college: 1.5
+  expense_for_child: 1.5
+  monthly_paid_off: 1.5
+  something_for_vacation: 1.5
+  save_after_child_to_college: 1.5
+  money_save_for_college: 1.5
+  willing_for_pay_college: 1.5
+  result: 1.5
+  loan_option_id: 1
+
+two:
+  adjusted_gross_income: 1.5
+  after_adjusted_gross_input: 1.5
+  tax_credit: 1.5
+  money_contribute_to_college: 1.5
+  expense_for_child: 1.5
+  monthly_paid_off: 1.5
+  something_for_vacation: 1.5
+  save_after_child_to_college: 1.5
+  money_save_for_college: 1.5
+  willing_for_pay_college: 1.5
+  result: 1.5
+  loan_option_id: 1

@@ -1,0 +1,78 @@
+<div id="page">
+  <div class="top"></div>
+  <div class="content">
+    <div class="header page">
+      <h1>Contact Us</h1>
+    </div>
+    <div id="contact" class="padding">
+      <br />
+
+      <p>Looking for help?  Are you interested in a group rate or a coporate account?  Any other questions?  Fill out the form below and team member from myfinancialfit.com will get in touch with you as soon as possible.</p>
+
+      <div class="section_title">
+
+        <h3>Send Us An Email</h3>
+
+      </div>
+
+      <% form_for @contact, :as => :contact_us, :url => general_save_contact_path(@post), :html => { :method => :put, :class => "edit_post", :id => "contact_form" } do |f| %>
+        <% if @contact.errors.any? %>
+          <div id="error_explanation" style="text-align:left;padding-bottom:20px;">
+            <h4><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being send to us:</h4>
+            <ul style="margin-left:30px;color:red;">
+              <% @contact.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+		<p>
+			<label>Your name</label>
+			<input class="text_field" id="contact_us_name" name="contact_us[name]" size="30" type="text" value="">
+		</p>
+		<p>
+			<label for="contact_us_email">Your Email</label>
+			<input class="text_field" id="contact_us_email" name="contact_us[email]" size="30" type="email" >
+		</p>
+        <p>
+			<label for="contact_us_company">Company/School Name</label>
+			<input class="text_field" id="contact_us_company" name="contact_us[company]" size="30" type="text" >
+		</p>
+        <p>
+			<label for="contact_us_phone_number">Phone Number</label>
+			<input class="text_field" id="contact_us_phone_number" name="contact_us[phone_number]" size="30" type="text" >
+		</p>
+        <p class="last"><label>Subject</label>
+          <select name="subject" id="subject" class="text_field" >
+            <option value="General Support">General Support</option>
+            <option value="General Support">Group Rate Inquiry</option>
+            <option value="General Support">Financial Company Inquiry</option>
+          </select>
+		</p>
+        <div class="clear"></div>
+        <p><label for="contact_us_message">Message</label>
+          <textarea class="text_field" cols="40" id="contact_us_message" name="contact_us[message]" rows="20" ></textarea></p>
+
+        <div class="send_form">
+          <a href="#" class="button submit" onClick="document.forms['contact_form'].submit();"><span>Send Email</span></a>
+
+
+        </div>
+
+        <div class="clear"></div>
+
+
+
+      <% end %>
+
+
+
+    </div>
+
+
+
+  </div>
+
+  <div class="bottom"></div>
+
+</div>

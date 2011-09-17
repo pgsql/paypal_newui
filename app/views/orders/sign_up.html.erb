@@ -1,0 +1,57 @@
+<% form_for @order do |f| %>
+   <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= render 'form' %>
+<p>
+    <%= f.label :first_name, "First Name *"%><br />
+    <%= f.text_field :first_name %>
+  </p>
+  <p>
+    <%= f.label :last_name, "Last Name *" %><br />
+    <%= f.text_field :last_name %>
+  </p>
+  <p>
+    <%= f.label :email, "Email * "%><br />
+    <%= f.text_field :email %>
+  </p>
+  <div class="field">
+    <%= f.label :password, "Password *" %>
+    <%= f.password_field :password %>
+		<% unless @order.new_record? %>
+		  <em>Leave this field blank if you don't want to change password</em>
+		<% end %>
+  </div>
+  <p>
+    <%= f.label :login ,"login *" %><br />
+    <%= f.text_field :login %>
+  </p>
+  <p>
+    <%= f.label :card_type, "card_type *"%><br />
+    <%= f.select :card_type, [["Visa", "visa"], ["MasterCard", "master"], ["Discover", "discover"], ["American Express", "american_express"]] %>
+  </p>
+  <p>
+    <%= f.label :card_number, "Card Number *" %><br />
+    <%= f.text_field :card_number %>
+  </p>
+  <p>
+    <%= f.label :card_verification, "Card Verification Value (CVV) *" %><br />
+    <%= f.password_field :card_verification %>
+  </p>
+  <p>
+    <%= f.label :card_expires_on, "Card Expires on * " %><br />
+    <%= f.date_select :card_expires_on, :discard_day => true, :start_year => Date.today.year, :end_year => (Date.today.year+10), :add_month_numbers => true %>
+  </p>
+
+
+  <p><%= f.submit "Submit" %></p>
+<% end %>

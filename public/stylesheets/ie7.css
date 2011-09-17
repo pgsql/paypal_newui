@@ -1,0 +1,10 @@
+form .selector_box label.checkbox *,
+form .selector_box label.radio *{ 
+	margin-top:0; margin-bottom:0; display:inline-block;
+}
+
+.pagination .cancel{ float:left; display:block; }
+.pagination input{ 
+	display:block; float:right; margin:0; padding:16px;
+	line-height:0.8em;
+}

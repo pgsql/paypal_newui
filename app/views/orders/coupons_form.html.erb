@@ -1,0 +1,38 @@
+<div id="page">
+	<div class="top"></div>
+	<div class="content">
+		<div class="header page">
+			<h1>Step 1: Select Product</h1>
+		</div>
+		<div id="signup" class="padding">
+			<div class="left">
+				<% form_tag calculate_amount_orders_path, :method => :put, :remote => true, :id=> "coupon" do %>
+					<h2><span>Product Choice</span></h2>
+					<p class="card_type">
+						<label>Subscription:</label>
+						<%= select_tag :duration,  options_from_collection_for_select(PaymentOption.all, "amount", "name"),{:onchange=>"change_price()",:class=> "text_field"}%>
+					<p>
+						<%= label_tag 'coupon', 'Coupon' %>
+						<%= text_field_tag 'coupon', '',{:class=> "text_field"}%>
+					</p>
+					<p>
+						<label>Price</label>
+						<%= text_field_tag 'price', PaymentOption.first.amount ,{:id=>"amount",:disabled => true,:class=> "text_field"} %>
+					</p>
+					<div class="send_form">
+						<a href="#" class="button submit" onClick="document.forms['coupon'].submit();"><span>Next</span></a>
+					</div>
+					<div class="clear"></div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="bottom"></div>
+</div>
+<script type="text/javascript">
+	function change_price()
+	{
+		document.getElementById('amount').value = document.getElementById('duration').value;
+	}
+</script>

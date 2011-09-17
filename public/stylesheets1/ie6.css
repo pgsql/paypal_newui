@@ -1,0 +1,10 @@
+label.radio input,
+label.checkbox input{ 
+	border:0 !important; 
+}
+
+.field_with_errors input{ background:none; }
+
+.pagination{ padding-top:32px; }
+
+.icon.add{ background-image:none; }

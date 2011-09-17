@@ -1,0 +1,104 @@
+/*** COLORS ***/
+	$highlight:	         #FF8000;
+	$highlight_light:    #FFA020;
+	$highlight_lighter:  #FFBF3F;
+	$highlight_dark:     #cc5000;
+	$highlight_subtle:   #F8F8F8;
+
+	$cancel:             #999;
+	$cancel_dark:        #777;
+	$cancel_darker:      #444;
+	$cancel_light:       #CCC;
+	$cancel_lighter:     #E8E8E8;
+	$cancel_lightest:    #EEE;
+	$cancel_subtle:      #F8F8F8;
+
+	$error:              #D33;
+	$error_dark:         #A11;
+	$error_subtle:       #FEE;
+
+	$text_black:         #333;
+	$black:              #050508;
+/*** colors ***/
+
+
+/*** COLUMNS, SPACING & BASELINE ***/
+	$col_number: 10;
+	$col_width:  76px;
+	$baseline:   8px;
+	$gutter:     20px;
+
+	@mixin col_width( $num, $padding = 0 ){
+		width:( $num * $col_width + $gutter * ( $num - 1 ) ) - $padding;
+	}
+/*** columns, spacing & baseline ***/
+
+
+/*** FONTS ***/
+	@mixin serif{
+		font-family: 'Times New Roman', Georgia, serif;
+	}
+
+	@mixin georgia{
+		font-family: Georgia, serif;
+	}
+
+	@mixin sans{
+		font-family: Tahoma, Helvetica, Arial, sans-serif, sans;
+	}
+/*** fonts ***/
+
+
+/*** MIXINS ***/
+	@mixin clear_fix{
+		height:auto; overflow:hidden;
+	}
+
+	@mixin rounded( $amount ){
+		-webkit-border-radius:$amount;
+		-moz-border-radius:$amount;
+		-o-border-radius:$amount;
+		-ie-border-radius:$amount;
+		border-radius:$amount;
+	}
+
+	@mixin inset{
+		-moz-box-shadow:    1px 1px 1px $highlight_subtle;
+		-webkit-box-shadow: 1px 1px 1px $highlight_subtle;
+		-o-box-shadow:      1px 1px 1px $highlight_subtle;
+		-ie-box-shadow:     1px 1px 1px $highlight_subtle;
+		box-shadow:         1px 1px 1px $highlight_subtle;
+	}
+
+	@mixin shadow( $size = 4px, $darkness = 0.1 ){
+		-moz-box-shadow:    2px 2px $size rgba(0,0,0,$darkness);
+		-webkit-box-shadow: 2px 2px $size rgba(0,0,0,$darkness);
+		-o-box-shadow:      2px 2px $size rgba(0,0,0,$darkness);
+		-ie-box-shadow:     2px 2px $size rgba(0,0,0,$darkness);
+		box-shadow:         2px 2px $size rgba(0,0,0,$darkness);
+	}
+
+	@mixin text_shadow{
+		-moz-text-shadow:    1px 1px 2px rgba(0,0,0,0.15);
+		-webkit-text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+		-o-text-shadow:      1px 1px 2px rgba(0,0,0,0.15);
+		-ie-text-shadow:     1px 1px 2px rgba(0,0,0,0.15);
+		text-shadow:         1px 1px 2px rgba(0,0,0,0.15);
+	}
+
+	@mixin transition( $property, $time ){
+		-webkit-transition: $property linear $time;
+		-moz-transition:    $property linear $time;
+		-o-transition:      $property linear $time;
+		-ie-transition:     $property linear $time;
+		transition:         $property linear $time;
+	}
+
+	@mixin inner_shadow{
+		-moz-box-shadow:    2px 2px -4px rgba(0,0,0,0.1);
+		-webkit-box-shadow: 2px 2px -4px rgba(0,0,0,0.1);
+		-o-box-shadow:      2px 2px -4px rgba(0,0,0,0.1);
+		-ie-box-shadow:     2px 2px -4px rgba(0,0,0,0.1);
+		box-shadow:         2px 2px -4px rgba(0,0,0,0.1);
+	}
+/*** mixins ***/

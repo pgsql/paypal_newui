@@ -1,0 +1,20 @@
+<h1>Listing colleges</h1>
+<%= link_to 'New College', new_admin_college_path %>|<%= link_to "back to home","/admin/dashboard" %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @colleges.each do |college| %>
+  <tr>
+    <td><%= college.name %></td>
+    <td><%= link_to 'Edit', edit_admin_college_path(college) %></td>
+    <td><%= link_to 'Destroy', [:admin, college], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+

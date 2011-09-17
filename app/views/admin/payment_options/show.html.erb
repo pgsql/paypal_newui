@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @payment_option.name %>
+</p>
+
+<p>
+  <b>Duration(In Months):</b>
+  <%= @payment_option.duration %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @payment_option.amount %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_payment_option_path(@payment_option) %> |
+<%= link_to 'Back', admin_payment_options_path %>

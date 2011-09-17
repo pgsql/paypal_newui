@@ -1,0 +1,25 @@
+= form_tag url_for({:action => :create}) do |f|
+
+  %fieldset
+    %h2
+      Choose your favorite schools below
+
+    = fields_for "college_choice_ids" do |a|
+
+      - @states.each do |name, state_college_collection|
+
+        .state
+
+          %h3= name
+
+          .selector_box
+            = render :partial => 'college',
+              :collection => state_college_collection,
+              :locals => { :f => a }
+
+    = hidden_field_tag "state_id",    @state_id
+    = hidden_field_tag "category_id", @category_id
+
+  %fieldset.actions.pagination
+
+    = submit_tag "Save Selections To Chart »", :class => 'large_button ok'

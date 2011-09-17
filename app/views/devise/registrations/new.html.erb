@@ -1,0 +1,73 @@
+<div id="page">
+	<div class="top"></div>
+	<div class="content">
+		<div class="header page">
+			<h1>Signup</h1>
+		</div>
+		<div id="signup" class="padding">
+			<div class="left">
+				<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+					<h2><span>Account Information</span></h2>
+					<table>
+						<tr>
+							<td colspan="2" style="color:red;"><%= devise_error_messages! %></td>
+						</tr>
+						<tr>
+							<td>
+								<p><label>Email Address</label>
+							</td>
+						<td>
+								<%= f.email_field :email ,:class=> "text_field"%>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Username</label>
+							</td>
+							<td>
+								<%= f.text_field :login ,:class=> "text_field"%>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Password</label>
+							</td>
+							<td>
+								<%= f.password_field :password,:class=> "text_field" %>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Password Confirmation</label>
+							</td>
+							<td>
+								<%= f.password_field :password_confirmation ,:class=> "text_field"%>
+							</td>
+						</tr>
+					</table>
+					<div class="clear margin"></div>
+					<div class="clear"></div>
+					<div class="send_form">
+						<a href="#" class="button submit" onClick="document.forms['user_new'].submit();">
+							<span>Complete Signup</span>
+						</a>
+					</div>
+				<% end %>
+			</div>
+			<div class="right">
+				<br />
+				<div class="sidebar_box">
+					<h4>Signup Instructions</h4>
+					<p>Quickly create your account on the left to create access to the tools from myfinancialfit.com</p>
+				</div>
+				<div class="sidebar_box">
+					<h4>Contact Us</h4>
+					<p>Still have questions? Looking for a corporate account? <a href="/contact">Contact us</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="clear"></div>
+	<div class="bottom"></div>
+</div>

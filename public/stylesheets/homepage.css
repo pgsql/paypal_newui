@@ -1,0 +1,14 @@
+.header{border-bottom:solid 1px #636363;font:30px/42px "JuveloRegular";text-align:center;padding:20px 0;margin-bottom:20px;color:#333;}
+.block-container{overflow:auto;}
+.block-item{float:left;overflow:auto;width:460px;}
+.withSpace{padding-right:20px;}
+.block-item .block{width:460px;background:#323232;height:290px;}
+.block-item .text{font:14px/37px "Times New Roman",Times,serif; font-weight: bold;}
+.header2{margin:66px 0 28px 0;border-bottom:solid 1px #636363;border-top:solid 1px #636363;font:30px/42px "JuveloRegular";text-align:center;padding:20px 0;color:#333;}
+.header2 span{color:#fe7f0b;}
+#disclaimer{color:#4c4c4c;font:12px/18px "Times New Roman",Times,serif;}
+#disclaimer p{margin-bottom:18px;}
+#disclaimer p.miniheader{font-size:14px;font-weight:bold;}
+#acceptance{margin-bottom:30px;padding-top:10px;font:12px/18px "Times New Roman",Times,serif;color:#DB6E00;}
+#acceptance input{float:left;margin:3px 10px 0 0;}
+.big-submit{width:940px;height:61px;overflow:hidden;background:url(../images/ui/largex-orange_61.png);}

@@ -1,0 +1,124 @@
+/*** QUESTION SLIDER ***/
+	form.question_slides.active{
+		@include georgia;
+
+		position:relative;
+		color:#444;
+
+		.question_number{
+			color:$highlight;
+
+			a.help{
+				@include rounded( 1em );
+				@include shadow;
+
+				display:inline-block; width:1em; height:1em; margin-left:$gutter;
+				text-align:center; font-size:$baseline*4; color:white; text-decoration:none; line-height:1em;
+				background:$cancel_light; border:1px solid $cancel;
+
+				&.disabled{
+					border:1px solid $cancel_light;
+					background:$cancel_subtle;
+				}
+			}
+		}
+
+		fieldset{
+			min-height:280px; padding-bottom:$baseline*4;
+			font-size:1.5em; line-height:1.5em;
+		}
+
+		input[type='text']{
+			@include col_width( 6, 8px );
+
+			margin-top:$baseline * 2; padding:4px;
+		}
+
+		.selector_box{
+			@include sans;
+
+			font-size:$baseline*2.5;
+			
+			label{
+				border-top:1px solid $cancel_subtle;
+			}
+		}
+	}
+/*** question slider ***/
+
+
+/*** TOOLTIP ***/
+	.tooltip{
+		@include rounded( 10px );
+		@include text_shadow;
+		@include shadow( 40px, 0.2 );
+		@include col_width( 6, $gutter * 2 );
+		@include serif;
+
+		display:block; padding:$gutter;
+		text-align:center; color:white; font-size:$baseline * 2.5; line-height:$baseline * 3;
+		background:$cancel; border:2px solid $cancel_dark;
+
+		&.error{
+			background:$error; border:2px solid $error_dark;
+		}
+	}
+/*** tooltip ***/
+
+
+/*** LIST ITEMS ***/
+	ul.state_list{
+		list-style:none;
+
+		li.state{
+			clear:both;
+			margin-bottom:8px;
+
+			strong{
+				color:#888;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	ul.college_list{
+		margin:16px 0; padding:16px;
+		list-style:none; border-left:1px dotted #DDD;
+
+		li.college{
+			float:left; clear:both;
+			margin-bottom:8px;
+		}
+	}
+/*** form items ***/
+
+
+/*** CHOICE TABLE FORM ***/
+	form#choice_table{
+		table{
+			@include col_width( 10 );
+
+			tr.category{
+				padding-top:8px;
+				text-transform:uppercase; color:$cancel;
+				background:$cancel_lighter; border-bottom:1px solid $cancel_lightest;
+
+				h5{
+					float:left; margin-top:$baseline;
+					line-height:3*$baseline;
+				}
+
+				a{
+					display:inline-block; float:right;
+					text-decoration:none; text-transform:none;
+				}
+			}
+		}
+
+		small{ color:$cancel; }
+
+		input{
+			@include col_width( 2, $baseline*2 );
+		}
+	}
+/*** choice table form ***/

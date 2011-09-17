@@ -1,0 +1,45 @@
+#container
+  #main
+    .header
+      View these short videos and you will learn how to find your financial fits.
+    .block-container
+      .block-item.withSpace
+        .block
+          <iframe src="http://player.vimeo.com/video/23922781?title=0&amp;byline=0&amp;portrait=0" width="460" height="290" frameborder="0"></iframe>
+        .text
+          The Personal Affordability Calculator
+      .block-item
+        .block
+          <iframe src="http://player.vimeo.com/video/23946827?title=0&amp;byline=0&amp;portrait=0" width="460" height="290" frameborder="0"></iframe>
+        .text
+          The Net Price Calculators
+      .block-item.withSpace
+        .block
+          <iframe src="http://player.vimeo.com/video/23948239?title=0&amp;byline=0&amp;portrait=0" width="460" height="290" frameborder="0"></iframe>
+        .text
+          The Net Price Comparison Chart
+      .block-item
+        .block
+          <iframe src="http://player.vimeo.com/video/23946241?title=0&amp;byline=0&amp;portrait=0" width="460" height="290" frameborder="0"></iframe>
+        .text
+          Managingcollegecost.com
+    .header2
+      Assess your Personal Affordability for college.
+      %br/
+      Complete this short,
+      %span confidential and anonymous
+      questionnaire.
+    #disclaimer
+      %p.miniheader
+        Terms of Use
+      %p
+        The personal affordability calculator is a tool for families to assess and determine an estimate of what they can afford to pay for college.  It should be used as an estimate and not an exact number.  Managingcollegecosts Inc. takes no responsibility for how one answers each of the items
+      %p
+        The net cost calculators are the property of each of the colleges.  Managingcollegecosts Inc. takes no responsibility for the accuracy of these calculators. As the calculators indicate, official financial aid award letters are only issued by colleges after a student has applied, been accepted, and completed the FAFSA and all other school specific requirements.  Details regarding filing these forms are available by viewing the free videos on the managingcollegecost.com website or by consulting the financial aid offices of those respective colleges.
+      %p
+        Myfinancialfit.com is to be viewed as a tool to help families obtain an idea of college affordability and how to match that affordability with the net costs of colleges.  Many variables can be used to make a final college decision.  Managingcollegecosts Inc. encourages students, parents, and high school counselors to work together to come to those conclusions.  Our hope is that myfinancialfit.com can be an effective tool to aid all parties with that conclusion.
+    #acceptance
+      = form_tag(:action => :create) do
+        = check_box_tag :accepted
+        I have read and understand the terms and conditions for myfinancialfit.com and managingcollegecost.com
+        = submit_tag("Start assessing your affordability now - click here to begin", :class => "large_button ok wide")

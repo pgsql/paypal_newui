@@ -1,0 +1,14 @@
+a { color: #0050a1; }
+div#page .header .price_tag{ 
+	background:url('../images/themes/luminous_vivid_orange/price_tag.png') no-repeat top;
+}
+div#page .section_title {
+	background: url('../images/themes/luminous_vivid_orange/section_title.gif') no-repeat top;
+}
+a.button {
+	background: url('../images/themes/luminous_vivid_orange/button_right.png') no-repeat top right;
+	
+}
+	a.button span{
+		background: url('../images/themes/luminous_vivid_orange/button_left.png') no-repeat top left;
+	}

@@ -1,0 +1,6 @@
+input[type="radio"],
+input[type="checkbox"]{
+	border:0; background:0;
+}
+
+input.disabled{ background:#EEE; }

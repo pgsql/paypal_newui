@@ -1,0 +1,8 @@
+%label.checkbox{ :for => "college_choice_ids_#{college.id}" }
+
+	= f.check_box( college.id )
+
+	-unless college.url.blank?
+		= link_to college.name, college.url, :target => '_blank'
+	-else
+		= college.name
