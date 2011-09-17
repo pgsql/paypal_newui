@@ -53,6 +53,14 @@
 							<%= f.text_field :last_name,:class=> "text_field" %>
 							</td>
 						</tr>
+            <tr>
+							<td>
+							<%= f.label :email, "Email *"%>
+							</td>
+							<td>
+							<%= f.text_field :email,:class=> "text_field" %>
+							</td>
+						</tr>
 						<tr>
 							<td>
 							<%= f.label :address1, "Address1 * "%>
@@ -142,9 +150,12 @@
 								<%= f.label :card_verification, "CVV *" %>
 							</td>
 							<td>
-								<%= f.password_field :card_verification ,:class=> "text_field"%>
+								<%= f.password_field :card_verification ,:class=> "text_field"%> <br />
+                Type in the 3 or 4 numbers on the back of your card
 							</td>
+
 						</tr>
+          
 					</table>
 					<div class="clear"></div>
 					<div class="send_form">

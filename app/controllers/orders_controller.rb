@@ -47,15 +47,16 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.xml
   def create
-   
     params[:order][:amount] = params[:amount]
     params[:order][:duration] = params[:duration]
-    
     @order = Order.new(params[:order])
+    params[:order][:name] = params[:order][:first_name] + " " + params[:order][:last_name] unless params[:order].blank?
+    Rails.logger.info params.inspect
     @order.user = current_user
 
     respond_to do |format|
        if @order.save
+
          @order.purchase
          session[:order] = @order.id
         if @order.purchase
@@ -81,12 +82,12 @@ class OrdersController < ApplicationController
     session[:coupon] = ""
     session[:duration_price] = ""
     session[:duration_price] = ""
-     session[:actual_price] = ""
+    session[:actual_price] = ""
 
     session[:duration_price] = params[:duration]
     session[:actual_price] = params[:duration]
-   session[:duration] = PaymentOption.find_by_amount(session[:duration_price]).name
-   session[:duration_months] = PaymentOption.find_by_amount(session[:duration_price]).duration
+    session[:duration] = PaymentOption.find_by_amount(session[:duration_price]).name
+    session[:duration_months] = PaymentOption.find_by_amount(session[:duration_price]).duration
     unless params[:coupon].blank?
       @coupon = Coupon.find_by_code(params[:coupon])
       if @coupon

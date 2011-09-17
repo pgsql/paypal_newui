@@ -1,3 +1,9 @@
+<div id="page">
+	<div class="top"></div>
+	<div class="content" style="overflow:visible;">
+		<h2>A Financial Fit College Search Program</h2>
+		<div class="header header_home page">
+<div class="info">
 <%
 @order = Order.find(session[:order]) %>
 
@@ -9,3 +15,9 @@ Hello customer.  I'm sorry but your transaction has failed.  Please try again or
 
 
   <br /> Click here for new transaction <% link_to "New Payment", coupons_form_orders_path %>
+  </div>
+			</div>
+
+		</div>
+		<div class="bottom"></div>
+	</div>

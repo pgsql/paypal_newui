@@ -1,12 +1,11 @@
 class Order < ActiveRecord::Base
   attr_accessor :card_number, :card_verification
-  validates_presence_of :name
-  validates_presence_of :address1
-  validates_presence_of :city
-  validates_presence_of :state
-  validates_presence_of :country
-  validates_presence_of :zip
-  
+  validates :first_name, :presence => true
+  validates :address1, :presence => true
+  validates :city, :presence => true
+  validates :state, :presence => true
+  validates :country, :presence => true
+  validates :zip, :presence => true
 
   validate_on_create :validate_card
 

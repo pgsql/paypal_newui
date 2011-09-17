@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
   before_filter :check_for_terms_acceptance, :unless => lambda { |c| c.controller_name == 'sessions' || c.controller_name == 'registrations' || c.controller_name == 'passwords' || c.controller_name == 'general'}
   before_filter :check_user_status,:unless => lambda { |c| c.controller_name == 'sessions' || c.controller_name == 'registrations' || c.controller_name == 'passwords'|| c.controller_name == 'general'}
   protect_from_forgery
+  
+
   def require_login
     if current_user.nil?
       flash[:error] = "you don't have access"
