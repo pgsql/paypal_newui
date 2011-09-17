@@ -10,8 +10,8 @@
 				<p>
 					You have selected : <b> <%=session[:duration] %></b><br />
 					Actual Price is <b><%=session[:actual_price] %></b>&nbsp;&nbsp;<br/>
-					Discount on you coupon price :  <b><%=session[:coupon].to_i %> % </b><br />
-					Present Price is <b><%=session[:duration_price] %></b>&nbsp;&nbsp;
+					Discount on your coupon price :  <b><%=session[:coupon].to_i %> % </b><br />
+					Final Price is <b><%=session[:duration_price] %></b>&nbsp;&nbsp;
 					<br />
 					<%= link_to "Click to change the Subscription", coupons_form_orders_path %>
 				</p>
