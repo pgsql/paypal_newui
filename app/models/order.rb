@@ -23,7 +23,11 @@ class Order < ActiveRecord::Base
   end
 
   def price_in_cents
-    amount.to_f.round
+    correct_amount.round
+  end
+
+  def correct_amount
+    amount * 100
   end
 
   def create_user

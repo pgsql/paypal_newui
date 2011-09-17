@@ -11,7 +11,7 @@
 					You have selected : <b> <%=session[:duration] %></b><br />
 					Actual Price is <b><%=session[:actual_price] %></b>&nbsp;&nbsp;<br/>
 					Discount on your coupon price :  <b><%=session[:coupon].to_i %> % </b><br />
-					Final Price is <b><%=session[:duration_price] %></b>&nbsp;&nbsp;
+					Final Price is <b><%= display_price( session[:duration_price]) %></b>&nbsp;&nbsp;
 					<br />
 					<%= link_to "Click to change the Subscription", coupons_form_orders_path %>
 				</p>
@@ -83,7 +83,7 @@
 							</td>
 							<td>
 							<%= f.text_field :city,:class=> "text_field" %>
-							<%= hidden_field_tag :amount,session[:duration_price].to_s %>
+							<%= hidden_field_tag :amount,display_price( session[:duration_price]) %>
 							<%= hidden_field_tag :duration,session[:duration_months].to_s %>
 							</td>
 						</tr>

@@ -19812,3 +19812,630 @@ Rendered layouts/_header.html.erb (1.7ms)
 Rendered layouts/_footer.html.erb (1.2ms)
 Rendered general/index.html.erb within layouts/sessions (44.1ms)
 Completed 200 OK in 244ms (Views: 241.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-18 01:57:42 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.1ms)
+Rendered layouts/_header.html.erb (3.1ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (89.1ms)
+Completed 200 OK in 170ms (Views: 117.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-09-18 01:57:53 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nwD6FqH9VUNEaIp9cAxZxk7unMq4Tl0CnzNM5VLXk9E=", "user"=>{"login"=>"admin@exaple.com", "password"=>"[FILTERED]"}}
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'admin@exaple.com' LIMIT 1
+Completed   in 57ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nwD6FqH9VUNEaIp9cAxZxk7unMq4Tl0CnzNM5VLXk9E=", "user"=>{"login"=>"admin@exaple.com", "password"=>"[FILTERED]"}}
+Rendered devise/shared/_links.erb (2.1ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (13.3ms)
+Completed 200 OK in 233ms (Views: 16.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-09-18 01:57:57 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nwD6FqH9VUNEaIp9cAxZxk7unMq4Tl0CnzNM5VLXk9E=", "user"=>{"login"=>"admin@exaple.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'admin@exaple.com' LIMIT 1[0m
+Completed   in 28ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nwD6FqH9VUNEaIp9cAxZxk7unMq4Tl0CnzNM5VLXk9E=", "user"=>{"login"=>"admin@exaple.com", "password"=>"[FILTERED]"}}
+Rendered devise/shared/_links.erb (2.1ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (13.2ms)
+Completed 200 OK in 238ms (Views: 16.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-09-18 01:58:10 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nwD6FqH9VUNEaIp9cAxZxk7unMq4Tl0CnzNM5VLXk9E=", "user"=>{"login"=>"admin@example.com", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (5.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'admin@example.com' LIMIT 1
+  [1m[36mAREL (0.5ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2011-09-13 20:00:52.218402', "current_sign_in_at" = '2011-09-17 20:28:11.000492', "last_sign_in_ip" = '99.141.116.222', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 38, "updated_at" = '2011-09-17 20:28:11.001167' WHERE "users"."id" = 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 483ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-18 01:58:11 +0530
+  Processing by GeneralController#index as HTML
+  [1m[35mUser Load (2.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/surveys
+Completed 302 Found in 131ms
+
+
+Started GET "/surveys" for 127.0.0.1 at 2011-09-18 01:58:11 +0530
+  Processing by SurveysController#index as HTML
+  [1m[36mUser Load (51.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/surveys/new
+Completed 302 Found in 123ms
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2011-09-18 01:58:11 +0530
+  Processing by SurveysController#new as HTML
+  [1m[36mUser Load (53.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1
+Completed   in 121ms
+
+NoMethodError (undefined method `layout' for #<SurveysController:0xae68520>):
+  app/controllers/surveys_controller.rb:34:in `new'
+
+Rendered /home/jyothi/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /home/jyothi/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.1ms)
+Rendered /home/jyothi/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.1ms)
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2011-09-18 01:58:37 +0530
+  Processing by SurveysController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1
+  [1m[36mLoanOption Load (0.4ms)[0m  [1mSELECT "loan_options".* FROM "loan_options"[0m
+Rendered surveys/_form.html.haml (126.7ms)
+Rendered layouts/_header.html.erb (1.7ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered surveys/new.html.erb within layouts/sessions (140.8ms)
+Completed 200 OK in 352ms (Views: 156.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2011-09-18 01:58:41 +0530
+  Processing by SurveysController#new as HTML
+  [1m[35mUser Load (4.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1[0m
+  [1m[35mLoanOption Load (0.3ms)[0m  SELECT "loan_options".* FROM "loan_options"
+Rendered surveys/_form.html.haml (109.0ms)
+Rendered layouts/_header.html.erb (1.5ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered surveys/new.html.erb within layouts/sessions (116.4ms)
+Completed 200 OK in 312ms (Views: 118.9ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2011-09-18 01:58:43 +0530
+  Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1
+Rendered admin/dashboard/index.html.erb within layouts/admin (3.1ms)
+Completed 200 OK in 150ms (Views: 12.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2011-09-18 01:58:49 +0530
+  Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (3.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1
+Rendered admin/dashboard/index.html.erb within layouts/admin (3.0ms)
+Completed 200 OK in 171ms (Views: 6.3ms | ActiveRecord: 57.2ms)
+
+
+Started GET "/admin/payment_options" for 127.0.0.1 at 2011-09-18 01:58:52 +0530
+  Processing by Admin::PaymentOptionsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1
+  [1m[36mPaymentOption Load (0.3ms)[0m  [1mSELECT "payment_options".* FROM "payment_options"[0m
+Rendered admin/payment_options/index.html.erb within layouts/admin (68.1ms)
+Completed 200 OK in 161ms (Views: 78.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2011-09-18 01:59:15 +0530
+  Processing by Admin::DashboardController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1[0m
+Rendered admin/dashboard/index.html.erb within layouts/admin (3.0ms)
+Completed 200 OK in 131ms (Views: 6.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/coupons" for 127.0.0.1 at 2011-09-18 01:59:17 +0530
+  Processing by Admin::CouponsController#index as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1[0m
+  [1m[35mCoupon Load (0.4ms)[0m  SELECT "coupons".* FROM "coupons"
+Rendered admin/coupons/index.html.erb within layouts/admin (19.0ms)
+Completed 200 OK in 187ms (Views: 33.8ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/admin/coupons/1/edit" for 127.0.0.1 at 2011-09-18 01:59:20 +0530
+  Processing by Admin::CouponsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1
+  [1m[36mCoupon Load (0.3ms)[0m  [1mSELECT "coupons".* FROM "coupons" WHERE "coupons"."id" = 1 LIMIT 1[0m
+Rendered admin/coupons/_form.html.erb (22.5ms)
+Rendered admin/coupons/edit.html.erb within layouts/admin (30.5ms)
+Completed 200 OK in 169ms (Views: 37.3ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/admin/coupons/1" for 127.0.0.1 at 2011-09-18 01:59:28 +0530
+  Processing by Admin::CouponsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nwD6FqH9VUNEaIp9cAxZxk7unMq4Tl0CnzNM5VLXk9E=", "coupon"=>{"name"=>"99", "code"=>"99", "max_users"=>"12", "value"=>"99", "validity(1i)"=>"2011", "validity(2i)"=>"8", "validity(3i)"=>"28"}, "commit"=>"Update Coupon", "id"=>"1"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.4ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1[0m
+  [1m[35mCoupon Load (0.3ms)[0m  SELECT "coupons".* FROM "coupons" WHERE "coupons"."id" = 1 LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE "coupons" SET "name" = '99', "code" = '99', "value" = 99, "updated_at" = '2011-09-17 20:29:29.358336' WHERE "coupons"."id" = 1[0m
+Redirected to http://localhost:3000/admin/coupons/1
+Completed 302 Found in 159ms
+
+
+Started GET "/admin/coupons/1" for 127.0.0.1 at 2011-09-18 01:59:29 +0530
+  Processing by Admin::CouponsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1[0m
+  [1m[35mCoupon Load (0.3ms)[0m  SELECT "coupons".* FROM "coupons" WHERE "coupons"."id" = 1 LIMIT 1
+Rendered admin/coupons/show.html.erb within layouts/admin (14.9ms)
+Completed 200 OK in 157ms (Views: 26.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/coupons" for 127.0.0.1 at 2011-09-18 01:59:31 +0530
+  Processing by Admin::CouponsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1
+  [1m[36mCoupon Load (0.3ms)[0m  [1mSELECT "coupons".* FROM "coupons"[0m
+Rendered admin/coupons/index.html.erb within layouts/admin (19.4ms)
+Completed 200 OK in 101ms (Views: 22.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-18 01:59:39 +0530
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered general/index.html.erb within layouts/sessions (5.7ms)
+Completed 200 OK in 52ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-18 01:59:40 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.2ms)
+Rendered layouts/_header.html.erb (1.9ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (15.2ms)
+Completed 200 OK in 116ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-09-18 01:59:46 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I+AGNYJVsl3K7M7hTRtDA//DNVCj78CjKHgmPSrLNFE=", "user"=>{"login"=>"phani66@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'phani66@gmail.com' LIMIT 1
+Completed   in 26ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I+AGNYJVsl3K7M7hTRtDA//DNVCj78CjKHgmPSrLNFE=", "user"=>{"login"=>"phani66@gmail.com", "password"=>"[FILTERED]"}}
+Rendered devise/shared/_links.erb (2.5ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (13.6ms)
+Completed 200 OK in 234ms (Views: 17.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-09-18 01:59:49 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I+AGNYJVsl3K7M7hTRtDA//DNVCj78CjKHgmPSrLNFE=", "user"=>{"login"=>"phani66@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'phani66@gmail.com' LIMIT 1[0m
+Completed   in 83ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I+AGNYJVsl3K7M7hTRtDA//DNVCj78CjKHgmPSrLNFE=", "user"=>{"login"=>"phani66@gmail.com", "password"=>"[FILTERED]"}}
+Rendered devise/shared/_links.erb (2.1ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (13.2ms)
+Completed 200 OK in 177ms (Views: 16.4ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-09-18 02:00:02 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I+AGNYJVsl3K7M7hTRtDA//DNVCj78CjKHgmPSrLNFE=", "user"=>{"login"=>"phani.rubyonrails@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'phani.rubyonrails@gmail.com' LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2011-09-17 15:58:45.242397', "current_sign_in_at" = '2011-09-17 20:30:02.554685', "sign_in_count" = 9, "updated_at" = '2011-09-17 20:30:02.555438' WHERE "users"."id" = 31[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 313ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-18 02:00:02 +0530
+  Processing by GeneralController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1
+Redirected to http://localhost:3000/surveys
+Completed 302 Found in 105ms
+
+
+Started GET "/surveys" for 127.0.0.1 at 2011-09-18 02:00:02 +0530
+  Processing by SurveysController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1[0m
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 106ms
+
+
+Started GET "/welcome" for 127.0.0.1 at 2011-09-18 02:00:02 +0530
+  Processing by WelcomesController#show as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered welcomes/show.html.haml within layouts/welcomes (28.3ms)
+Completed 200 OK in 144ms (Views: 40.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/orders/coupons_form" for 127.0.0.1 at 2011-09-18 02:00:08 +0530
+  Processing by OrdersController#coupons_form as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1[0m
+  [1m[35mPaymentOption Load (0.3ms)[0m  SELECT "payment_options".* FROM "payment_options"
+  [1m[36mPaymentOption Load (0.3ms)[0m  [1mSELECT "payment_options".* FROM "payment_options" LIMIT 1[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders_coupons_form_html_erb__939973215_91676620_548451898 at /home/jyothi/projects/paypal_newui/app/views/orders/coupons_form.html.erb:9)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered orders/coupons_form.html.erb within layouts/sessions (35.0ms)
+Completed 200 OK in 174ms (Views: 37.8ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/orders/calculate_amount" for 127.0.0.1 at 2011-09-18 02:00:10 +0530
+  Processing by OrdersController#calculate_amount as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I+AGNYJVsl3K7M7hTRtDA//DNVCj78CjKHgmPSrLNFE=", "duration"=>"29.95", "coupon"=>""}
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1
+  [1m[36mPaymentOption Load (0.3ms)[0m  [1mSELECT "payment_options".* FROM "payment_options" WHERE "payment_options"."amount" = 29.95 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "payment_options".* FROM "payment_options" WHERE "payment_options"."amount" = 29.95 LIMIT 1
+Redirected to http://localhost:3000/orders/new
+Completed 302 Found in 68ms
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2011-09-18 02:00:10 +0530
+  Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1[0m
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:10)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders__form_html_erb___282984100_92951060__212548024 at /home/jyothi/projects/paypal_newui/app/views/orders/_form.html.erb:18)
+Rendered orders/_form.html.erb (31.1ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered orders/new.html.erb within layouts/sessions (38.3ms)
+Completed 200 OK in 191ms (Views: 47.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/orders/coupons_form" for 127.0.0.1 at 2011-09-18 02:00:15 +0530
+  Processing by OrdersController#coupons_form as HTML
+  [1m[35mUser Load (5.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1
+  [1m[36mPaymentOption Load (0.3ms)[0m  [1mSELECT "payment_options".* FROM "payment_options"[0m
+  [1m[35mPaymentOption Load (0.3ms)[0m  SELECT "payment_options".* FROM "payment_options" LIMIT 1
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders_coupons_form_html_erb__939973215_92137860_548451898 at /home/jyothi/projects/paypal_newui/app/views/orders/coupons_form.html.erb:9)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered orders/coupons_form.html.erb within layouts/sessions (34.5ms)
+Completed 200 OK in 210ms (Views: 37.1ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/orders/calculate_amount" for 127.0.0.1 at 2011-09-18 02:00:19 +0530
+  Processing by OrdersController#calculate_amount as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I+AGNYJVsl3K7M7hTRtDA//DNVCj78CjKHgmPSrLNFE=", "duration"=>"29.95", "coupon"=>"99"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1[0m
+  [1m[35mPaymentOption Load (0.3ms)[0m  SELECT "payment_options".* FROM "payment_options" WHERE "payment_options"."amount" = 29.95 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "payment_options".* FROM "payment_options" WHERE "payment_options"."amount" = 29.95 LIMIT 1[0m
+  [1m[35mCoupon Load (2.9ms)[0m  SELECT "coupons".* FROM "coupons" WHERE "coupons"."code" = '99' LIMIT 1
+Redirected to http://localhost:3000/orders/new
+Completed 302 Found in 285ms
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2011-09-18 02:00:20 +0530
+  Processing by OrdersController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1[0m
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:10)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders__form_html_erb___282984100_92588560__212548024 at /home/jyothi/projects/paypal_newui/app/views/orders/_form.html.erb:18)
+Rendered orders/_form.html.erb (35.4ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered orders/new.html.erb within layouts/sessions (43.7ms)
+Completed 200 OK in 175ms (Views: 46.8ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/orders/coupons_form" for 127.0.0.1 at 2011-09-18 02:03:42 +0530
+  Processing by OrdersController#coupons_form as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1
+  [1m[36mPaymentOption Load (0.3ms)[0m  [1mSELECT "payment_options".* FROM "payment_options"[0m
+  [1m[35mPaymentOption Load (0.3ms)[0m  SELECT "payment_options".* FROM "payment_options" LIMIT 1
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders_coupons_form_html_erb__939973215_91623750_548451898 at /home/jyothi/projects/paypal_newui/app/views/orders/coupons_form.html.erb:9)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered orders/coupons_form.html.erb within layouts/sessions (33.7ms)
+Completed 200 OK in 170ms (Views: 36.2ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/orders/calculate_amount" for 127.0.0.1 at 2011-09-18 02:03:44 +0530
+  Processing by OrdersController#calculate_amount as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I+AGNYJVsl3K7M7hTRtDA//DNVCj78CjKHgmPSrLNFE=", "duration"=>"29.95", "coupon"=>""}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1[0m
+  [1m[35mPaymentOption Load (0.3ms)[0m  SELECT "payment_options".* FROM "payment_options" WHERE "payment_options"."amount" = 29.95 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "payment_options".* FROM "payment_options" WHERE "payment_options"."amount" = 29.95 LIMIT 1[0m
+Redirected to http://localhost:3000/orders/new
+Completed 302 Found in 67ms
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2011-09-18 02:03:44 +0530
+  Processing by OrdersController#new as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:10)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders__form_html_erb___282984100_92950640__212548024 at /home/jyothi/projects/paypal_newui/app/views/orders/_form.html.erb:18)
+Rendered orders/_form.html.erb (30.4ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered orders/new.html.erb within layouts/sessions (38.0ms)
+Completed 200 OK in 179ms (Views: 41.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/orders/coupons_form" for 127.0.0.1 at 2011-09-18 02:03:57 +0530
+  Processing by OrdersController#coupons_form as HTML
+  [1m[36mUser Load (6.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1[0m
+  [1m[35mPaymentOption Load (0.3ms)[0m  SELECT "payment_options".* FROM "payment_options"
+  [1m[36mPaymentOption Load (0.3ms)[0m  [1mSELECT "payment_options".* FROM "payment_options" LIMIT 1[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders_coupons_form_html_erb__939973215_92140750_548451898 at /home/jyothi/projects/paypal_newui/app/views/orders/coupons_form.html.erb:9)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered orders/coupons_form.html.erb within layouts/sessions (35.4ms)
+Completed 200 OK in 194ms (Views: 37.9ms | ActiveRecord: 6.7ms)
+
+
+Started POST "/orders/calculate_amount" for 127.0.0.1 at 2011-09-18 02:04:01 +0530
+  Processing by OrdersController#calculate_amount as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I+AGNYJVsl3K7M7hTRtDA//DNVCj78CjKHgmPSrLNFE=", "duration"=>"29.95", "coupon"=>"99"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1
+  [1m[36mPaymentOption Load (0.3ms)[0m  [1mSELECT "payment_options".* FROM "payment_options" WHERE "payment_options"."amount" = 29.95 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "payment_options".* FROM "payment_options" WHERE "payment_options"."amount" = 29.95 LIMIT 1
+  [1m[36mCoupon Load (0.3ms)[0m  [1mSELECT "coupons".* FROM "coupons" WHERE "coupons"."code" = '99' LIMIT 1[0m
+Redirected to http://localhost:3000/orders/new
+Completed 302 Found in 216ms
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2011-09-18 02:04:01 +0530
+  Processing by OrdersController#new as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:10)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders__form_html_erb___282984100_92635790__212548024 at /home/jyothi/projects/paypal_newui/app/views/orders/_form.html.erb:18)
+Rendered orders/_form.html.erb (30.5ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered orders/new.html.erb within layouts/sessions (37.7ms)
+Completed 200 OK in 177ms (Views: 40.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2011-09-18 02:07:09 +0530
+  Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1[0m
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:10)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders__form_html_erb___282984100_91265800__212548024 at /home/jyothi/projects/paypal_newui/app/views/orders/_form.html.erb:18)
+Rendered orders/_form.html.erb (85.8ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered orders/new.html.erb within layouts/sessions (92.9ms)
+Completed 200 OK in 223ms (Views: 95.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/orders/coupons_form" for 127.0.0.1 at 2011-09-18 02:07:12 +0530
+  Processing by OrdersController#coupons_form as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1
+  [1m[36mPaymentOption Load (0.3ms)[0m  [1mSELECT "payment_options".* FROM "payment_options"[0m
+  [1m[35mPaymentOption Load (0.3ms)[0m  SELECT "payment_options".* FROM "payment_options" LIMIT 1
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders_coupons_form_html_erb__939973215_92586510_548451898 at /home/jyothi/projects/paypal_newui/app/views/orders/coupons_form.html.erb:9)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered orders/coupons_form.html.erb within layouts/sessions (34.7ms)
+Completed 200 OK in 164ms (Views: 37.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/orders/calculate_amount" for 127.0.0.1 at 2011-09-18 02:07:15 +0530
+  Processing by OrdersController#calculate_amount as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I+AGNYJVsl3K7M7hTRtDA//DNVCj78CjKHgmPSrLNFE=", "duration"=>"29.95", "coupon"=>"99"}
+  [1m[36mUser Load (4.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1[0m
+  [1m[35mPaymentOption Load (0.3ms)[0m  SELECT "payment_options".* FROM "payment_options" WHERE "payment_options"."amount" = 29.95 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "payment_options".* FROM "payment_options" WHERE "payment_options"."amount" = 29.95 LIMIT 1[0m
+  [1m[35mCoupon Load (0.3ms)[0m  SELECT "coupons".* FROM "coupons" WHERE "coupons"."code" = '99' LIMIT 1
+Redirected to http://localhost:3000/orders/new
+Completed 302 Found in 191ms
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2011-09-18 02:07:15 +0530
+  Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1[0m
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:10)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders__form_html_erb___282984100_92951090__212548024 at /home/jyothi/projects/paypal_newui/app/views/orders/_form.html.erb:18)
+Rendered orders/_form.html.erb (30.9ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered orders/new.html.erb within layouts/sessions (38.3ms)
+Completed 200 OK in 173ms (Views: 41.6ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/orders/coupons_form" for 127.0.0.1 at 2011-09-18 02:07:42 +0530
+  Processing by OrdersController#coupons_form as HTML
+  [1m[35mUser Load (2.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1
+  [1m[36mPaymentOption Load (0.3ms)[0m  [1mSELECT "payment_options".* FROM "payment_options"[0m
+  [1m[35mPaymentOption Load (0.3ms)[0m  SELECT "payment_options".* FROM "payment_options" LIMIT 1
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders_coupons_form_html_erb__939973215_92134800_548451898 at /home/jyothi/projects/paypal_newui/app/views/orders/coupons_form.html.erb:9)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered orders/coupons_form.html.erb within layouts/sessions (34.9ms)
+Completed 200 OK in 177ms (Views: 37.5ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/orders/calculate_amount" for 127.0.0.1 at 2011-09-18 02:07:45 +0530
+  Processing by OrdersController#calculate_amount as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I+AGNYJVsl3K7M7hTRtDA//DNVCj78CjKHgmPSrLNFE=", "duration"=>"29.95", "coupon"=>"99"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1[0m
+  [1m[35mPaymentOption Load (0.3ms)[0m  SELECT "payment_options".* FROM "payment_options" WHERE "payment_options"."amount" = 29.95 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "payment_options".* FROM "payment_options" WHERE "payment_options"."amount" = 29.95 LIMIT 1[0m
+  [1m[35mCoupon Load (3.9ms)[0m  SELECT "coupons".* FROM "coupons" WHERE "coupons"."code" = '99' LIMIT 1
+Redirected to http://localhost:3000/orders/new
+Completed 302 Found in 207ms
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2011-09-18 02:07:46 +0530
+  Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1[0m
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:10)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders__form_html_erb___282984100_92502260__212548024 at /home/jyothi/projects/paypal_newui/app/views/orders/_form.html.erb:18)
+Rendered orders/_form.html.erb (30.0ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered orders/new.html.erb within layouts/sessions (37.3ms)
+Completed 200 OK in 175ms (Views: 40.6ms | ActiveRecord: 5.9ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2011-09-18 02:08:21 +0530
+  Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I+AGNYJVsl3K7M7hTRtDA//DNVCj78CjKHgmPSrLNFE=", "order"=>{"first_name"=>"Cody", "last_name"=>"Fauser", "email"=>"", "address1"=>"66 Oak Boulevard", "address2"=>"", "city"=>"Beverly Hills", "state"=>"CA", "country"=>"United States", "zip"=>"90210", "card_type"=>"visa", "card_number"=>"[FILTERED]", "card_expires_on(1i)"=>"2011", "card_expires_on(2i)"=>"9", "card_expires_on(3i)"=>"1", "card_verification"=>"[FILTERED]"}, "amount"=>"0.2995000000000019", "duration"=>"3"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:10)
+{"utf8"=>"✓", "authenticity_token"=>"I+AGNYJVsl3K7M7hTRtDA//DNVCj78CjKHgmPSrLNFE=", "order"=>{"first_name"=>"Cody", "last_name"=>"Fauser", "email"=>"", "address1"=>"66 Oak Boulevard", "address2"=>"", "city"=>"Beverly Hills", "state"=>"CA", "country"=>"United States", "zip"=>"90210", "card_type"=>"visa", "card_number"=>"4433221111223344", "card_expires_on(1i)"=>"2011", "card_expires_on(2i)"=>"9", "card_expires_on(3i)"=>"1", "card_verification"=>"222", "amount"=>"0.2995000000000019", "duration"=>"3", "name"=>"Cody Fauser"}, "amount"=>"0.2995000000000019", "duration"=>"3", "action"=>"create", "controller"=>"orders"}
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "orders" ("user_id", "ip_address", "first_name", "last_name", "card_type", "card_expires_on", "created_at", "updated_at", "description", "amount", "status", "card_number", "card_verification", "card_exires_on", "email", "login", "password", "duration", "message", "tran", "name", "city", "country", "address1", "address2", "zip", "coupon", "state") VALUES (31, NULL, 'Cody', 'Fauser', 'visa', '2011-09-01', '2011-09-17 20:38:22.229546', '2011-09-17 20:38:22.229546', NULL, 0.2995000000000019, NULL, NULL, NULL, NULL, '', NULL, NULL, 3, NULL, NULL, NULL, 'Beverly Hills', 'United States', '66 Oak Boulevard', '', '90210', NULL, 'CA')[0m
+#<ActiveMerchant::Billing::Response:0xae35a30 @params={"timestamp"=>"2011-09-17T20:38:25Z", "ack"=>"Failure", "correlation_id"=>"1506fcfec97ca", "version"=>"59.0", "build"=>"2075688", "amount"=>"0.00", "amount_currency_id"=>"USD", "message"=>"This transaction cannot be processed. The amount to be charged is zero.", "error_codes"=>"10525"}, @message="This transaction cannot be processed. The amount to be charged is zero.", @success=false, @test=true, @authorization=nil, @fraud_review=false, @avs_result={"code"=>nil, "message"=>nil, "street_match"=>nil, "postal_match"=>nil}, @cvv_result={"code"=>nil, "message"=>nil}>
+#<ActiveMerchant::Billing::Response:0xa6aca98 @params={"timestamp"=>"2011-09-17T20:38:27Z", "ack"=>"Failure", "correlation_id"=>"9021a48eae267", "version"=>"59.0", "build"=>"2075688", "amount"=>"0.00", "amount_currency_id"=>"USD", "message"=>"This transaction cannot be processed. The amount to be charged is zero.", "error_codes"=>"10525"}, @message="This transaction cannot be processed. The amount to be charged is zero.", @success=false, @test=true, @authorization=nil, @fraud_review=false, @avs_result={"code"=>nil, "message"=>nil, "street_match"=>nil, "postal_match"=>nil}, @cvv_result={"code"=>nil, "message"=>nil}>
+  [1m[35mOrder Load (142.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."id" = 35 LIMIT 1
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered orders/failure.html.erb within layouts/sessions (154.7ms)
+Completed 200 OK in 6592ms (Views: 28.7ms | ActiveRecord: 143.3ms)
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:10)
+  [1m[36mOrder Load (5.3ms)[0m  [1mSELECT "orders".* FROM "orders" ORDER BY orders.id DESC LIMIT 1[0m
+
+
+Started POST "/orders" for 127.0.0.1 at 2011-09-18 02:12:39 +0530
+
+SyntaxError (/home/jyothi/projects/paypal_newui/app/helpers/orders_helper.rb:3: syntax error, unexpected '(', expecting ';' or '\n'
+  def display price(price)
+                    ^
+/home/jyothi/projects/paypal_newui/app/helpers/orders_helper.rb:6: syntax error, unexpected keyword_end, expecting $end):
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/orders_controller.rb:1:in `<top (required)>'
+
+Rendered /home/jyothi/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.1ms)
+Rendered /home/jyothi/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.4ms)
+Rendered /home/jyothi/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.6ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2011-09-18 02:13:00 +0530
+  Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I+AGNYJVsl3K7M7hTRtDA//DNVCj78CjKHgmPSrLNFE=", "order"=>{"first_name"=>"Cody", "last_name"=>"Fauser", "email"=>"revurikarna@gmail.com", "address1"=>"66 Oak Boulevard", "address2"=>"", "city"=>"Beverly Hills", "state"=>"CA", "country"=>"United States", "zip"=>"90210", "card_type"=>"visa", "card_number"=>"[FILTERED]", "card_expires_on(1i)"=>"2012", "card_expires_on(2i)"=>"10", "card_expires_on(3i)"=>"1", "card_verification"=>"[FILTERED]"}, "amount"=>"0.2995000000000019", "duration"=>"3"}
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1[0m
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:10)
+{"utf8"=>"✓", "authenticity_token"=>"I+AGNYJVsl3K7M7hTRtDA//DNVCj78CjKHgmPSrLNFE=", "order"=>{"first_name"=>"Cody", "last_name"=>"Fauser", "email"=>"revurikarna@gmail.com", "address1"=>"66 Oak Boulevard", "address2"=>"", "city"=>"Beverly Hills", "state"=>"CA", "country"=>"United States", "zip"=>"90210", "card_type"=>"visa", "card_number"=>"4433221111223344", "card_expires_on(1i)"=>"2012", "card_expires_on(2i)"=>"10", "card_expires_on(3i)"=>"1", "card_verification"=>"123", "amount"=>"0.2995000000000019", "duration"=>"3", "name"=>"Cody Fauser"}, "amount"=>"0.2995000000000019", "duration"=>"3", "action"=>"create", "controller"=>"orders"}
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "orders" ("user_id", "ip_address", "first_name", "last_name", "card_type", "card_expires_on", "created_at", "updated_at", "description", "amount", "status", "card_number", "card_verification", "card_exires_on", "email", "login", "password", "duration", "message", "tran", "name", "city", "country", "address1", "address2", "zip", "coupon", "state") VALUES (31, NULL, 'Cody', 'Fauser', 'visa', '2012-10-01', '2011-09-17 20:43:00.368122', '2011-09-17 20:43:00.368122', NULL, 0.2995000000000019, NULL, NULL, NULL, NULL, 'revurikarna@gmail.com', NULL, NULL, 3, NULL, NULL, NULL, 'Beverly Hills', 'United States', '66 Oak Boulevard', '', '90210', NULL, 'CA')
+#<ActiveMerchant::Billing::Response:0xaea57a4 @params={"timestamp"=>"2011-09-17T20:43:03Z", "ack"=>"Failure", "correlation_id"=>"33633cf2c17a8", "version"=>"59.0", "build"=>"2075688", "amount"=>"0.00", "amount_currency_id"=>"USD", "message"=>"This transaction cannot be processed. The amount to be charged is zero.", "error_codes"=>"10525"}, @message="This transaction cannot be processed. The amount to be charged is zero.", @success=false, @test=true, @authorization=nil, @fraud_review=false, @avs_result={"code"=>nil, "message"=>nil, "street_match"=>nil, "postal_match"=>nil}, @cvv_result={"code"=>nil, "message"=>nil}>
+#<ActiveMerchant::Billing::Response:0xae38f64 @params={"timestamp"=>"2011-09-17T20:43:05Z", "ack"=>"Failure", "correlation_id"=>"af89df0388767", "version"=>"59.0", "build"=>"2075688", "amount"=>"0.00", "amount_currency_id"=>"USD", "message"=>"This transaction cannot be processed. The amount to be charged is zero.", "error_codes"=>"10525"}, @message="This transaction cannot be processed. The amount to be charged is zero.", @success=false, @test=true, @authorization=nil, @fraud_review=false, @avs_result={"code"=>nil, "message"=>nil, "street_match"=>nil, "postal_match"=>nil}, @cvv_result={"code"=>nil, "message"=>nil}>
+  [1m[36mOrder Load (7.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."id" = 36 LIMIT 1[0m
+Rendered layouts/_header.html.erb (2.7ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered orders/failure.html.erb within layouts/sessions (24.6ms)
+Completed 200 OK in 6141ms (Views: 25.3ms | ActiveRecord: 9.1ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2011-09-18 02:13:44 +0530
+  Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I+AGNYJVsl3K7M7hTRtDA//DNVCj78CjKHgmPSrLNFE=", "order"=>{"first_name"=>"Cody", "last_name"=>"Fauser", "email"=>"revurikarna@gmail.com", "address1"=>"66 Oak Boulevard", "address2"=>"", "city"=>"Beverly Hills", "state"=>"CA", "country"=>"United States", "zip"=>"90210", "card_type"=>"visa", "card_number"=>"[FILTERED]", "card_expires_on(1i)"=>"2012", "card_expires_on(2i)"=>"10", "card_expires_on(3i)"=>"1", "card_verification"=>"[FILTERED]"}, "amount"=>"0.2995000000000019", "duration"=>"3"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:10)
+{"utf8"=>"✓", "authenticity_token"=>"I+AGNYJVsl3K7M7hTRtDA//DNVCj78CjKHgmPSrLNFE=", "order"=>{"first_name"=>"Cody", "last_name"=>"Fauser", "email"=>"revurikarna@gmail.com", "address1"=>"66 Oak Boulevard", "address2"=>"", "city"=>"Beverly Hills", "state"=>"CA", "country"=>"United States", "zip"=>"90210", "card_type"=>"visa", "card_number"=>"4433221111223344", "card_expires_on(1i)"=>"2012", "card_expires_on(2i)"=>"10", "card_expires_on(3i)"=>"1", "card_verification"=>"123", "amount"=>"0.2995000000000019", "duration"=>"3", "name"=>"Cody Fauser"}, "amount"=>"0.2995000000000019", "duration"=>"3", "action"=>"create", "controller"=>"orders"}
+  [1m[36mAREL (0.8ms)[0m  [1mINSERT INTO "orders" ("user_id", "ip_address", "first_name", "last_name", "card_type", "card_expires_on", "created_at", "updated_at", "description", "amount", "status", "card_number", "card_verification", "card_exires_on", "email", "login", "password", "duration", "message", "tran", "name", "city", "country", "address1", "address2", "zip", "coupon", "state") VALUES (31, NULL, 'Cody', 'Fauser', 'visa', '2012-10-01', '2011-09-17 20:43:44.524721', '2011-09-17 20:43:44.524721', NULL, 0.2995000000000019, NULL, NULL, NULL, NULL, 'revurikarna@gmail.com', NULL, NULL, 3, NULL, NULL, NULL, 'Beverly Hills', 'United States', '66 Oak Boulevard', '', '90210', NULL, 'CA')[0m
+#<ActiveMerchant::Billing::Response:0xb014108 @params={"timestamp"=>"2011-09-17T20:43:47Z", "ack"=>"Failure", "correlation_id"=>"e0f246119bb6", "version"=>"59.0", "build"=>"2075688", "amount"=>"0.00", "amount_currency_id"=>"USD", "message"=>"This transaction cannot be processed. The amount to be charged is zero.", "error_codes"=>"10525"}, @message="This transaction cannot be processed. The amount to be charged is zero.", @success=false, @test=true, @authorization=nil, @fraud_review=false, @avs_result={"code"=>nil, "message"=>nil, "street_match"=>nil, "postal_match"=>nil}, @cvv_result={"code"=>nil, "message"=>nil}>
+#<ActiveMerchant::Billing::Response:0xaf0a26c @params={"timestamp"=>"2011-09-17T20:43:50Z", "ack"=>"Failure", "correlation_id"=>"7e60d52346da", "version"=>"59.0", "build"=>"2075688", "amount"=>"0.00", "amount_currency_id"=>"USD", "message"=>"This transaction cannot be processed. The amount to be charged is zero.", "error_codes"=>"10525"}, @message="This transaction cannot be processed. The amount to be charged is zero.", @success=false, @test=true, @authorization=nil, @fraud_review=false, @avs_result={"code"=>nil, "message"=>nil, "street_match"=>nil, "postal_match"=>nil}, @cvv_result={"code"=>nil, "message"=>nil}>
+  [1m[35mOrder Load (7.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."id" = 37 LIMIT 1
+Rendered layouts/_header.html.erb (2.8ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered orders/failure.html.erb within layouts/sessions (24.9ms)
+Completed 200 OK in 6636ms (Views: 25.8ms | ActiveRecord: 8.9ms)
+  [1m[35mOrder Load (3.6ms)[0m  SELECT "orders".* FROM "orders" ORDER BY orders.id DESC LIMIT 1
+
+
+Started GET "/orders/coupons_form" for 127.0.0.1 at 2011-09-18 02:14:26 +0530
+  Processing by OrdersController#coupons_form as HTML
+  [1m[36mUser Load (5.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1[0m
+  [1m[35mPaymentOption Load (0.3ms)[0m  SELECT "payment_options".* FROM "payment_options"
+  [1m[36mPaymentOption Load (0.3ms)[0m  [1mSELECT "payment_options".* FROM "payment_options" LIMIT 1[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders_coupons_form_html_erb__939973215_92070440_548451898 at /home/jyothi/projects/paypal_newui/app/views/orders/coupons_form.html.erb:9)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered orders/coupons_form.html.erb within layouts/sessions (34.9ms)
+Completed 200 OK in 148ms (Views: 37.5ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/orders/calculate_amount" for 127.0.0.1 at 2011-09-18 02:14:29 +0530
+  Processing by OrdersController#calculate_amount as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I+AGNYJVsl3K7M7hTRtDA//DNVCj78CjKHgmPSrLNFE=", "duration"=>"29.95", "coupon"=>"99"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1
+  [1m[36mPaymentOption Load (0.3ms)[0m  [1mSELECT "payment_options".* FROM "payment_options" WHERE "payment_options"."amount" = 29.95 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "payment_options".* FROM "payment_options" WHERE "payment_options"."amount" = 29.95 LIMIT 1
+  [1m[36mCoupon Load (0.3ms)[0m  [1mSELECT "coupons".* FROM "coupons" WHERE "coupons"."code" = '99' LIMIT 1[0m
+Redirected to http://localhost:3000/orders/new
+Completed 302 Found in 217ms
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2011-09-18 02:14:29 +0530
+  Processing by OrdersController#new as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:10)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders__form_html_erb___282984100_92788100__212548024 at /home/jyothi/projects/paypal_newui/app/views/orders/_form.html.erb:18)
+Rendered orders/_form.html.erb (30.1ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered orders/new.html.erb within layouts/sessions (37.3ms)
+Completed 200 OK in 177ms (Views: 40.2ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2011-09-18 02:14:49 +0530
+  Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I+AGNYJVsl3K7M7hTRtDA//DNVCj78CjKHgmPSrLNFE=", "order"=>{"first_name"=>"Cody", "last_name"=>"Fauser", "email"=>"", "address1"=>"66 Oak Boulevard", "address2"=>"", "city"=>"Beverly Hills", "state"=>"CA", "country"=>"United States", "zip"=>"90210", "card_type"=>"visa", "card_number"=>"[FILTERED]", "card_expires_on(1i)"=>"2012", "card_expires_on(2i)"=>"10", "card_expires_on(3i)"=>"1", "card_verification"=>"[FILTERED]"}, "amount"=>"0.30", "duration"=>"3"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1[0m
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:10)
+{"utf8"=>"✓", "authenticity_token"=>"I+AGNYJVsl3K7M7hTRtDA//DNVCj78CjKHgmPSrLNFE=", "order"=>{"first_name"=>"Cody", "last_name"=>"Fauser", "email"=>"", "address1"=>"66 Oak Boulevard", "address2"=>"", "city"=>"Beverly Hills", "state"=>"CA", "country"=>"United States", "zip"=>"90210", "card_type"=>"visa", "card_number"=>"4433221111223344", "card_expires_on(1i)"=>"2012", "card_expires_on(2i)"=>"10", "card_expires_on(3i)"=>"1", "card_verification"=>"123", "amount"=>"0.30", "duration"=>"3", "name"=>"Cody Fauser"}, "amount"=>"0.30", "duration"=>"3", "action"=>"create", "controller"=>"orders"}
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "orders" ("user_id", "ip_address", "first_name", "last_name", "card_type", "card_expires_on", "created_at", "updated_at", "description", "amount", "status", "card_number", "card_verification", "card_exires_on", "email", "login", "password", "duration", "message", "tran", "name", "city", "country", "address1", "address2", "zip", "coupon", "state") VALUES (31, NULL, 'Cody', 'Fauser', 'visa', '2012-10-01', '2011-09-17 20:44:50.285141', '2011-09-17 20:44:50.285141', NULL, 0.3, NULL, NULL, NULL, NULL, '', NULL, NULL, 3, NULL, NULL, NULL, 'Beverly Hills', 'United States', '66 Oak Boulevard', '', '90210', NULL, 'CA')
+#<ActiveMerchant::Billing::Response:0xae5f614 @params={"timestamp"=>"2011-09-17T20:44:53Z", "ack"=>"Failure", "correlation_id"=>"1471244cb807c", "version"=>"59.0", "build"=>"2075688", "amount"=>"0.00", "amount_currency_id"=>"USD", "message"=>"This transaction cannot be processed. The amount to be charged is zero.", "error_codes"=>"10525"}, @message="This transaction cannot be processed. The amount to be charged is zero.", @success=false, @test=true, @authorization=nil, @fraud_review=false, @avs_result={"code"=>nil, "message"=>nil, "street_match"=>nil, "postal_match"=>nil}, @cvv_result={"code"=>nil, "message"=>nil}>
+#<ActiveMerchant::Billing::Response:0xa709798 @params={"timestamp"=>"2011-09-17T20:44:56Z", "ack"=>"Failure", "correlation_id"=>"a698d2acef3b", "version"=>"59.0", "build"=>"2075688", "amount"=>"0.00", "amount_currency_id"=>"USD", "message"=>"This transaction cannot be processed. The amount to be charged is zero.", "error_codes"=>"10525"}, @message="This transaction cannot be processed. The amount to be charged is zero.", @success=false, @test=true, @authorization=nil, @fraud_review=false, @avs_result={"code"=>nil, "message"=>nil, "street_match"=>nil, "postal_match"=>nil}, @cvv_result={"code"=>nil, "message"=>nil}>
+  [1m[36mOrder Load (138.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."id" = 38 LIMIT 1[0m
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered orders/failure.html.erb within layouts/sessions (149.5ms)
+Completed 200 OK in 6765ms (Views: 18.7ms | ActiveRecord: 139.3ms)
+  [1m[36mOrder Load (3.5ms)[0m  [1mSELECT "orders".* FROM "orders" ORDER BY orders.id DESC LIMIT 1[0m
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:10)
+  [1m[36mOrder Load (4.1ms)[0m  [1mSELECT "orders".* FROM "orders" ORDER BY orders.id DESC LIMIT 1[0m
+  [1m[35mOrder Load (3.4ms)[0m  SELECT "orders".* FROM "orders" ORDER BY orders.id DESC LIMIT 1
+  [1m[36mOrder Load (3.6ms)[0m  [1mSELECT "orders".* FROM "orders" ORDER BY orders.id DESC LIMIT 1[0m
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:10)
+  [1m[36mOrder Load (5.2ms)[0m  [1mSELECT "orders".* FROM "orders" ORDER BY orders.id DESC LIMIT 1[0m
+
+
+Started POST "/orders" for 127.0.0.1 at 2011-09-18 02:19:55 +0530
+  Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I+AGNYJVsl3K7M7hTRtDA//DNVCj78CjKHgmPSrLNFE=", "order"=>{"first_name"=>"Cody", "last_name"=>"Fauser", "email"=>"revurikarna@gmail.com", "address1"=>"66 Oak Boulevard", "address2"=>"", "city"=>"Beverly Hills", "state"=>"CA", "country"=>"United States", "zip"=>"90210", "card_type"=>"visa", "card_number"=>"[FILTERED]", "card_expires_on(1i)"=>"2012", "card_expires_on(2i)"=>"10", "card_expires_on(3i)"=>"1", "card_verification"=>"[FILTERED]"}, "amount"=>"0.30", "duration"=>"3"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:10)
+{"utf8"=>"✓", "authenticity_token"=>"I+AGNYJVsl3K7M7hTRtDA//DNVCj78CjKHgmPSrLNFE=", "order"=>{"first_name"=>"Cody", "last_name"=>"Fauser", "email"=>"revurikarna@gmail.com", "address1"=>"66 Oak Boulevard", "address2"=>"", "city"=>"Beverly Hills", "state"=>"CA", "country"=>"United States", "zip"=>"90210", "card_type"=>"visa", "card_number"=>"4433221111223344", "card_expires_on(1i)"=>"2012", "card_expires_on(2i)"=>"10", "card_expires_on(3i)"=>"1", "card_verification"=>"123", "amount"=>"0.30", "duration"=>"3", "name"=>"Cody Fauser"}, "amount"=>"0.30", "duration"=>"3", "action"=>"create", "controller"=>"orders"}
+  [1m[36mAREL (1.2ms)[0m  [1mINSERT INTO "orders" ("user_id", "ip_address", "first_name", "last_name", "card_type", "card_expires_on", "created_at", "updated_at", "description", "amount", "status", "card_number", "card_verification", "card_exires_on", "email", "login", "password", "duration", "message", "tran", "name", "city", "country", "address1", "address2", "zip", "coupon", "state") VALUES (31, NULL, 'Cody', 'Fauser', 'visa', '2012-10-01', '2011-09-17 20:49:55.565582', '2011-09-17 20:49:55.565582', NULL, 0.3, NULL, NULL, NULL, NULL, 'revurikarna@gmail.com', NULL, NULL, 3, NULL, NULL, NULL, 'Beverly Hills', 'United States', '66 Oak Boulevard', '', '90210', NULL, 'CA')[0m
+#<ActiveMerchant::Billing::Response:0xaff7328 @params={"timestamp"=>"2011-09-17T20:50:05Z", "ack"=>"Success", "correlation_id"=>"40e737a5d22c8", "version"=>"59.0", "build"=>"2075688", "amount"=>"0.30", "amount_currency_id"=>"USD", "avs_code"=>"X", "cvv2_code"=>"M", "transaction_id"=>"93453043T6725490X"}, @message="Success", @success=true, @test=true, @authorization="93453043T6725490X", @fraud_review=false, @avs_result={"code"=>"X", "message"=>"Street address and 9-digit postal code match.", "street_match"=>"Y", "postal_match"=>"Y"}, @cvv_result={"code"=>"M", "message"=>"Match"}>
+  [1m[35mAREL (0.8ms)[0m  UPDATE "orders" SET "status" = 'active', "tran" = '93453043T6725490X', "message" = 'Success', "updated_at" = '2011-09-17 20:50:05.714176' WHERE "orders"."id" = 39
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."login" = 'phani.rubyonrails@gmail.com') AND ("users".id <> 31) LIMIT 1[0m
+  [1m[35mAREL (0.7ms)[0m  UPDATE "users" SET "access_until" = '2011-12-18', "updated_at" = '2011-09-17 20:50:05.800860' WHERE "users"."id" = 31
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."login" = 'phani.rubyonrails@gmail.com') AND ("users".id <> 31) LIMIT 1[0m
+#<ActiveMerchant::Billing::Response:0xae94e90 @params={"timestamp"=>"2011-09-17T20:50:15Z", "ack"=>"Success", "correlation_id"=>"1143be04eeadd", "version"=>"59.0", "build"=>"2075688", "amount"=>"0.30", "amount_currency_id"=>"USD", "avs_code"=>"X", "cvv2_code"=>"M", "transaction_id"=>"1V195226XL1417717"}, @message="Success", @success=true, @test=true, @authorization="1V195226XL1417717", @fraud_review=false, @avs_result={"code"=>"X", "message"=>"Street address and 9-digit postal code match.", "street_match"=>"Y", "postal_match"=>"Y"}, @cvv_result={"code"=>"M", "message"=>"Match"}>
+  [1m[35mAREL (0.8ms)[0m  UPDATE "orders" SET "tran" = '1V195226XL1417717', "updated_at" = '2011-09-17 20:50:15.915869' WHERE "orders"."id" = 39
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."login" = 'phani.rubyonrails@gmail.com') AND ("users".id <> 31) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."login" = 'phani.rubyonrails@gmail.com') AND ("users".id <> 31) LIMIT 1
+Rendered layouts/_header.html.erb (3.3ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered orders/success.html.erb within layouts/sessions (15.7ms)
+Completed 200 OK in 20579ms (Views: 43.5ms | ActiveRecord: 5.8ms)
