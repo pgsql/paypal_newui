@@ -16768,3 +16768,1334 @@ Rendered layouts/_header.html.erb (13.4ms)
 Rendered layouts/_footer.html.erb (0.3ms)
 Rendered general/pricing.html.erb within layouts/application (16.0ms)
 Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-17 16:17:56 +0530
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (1.5ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-17 16:17:59 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.7ms)
+Rendered layouts/_header.html.erb (1.6ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered devise/sessions/new.html.erb within layouts/application (58.2ms)
+Completed 200 OK in 178ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-17 16:46:57 +0530
+  Processing by Devise::SessionsController#new as HTML
+Completed   in 88ms
+
+ActionView::MissingTemplate (Missing layout layouts/sessions with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml, :haml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/jyothi/projects/paypal_newui/app/views", "/home/jyothi/.rvm/gems/ruby-1.9.2-p0/gems/devise-1.4.5/app/views"):
+  app/controllers/devise/sessions_controller.rb:9:in `block in new'
+  app/controllers/devise/sessions_controller.rb:9:in `new'
+
+Rendered /home/jyothi/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-17 16:47:02 +0530
+  Processing by GeneralController#index as HTML
+Completed   in 55ms
+
+ActionView::MissingTemplate (Missing layout layouts/sessions with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml, :haml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/jyothi/projects/paypal_newui/app/views", "/home/jyothi/.rvm/gems/ruby-1.9.2-p0/gems/devise-1.4.5/app/views"):
+  
+
+Rendered /home/jyothi/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-17 16:52:57 +0530
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (1.5ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered general/index.html.erb within layouts/sessions (6.2ms)
+Completed 200 OK in 29ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-09-17 16:53:01 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered devise/registrations/new.html.erb within layouts/sessions (22.7ms)
+Completed 200 OK in 53ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pricing" for 127.0.0.1 at 2011-09-17 16:53:03 +0530
+  Processing by GeneralController#pricing as HTML
+Rendered layouts/_header.html.erb (82.5ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/pricing.html.erb within layouts/sessions (90.8ms)
+Completed 200 OK in 99ms (Views: 98.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tour" for 127.0.0.1 at 2011-09-17 16:53:05 +0530
+  Processing by GeneralController#tour as HTML
+Rendered layouts/_header.html.erb (21.2ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/tour.html.erb within layouts/sessions (25.8ms)
+Completed 200 OK in 29ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-17 16:53:08 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.1ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (16.7ms)
+Completed 200 OK in 61ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-09-17 16:54:07 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"acYJhEK7iCiwC2L3hwbtjeZ6FgTuP1sRp52TIQmc+ME=", "user"=>{"login"=>"rajib@rajib.com\"", "password"=>"[FILTERED]"}}
+  [1m[36mSQL (20.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'rajib@rajib.com"' LIMIT 1
+Completed   in 76ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"acYJhEK7iCiwC2L3hwbtjeZ6FgTuP1sRp52TIQmc+ME=", "user"=>{"login"=>"rajib@rajib.com\"", "password"=>"[FILTERED]"}}
+Rendered devise/shared/_links.erb (2.4ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (13.9ms)
+Completed 200 OK in 191ms (Views: 17.2ms | ActiveRecord: 20.5ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-09-17 16:54:23 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"acYJhEK7iCiwC2L3hwbtjeZ6FgTuP1sRp52TIQmc+ME=", "user"=>{"login"=>"rajib@rajib.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'rajib@rajib.com' LIMIT 1[0m
+Completed   in 30ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"acYJhEK7iCiwC2L3hwbtjeZ6FgTuP1sRp52TIQmc+ME=", "user"=>{"login"=>"rajib@rajib.com", "password"=>"[FILTERED]"}}
+Rendered devise/shared/_links.erb (2.1ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (13.5ms)
+Completed 200 OK in 178ms (Views: 16.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-09-17 16:54:26 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/registrations/new.html.erb within layouts/sessions (22.1ms)
+Completed 200 OK in 52ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-09-17 16:54:42 +0530
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"acYJhEK7iCiwC2L3hwbtjeZ6FgTuP1sRp52TIQmc+ME=", "user"=>{"email"=>"rajib@rajib.com", "login"=>"rajib@rajib.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35mUser Load (13.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('rajib@rajib.com')) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."login" = 'rajib@rajib.com') LIMIT 1[0m
+  [1m[35mAREL (0.8ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at", "role_id", "login", "access_until", "status") VALUES ('rajib@rajib.com', '$2a$10$swpHBX6wv5sd2ePzVPBQBuvNJ5ZVE0oycJwnwa5D1IMmK1vujvbGy', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2011-09-17 11:24:42.826502', '2011-09-17 11:24:42.826502', NULL, 'rajib@rajib.com', NULL, NULL)
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2011-09-17 11:24:42.974596', "current_sign_in_at" = '2011-09-17 11:24:42.974596', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2011-09-17 11:24:42.975310' WHERE "users"."id" = 30[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 425ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-17 16:54:43 +0530
+  Processing by GeneralController#index as HTML
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 30 LIMIT 1
+Redirected to http://localhost:3000/surveys
+Completed 302 Found in 129ms
+
+
+Started GET "/surveys" for 127.0.0.1 at 2011-09-17 16:54:43 +0530
+  Processing by SurveysController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 30 LIMIT 1[0m
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 60ms
+
+
+Started GET "/welcome" for 127.0.0.1 at 2011-09-17 16:54:43 +0530
+  Processing by WelcomesController#show as HTML
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 30 LIMIT 1
+Redirected to http://localhost:3000/orders/coupons_form
+Completed 302 Found in 67ms
+
+
+Started GET "/orders/coupons_form" for 127.0.0.1 at 2011-09-17 16:54:43 +0530
+  Processing by OrdersController#coupons_form as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 30 LIMIT 1[0m
+  [1m[35mPaymentOption Load (0.3ms)[0m  SELECT "payment_options".* FROM "payment_options"
+  [1m[36mPaymentOption Load (0.3ms)[0m  [1mSELECT "payment_options".* FROM "payment_options" LIMIT 1[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders_coupons_form_html_erb___867115238_81841460__978278940 at /home/jyothi/projects/paypal_newui/app/views/orders/coupons_form.html.erb:9)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered orders/coupons_form.html.erb within layouts/sessions (90.1ms)
+Completed 200 OK in 154ms (Views: 93.3ms | ActiveRecord: 7.3ms)
+
+
+Started POST "/orders/calculate_amount" for 127.0.0.1 at 2011-09-17 16:54:55 +0530
+  Processing by OrdersController#calculate_amount as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"acYJhEK7iCiwC2L3hwbtjeZ6FgTuP1sRp52TIQmc+ME=", "duration"=>"49.95", "coupon"=>""}
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 30 LIMIT 1
+  [1m[36mPaymentOption Load (0.3ms)[0m  [1mSELECT "payment_options".* FROM "payment_options" WHERE "payment_options"."amount" = 49.95 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "payment_options".* FROM "payment_options" WHERE "payment_options"."amount" = 49.95 LIMIT 1
+Redirected to http://localhost:3000/orders/new
+Completed 302 Found in 127ms
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2011-09-17 16:54:55 +0530
+  Processing by OrdersController#new as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 30 LIMIT 1[0m
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:11)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders__form_html_erb___608539833_87697230_416984252 at /home/jyothi/projects/paypal_newui/app/views/orders/_form.html.erb:18)
+Rendered orders/_form.html.erb (30.1ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered orders/new.html.erb within layouts/sessions (37.4ms)
+Completed 200 OK in 175ms (Views: 40.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2011-09-17 16:56:44 +0530
+  Processing by OrdersController#new as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 30 LIMIT 1
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:11)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders__form_html_erb___608539833_91722110_416984252 at /home/jyothi/projects/paypal_newui/app/views/orders/_form.html.erb:18)
+Rendered orders/_form.html.erb (30.6ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered orders/new.html.erb within layouts/sessions (37.8ms)
+Completed 200 OK in 175ms (Views: 41.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2011-09-17 16:56:46 +0530
+  Processing by OrdersController#new as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 30 LIMIT 1[0m
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:11)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders__form_html_erb___608539833_86294280_416984252 at /home/jyothi/projects/paypal_newui/app/views/orders/_form.html.erb:18)
+Rendered orders/_form.html.erb (83.0ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered orders/new.html.erb within layouts/sessions (90.8ms)
+Completed 200 OK in 228ms (Views: 93.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-09-17 16:56:49 +0530
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (6.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 30 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 126ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-17 16:56:50 +0530
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered general/index.html.erb within layouts/sessions (5.8ms)
+Completed 200 OK in 27ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-17 16:56:51 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.1ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (13.3ms)
+Completed 200 OK in 57ms (Views: 16.8ms | ActiveRecord: 6.7ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-09-17 16:57:05 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vwps9xnlbwgias7E5TRbQFMKasYWPp/Zszd0hWWI0Es=", "user"=>{"login"=>"rajib@rajib.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'rajib@rajib.com' LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE "users" SET "current_sign_in_at" = '2011-09-17 11:27:05.781943', "sign_in_count" = 2, "updated_at" = '2011-09-17 11:27:05.782564' WHERE "users"."id" = 30
+Redirected to http://localhost:3000/
+Completed 302 Found in 219ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-17 16:57:05 +0530
+  Processing by GeneralController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 30 LIMIT 1[0m
+Redirected to http://localhost:3000/surveys
+Completed 302 Found in 52ms
+
+
+Started GET "/surveys" for 127.0.0.1 at 2011-09-17 16:57:05 +0530
+  Processing by SurveysController#index as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 30 LIMIT 1
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 51ms
+
+
+Started GET "/welcome" for 127.0.0.1 at 2011-09-17 16:57:06 +0530
+  Processing by WelcomesController#show as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 30 LIMIT 1[0m
+Redirected to http://localhost:3000/orders/coupons_form
+Completed 302 Found in 102ms
+
+
+Started GET "/orders/coupons_form" for 127.0.0.1 at 2011-09-17 16:57:06 +0530
+  Processing by OrdersController#coupons_form as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 30 LIMIT 1
+  [1m[36mPaymentOption Load (0.3ms)[0m  [1mSELECT "payment_options".* FROM "payment_options"[0m
+  [1m[35mPaymentOption Load (0.3ms)[0m  SELECT "payment_options".* FROM "payment_options" LIMIT 1
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders_coupons_form_html_erb___867115238_87612430__978278940 at /home/jyothi/projects/paypal_newui/app/views/orders/coupons_form.html.erb:9)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered orders/coupons_form.html.erb within layouts/sessions (34.9ms)
+Completed 200 OK in 139ms (Views: 37.5ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/orders/calculate_amount" for 127.0.0.1 at 2011-09-17 16:57:23 +0530
+  Processing by OrdersController#calculate_amount as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vwps9xnlbwgias7E5TRbQFMKasYWPp/Zszd0hWWI0Es=", "duration"=>"49.95", "coupon"=>""}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 30 LIMIT 1[0m
+  [1m[35mPaymentOption Load (0.3ms)[0m  SELECT "payment_options".* FROM "payment_options" WHERE "payment_options"."amount" = 49.95 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "payment_options".* FROM "payment_options" WHERE "payment_options"."amount" = 49.95 LIMIT 1[0m
+Redirected to http://localhost:3000/orders/new
+Completed 302 Found in 70ms
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2011-09-17 16:57:23 +0530
+  Processing by OrdersController#new as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 30 LIMIT 1
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:11)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders__form_html_erb___608539833_91231580_416984252 at /home/jyothi/projects/paypal_newui/app/views/orders/_form.html.erb:18)
+Rendered orders/_form.html.erb (31.4ms)
+Rendered layouts/_header.html.erb (1.5ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered orders/new.html.erb within layouts/sessions (39.0ms)
+Completed 200 OK in 179ms (Views: 42.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2011-09-17 16:59:18 +0530
+  Processing by OrdersController#new as HTML
+  [1m[36mUser Load (7.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 30 LIMIT 1[0m
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:11)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders__form_html_erb___608539833_86597820_416984252 at /home/jyothi/projects/paypal_newui/app/views/orders/_form.html.erb:18)
+Rendered orders/_form.html.erb (83.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered orders/new.html.erb within layouts/sessions (91.5ms)
+Completed 200 OK in 245ms (Views: 94.6ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2011-09-17 17:01:14 +0530
+  Processing by OrdersController#new as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 30 LIMIT 1
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:11)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders__form_html_erb___608539833_87540170_416984252 at /home/jyothi/projects/paypal_newui/app/views/orders/_form.html.erb:18)
+Rendered orders/_form.html.erb (30.6ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered orders/new.html.erb within layouts/sessions (38.1ms)
+Completed 200 OK in 195ms (Views: 41.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2011-09-17 17:01:32 +0530
+  Processing by OrdersController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 30 LIMIT 1[0m
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:11)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders__form_html_erb___608539833_90223950_416984252 at /home/jyothi/projects/paypal_newui/app/views/orders/_form.html.erb:18)
+Rendered orders/_form.html.erb (30.6ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered orders/new.html.erb within layouts/sessions (37.9ms)
+Completed 200 OK in 173ms (Views: 41.0ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2011-09-17 17:02:38 +0530
+  Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vwps9xnlbwgias7E5TRbQFMKasYWPp/Zszd0hWWI0Es=", "order"=>{"first_name"=>"", "last_name"=>"", "address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "country"=>"", "zip"=>"", "card_type"=>"visa", "card_number"=>"", "card_expires_on(1i)"=>"2011", "card_expires_on(2i)"=>"9", "card_expires_on(3i)"=>"1", "card_verification"=>""}, "amount"=>"49.95", "duration"=>"6"}
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 30 LIMIT 1
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:11)
+DEPRECATION WARNING: Errors#add_to_base(msg) has been deprecated, use Errors#add(:base, msg) instead. (called from block in validate_card at /home/jyothi/projects/paypal_newui/app/models/order.rb:56)
+DEPRECATION WARNING: Errors#add_to_base(msg) has been deprecated, use Errors#add(:base, msg) instead. (called from block in validate_card at /home/jyothi/projects/paypal_newui/app/models/order.rb:56)
+DEPRECATION WARNING: Errors#add_to_base(msg) has been deprecated, use Errors#add(:base, msg) instead. (called from block in validate_card at /home/jyothi/projects/paypal_newui/app/models/order.rb:56)
+DEPRECATION WARNING: Errors#add_to_base(msg) has been deprecated, use Errors#add(:base, msg) instead. (called from block in validate_card at /home/jyothi/projects/paypal_newui/app/models/order.rb:56)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders__form_html_erb___608539833_87322390_416984252 at /home/jyothi/projects/paypal_newui/app/views/orders/_form.html.erb:18)
+Rendered orders/_form.html.erb (20.0ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered orders/new.html.erb within layouts/sessions (27.6ms)
+Completed 200 OK in 206ms (Views: 30.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/orders/coupons_form" for 127.0.0.1 at 2011-09-17 17:02:49 +0530
+  Processing by OrdersController#coupons_form as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 30 LIMIT 1[0m
+  [1m[35mPaymentOption Load (0.3ms)[0m  SELECT "payment_options".* FROM "payment_options"
+  [1m[36mPaymentOption Load (0.3ms)[0m  [1mSELECT "payment_options".* FROM "payment_options" LIMIT 1[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders_coupons_form_html_erb___867115238_85931190__978278940 at /home/jyothi/projects/paypal_newui/app/views/orders/coupons_form.html.erb:9)
+Rendered layouts/_header.html.erb (1.7ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered orders/coupons_form.html.erb within layouts/sessions (35.4ms)
+Completed 200 OK in 88ms (Views: 37.9ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/orders/calculate_amount" for 127.0.0.1 at 2011-09-17 17:02:53 +0530
+  Processing by OrdersController#calculate_amount as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vwps9xnlbwgias7E5TRbQFMKasYWPp/Zszd0hWWI0Es=", "duration"=>"49.95", "coupon"=>""}
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 30 LIMIT 1
+  [1m[36mPaymentOption Load (4.2ms)[0m  [1mSELECT "payment_options".* FROM "payment_options" WHERE "payment_options"."amount" = 49.95 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "payment_options".* FROM "payment_options" WHERE "payment_options"."amount" = 49.95 LIMIT 1
+Redirected to http://localhost:3000/orders/new
+Completed 302 Found in 125ms
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2011-09-17 17:02:53 +0530
+  Processing by OrdersController#new as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 30 LIMIT 1[0m
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:11)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders__form_html_erb___608539833_88216160_416984252 at /home/jyothi/projects/paypal_newui/app/views/orders/_form.html.erb:18)
+Rendered orders/_form.html.erb (31.1ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered orders/new.html.erb within layouts/sessions (39.0ms)
+Completed 200 OK in 192ms (Views: 42.1ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-09-17 17:06:56 +0530
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 30 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 61ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-17 17:06:56 +0530
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (1.5ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered general/index.html.erb within layouts/sessions (6.3ms)
+Completed 200 OK in 92ms (Views: 9.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-17 17:07:00 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.2ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (13.5ms)
+Completed 200 OK in 113ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2011-09-17 17:07:01 +0530
+  Processing by Devise::PasswordsController#new as HTML
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered devise/passwords/new.html.erb within layouts/sessions (23.4ms)
+Completed 200 OK in 167ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 127.0.0.1 at 2011-09-17 17:07:03 +0530
+  Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jroFOXZU+vTAPqFfPrBzpcBU9w9ZhzONlCEWxF1s8P0=", "user"=>{"email"=>""}, "commit"=>"Send me reset password instructions"}
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/passwords/new.html.erb within layouts/sessions (11.6ms)
+Completed 200 OK in 110ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 127.0.0.1 at 2011-09-17 17:07:17 +0530
+  Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jroFOXZU+vTAPqFfPrBzpcBU9w9ZhzONlCEWxF1s8P0=", "user"=>{"email"=>"phani.rubyonrails@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'phani.rubyonrails@gmail.com' LIMIT 1[0m
+Rendered layouts/_header.html.erb (1.5ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/passwords/new.html.erb within layouts/sessions (11.8ms)
+Completed 200 OK in 123ms (Views: 15.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-09-17 17:08:11 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/registrations/new.html.erb within layouts/sessions (23.1ms)
+Completed 200 OK in 110ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-09-17 17:08:36 +0530
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jroFOXZU+vTAPqFfPrBzpcBU9w9ZhzONlCEWxF1s8P0=", "user"=>{"email"=>"phani.rubyonrails@gmail.com", "login"=>"phani.rubyonrails@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('phani.rubyonrails@gmail.com')) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."login" = 'phani.rubyonrails@gmail.com') LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at", "role_id", "login", "access_until", "status") VALUES ('phani.rubyonrails@gmail.com', '$2a$10$FPjLzaUiBybzBdhIFgfoaugLosz9vWbjiWpvJ7RTNVWRSMHd7HZgW', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2011-09-17 11:38:36.843109', '2011-09-17 11:38:36.843109', NULL, 'phani.rubyonrails@gmail.com', NULL, NULL)
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2011-09-17 11:38:36.873693', "current_sign_in_at" = '2011-09-17 11:38:36.873693', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2011-09-17 11:38:36.874127' WHERE "users"."id" = 31[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 305ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-17 17:08:36 +0530
+  Processing by GeneralController#index as HTML
+  [1m[35mUser Load (4.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1
+Redirected to http://localhost:3000/surveys
+Completed 302 Found in 123ms
+
+
+Started GET "/surveys" for 127.0.0.1 at 2011-09-17 17:08:37 +0530
+  Processing by SurveysController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1[0m
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 102ms
+
+
+Started GET "/welcome" for 127.0.0.1 at 2011-09-17 17:08:37 +0530
+  Processing by WelcomesController#show as HTML
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1
+Redirected to http://localhost:3000/orders/coupons_form
+Completed 302 Found in 116ms
+
+
+Started GET "/orders/coupons_form" for 127.0.0.1 at 2011-09-17 17:08:37 +0530
+  Processing by OrdersController#coupons_form as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1[0m
+  [1m[35mPaymentOption Load (0.3ms)[0m  SELECT "payment_options".* FROM "payment_options"
+  [1m[36mPaymentOption Load (0.3ms)[0m  [1mSELECT "payment_options".* FROM "payment_options" LIMIT 1[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders_coupons_form_html_erb___867115238_77038190__978278940 at /home/jyothi/projects/paypal_newui/app/views/orders/coupons_form.html.erb:9)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered orders/coupons_form.html.erb within layouts/sessions (36.2ms)
+Completed 200 OK in 141ms (Views: 40.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-09-17 17:08:50 +0530
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (5.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 111ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-17 17:08:51 +0530
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered general/index.html.erb within layouts/sessions (5.8ms)
+Completed 200 OK in 27ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-17 17:08:55 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.1ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (13.8ms)
+Completed 200 OK in 58ms (Views: 16.8ms | ActiveRecord: 12.6ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2011-09-17 17:08:56 +0530
+  Processing by Devise::PasswordsController#new as HTML
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/passwords/new.html.erb within layouts/sessions (22.4ms)
+Completed 200 OK in 51ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 127.0.0.1 at 2011-09-17 17:08:59 +0530
+  Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vinS2zORVpInldPkzxF1elIq5R5SQM06hiWnQOeQXbY=", "user"=>{"email"=>"phani.rubyonrails@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'phani.rubyonrails@gmail.com' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."reset_password_token" = 'ouzkJ5B8RCBLzv4JnZzQ' LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "users" SET "reset_password_token" = 'ouzkJ5B8RCBLzv4JnZzQ', "updated_at" = '2011-09-17 11:39:00.062354' WHERE "users"."id" = 31[0m
+Rendered devise/mailer/reset_password_instructions.html.erb (1.3ms)
+
+Sent mail to phani.rubyonrails@gmail.com (10045ms)
+Date: Sat, 17 Sep 2011 17:09:01 +0530
+From: fpalmas@yahoo.com
+To: phani.rubyonrails@gmail.com
+Message-ID: <4e7486d4ec1ef_123953957a66816@shashipreetham-M61PME-S2.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+tag: password-reset
+
+<p>Hello phani.rubyonrails@gmail.com!</p>
+
+<p>Someone has requested a link to change your password, and you can do this through the link below.</p>
+
+<p><a href="http://66.228.51.151:3000/users/password/edit?reset_password_token=ouzkJ5B8RCBLzv4JnZzQ">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 10645ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-17 17:09:11 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.3ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (71.7ms)
+Completed 200 OK in 114ms (Views: 74.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2011-09-17 17:10:32 +0530
+  Processing by Devise::PasswordsController#new as HTML
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered devise/passwords/new.html.erb within layouts/sessions (28.8ms)
+Completed 200 OK in 92ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 127.0.0.1 at 2011-09-17 17:10:41 +0530
+  Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vinS2zORVpInldPkzxF1elIq5R5SQM06hiWnQOeQXbY=", "user"=>{"email"=>"phani.rubyonrails@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'phani.rubyonrails@gmail.com' LIMIT 1
+Rendered devise/mailer/reset_password_instructions.html.erb (1.0ms)
+
+Sent mail to phani.rubyonrails@gmail.com (5047ms)
+Date: Sat, 17 Sep 2011 17:10:42 +0530
+From: fpalmas@yahoo.com
+To: phani.rubyonrails@gmail.com
+Message-ID: <4e74873a88e58_13895b9994843486@shashipreetham-M61PME-S2.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+tag: password-reset
+
+<p>Hello phani.rubyonrails@gmail.com!</p>
+
+<p>Someone has requested a link to change your password, and you can do this through the link below.</p>
+
+<p><a href="http://66.228.51.151:3000/users/password/edit?reset_password_token=ouzkJ5B8RCBLzv4JnZzQ">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 5419ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-17 17:10:47 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.3ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (13.3ms)
+Completed 200 OK in 56ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-09-17 17:17:18 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vinS2zORVpInldPkzxF1elIq5R5SQM06hiWnQOeQXbY=", "user"=>{"login"=>"phani.rubyonrails@gmail.com", "password"=>"[FILTERED]"}}
+Completed   in 1ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vinS2zORVpInldPkzxF1elIq5R5SQM06hiWnQOeQXbY=", "user"=>{"login"=>"phani.rubyonrails@gmail.com", "password"=>"[FILTERED]"}}
+Rendered devise/shared/_links.erb (2.2ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (14.0ms)
+Completed 200 OK in 237ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-09-17 17:17:37 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vinS2zORVpInldPkzxF1elIq5R5SQM06hiWnQOeQXbY=", "user"=>{"login"=>"phani.rubyonrails@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'phani.rubyonrails@gmail.com' LIMIT 1
+  [1m[36mAREL (0.5ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = '2011-09-17 11:47:37.891398', "sign_in_count" = 2, "updated_at" = '2011-09-17 11:47:37.892056' WHERE "users"."id" = 31[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 264ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-17 17:17:37 +0530
+  Processing by GeneralController#index as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1
+Redirected to http://localhost:3000/surveys
+Completed 302 Found in 51ms
+
+
+Started GET "/surveys" for 127.0.0.1 at 2011-09-17 17:17:38 +0530
+  Processing by SurveysController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1[0m
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 59ms
+
+
+Started GET "/welcome" for 127.0.0.1 at 2011-09-17 17:17:38 +0530
+  Processing by WelcomesController#show as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1
+Redirected to http://localhost:3000/orders/coupons_form
+Completed 302 Found in 50ms
+
+
+Started GET "/orders/coupons_form" for 127.0.0.1 at 2011-09-17 17:17:38 +0530
+  Processing by OrdersController#coupons_form as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1[0m
+  [1m[35mPaymentOption Load (0.4ms)[0m  SELECT "payment_options".* FROM "payment_options"
+  [1m[36mPaymentOption Load (0.3ms)[0m  [1mSELECT "payment_options".* FROM "payment_options" LIMIT 1[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders_coupons_form_html_erb__403279968_95062850__135047915 at /home/jyothi/projects/paypal_newui/app/views/orders/coupons_form.html.erb:9)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered orders/coupons_form.html.erb within layouts/sessions (35.2ms)
+Completed 200 OK in 143ms (Views: 37.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-09-17 17:17:43 +0530
+  Processing by GeneralController#contact as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_general_contact_html_erb___11068246_95432530__135047915 at /home/jyothi/projects/paypal_newui/app/views/general/contact.html.erb:18)
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1
+Rendered layouts/_header.html.erb (112.9ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/contact.html.erb within layouts/sessions (127.4ms)
+Completed 200 OK in 146ms (Views: 129.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-09-17 17:17:47 +0530
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (5.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 208ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-17 17:17:48 +0530
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered general/index.html.erb within layouts/sessions (5.5ms)
+Completed 200 OK in 27ms (Views: 8.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-09-17 17:17:52 +0530
+  Processing by GeneralController#about as HTML
+Rendered layouts/_header.html.erb (22.6ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/about.html.erb within layouts/sessions (27.1ms)
+Completed 200 OK in 31ms (Views: 30.5ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-09-17 17:18:44 +0530
+  Processing by GeneralController#about as HTML
+Rendered layouts/_header.html.erb (21.4ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/about.html.erb within layouts/sessions (25.7ms)
+Completed 200 OK in 29ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-09-17 17:18:57 +0530
+  Processing by GeneralController#about as HTML
+Rendered layouts/_header.html.erb (65.5ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/about.html.erb within layouts/sessions (73.6ms)
+Completed 200 OK in 82ms (Views: 81.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-09-17 17:19:01 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/registrations/new.html.erb within layouts/sessions (21.3ms)
+Completed 200 OK in 50ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-09-17 17:19:04 +0530
+  Processing by GeneralController#contact as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_general_contact_html_erb___11068246_99405630__135047915 at /home/jyothi/projects/paypal_newui/app/views/general/contact.html.erb:18)
+Rendered layouts/_header.html.erb (21.1ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/contact.html.erb within layouts/sessions (34.8ms)
+Completed 200 OK in 164ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index.html" for 127.0.0.1 at 2011-09-17 17:19:05 +0530
+
+ActionController::RoutingError (No route matches "/index.html"):
+  
+
+Rendered /home/jyothi/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.9ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-09-17 17:19:07 +0530
+  Processing by GeneralController#contact as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_general_contact_html_erb___11068246_84915780__135047915 at /home/jyothi/projects/paypal_newui/app/views/general/contact.html.erb:18)
+Rendered layouts/_header.html.erb (77.7ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/contact.html.erb within layouts/sessions (91.9ms)
+Completed 200 OK in 125ms (Views: 95.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-17 18:39:52 +0530
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered general/index.html.erb within layouts/sessions (5.8ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-17 18:39:57 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.2ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (66.7ms)
+Completed 200 OK in 111ms (Views: 69.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-09-17 18:40:11 +0530
+  Processing by GeneralController#about as HTML
+Rendered layouts/_header.html.erb (31.3ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/about.html.erb within layouts/sessions (38.7ms)
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-09-17 18:40:15 +0530
+  Processing by GeneralController#about as HTML
+Rendered layouts/_header.html.erb (20.8ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/about.html.erb within layouts/sessions (25.0ms)
+Completed 200 OK in 28ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-09-17 18:40:41 +0530
+  Processing by GeneralController#about as HTML
+Rendered layouts/_header.html.erb (24.2ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/about.html.erb within layouts/sessions (29.0ms)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-09-17 18:43:11 +0530
+  Processing by GeneralController#contact as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_general_contact_html_erb___560184092_84890430__193275624 at /home/jyothi/projects/paypal_newui/app/views/general/contact.html.erb:18)
+Rendered layouts/_header.html.erb (20.6ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/contact.html.erb within layouts/sessions (34.2ms)
+Completed 200 OK in 52ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-09-17 18:43:18 +0530
+  Processing by GeneralController#contact as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_general_contact_html_erb___560184092_88727580__193275624 at /home/jyothi/projects/paypal_newui/app/views/general/contact.html.erb:18)
+Rendered layouts/_header.html.erb (21.8ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/contact.html.erb within layouts/sessions (35.7ms)
+Completed 200 OK in 105ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-09-17 18:43:21 +0530
+  Processing by GeneralController#contact as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_general_contact_html_erb___560184092_77057050__193275624 at /home/jyothi/projects/paypal_newui/app/views/general/contact.html.erb:18)
+Rendered layouts/_header.html.erb (73.8ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/contact.html.erb within layouts/sessions (87.3ms)
+Completed 200 OK in 128ms (Views: 90.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-09-17 18:43:23 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered layouts/_header.html.erb (1.5ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered devise/registrations/new.html.erb within layouts/sessions (74.4ms)
+Completed 200 OK in 129ms (Views: 77.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-09-17 18:43:25 +0530
+  Processing by GeneralController#contact as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_general_contact_html_erb___560184092_84237590__193275624 at /home/jyothi/projects/paypal_newui/app/views/general/contact.html.erb:18)
+Rendered layouts/_header.html.erb (21.1ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/contact.html.erb within layouts/sessions (34.6ms)
+Completed 200 OK in 64ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pricing" for 127.0.0.1 at 2011-09-17 18:43:26 +0530
+  Processing by GeneralController#pricing as HTML
+Rendered layouts/_header.html.erb (22.4ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/pricing.html.erb within layouts/sessions (26.8ms)
+Completed 200 OK in 30ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tour" for 127.0.0.1 at 2011-09-17 18:43:28 +0530
+  Processing by GeneralController#tour as HTML
+Rendered layouts/_header.html.erb (31.8ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/tour.html.erb within layouts/sessions (39.3ms)
+Completed 200 OK in 48ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-09-17 18:43:36 +0530
+  Processing by GeneralController#about as HTML
+Rendered layouts/_header.html.erb (27.0ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/about.html.erb within layouts/sessions (31.5ms)
+Completed 200 OK in 35ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-09-17 18:43:38 +0530
+  Processing by GeneralController#contact as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_general_contact_html_erb___560184092_74623380__193275624 at /home/jyothi/projects/paypal_newui/app/views/general/contact.html.erb:18)
+Rendered layouts/_header.html.erb (73.1ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/contact.html.erb within layouts/sessions (86.4ms)
+Completed 200 OK in 116ms (Views: 89.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-17 18:43:41 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.3ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (67.2ms)
+Completed 200 OK in 108ms (Views: 70.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-09-17 18:43:44 +0530
+  Processing by GeneralController#contact as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_general_contact_html_erb___560184092_84275670__193275624 at /home/jyothi/projects/paypal_newui/app/views/general/contact.html.erb:18)
+Rendered layouts/_header.html.erb (20.8ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/contact.html.erb within layouts/sessions (34.2ms)
+Completed 200 OK in 70ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-09-17 18:43:50 +0530
+  Processing by GeneralController#about as HTML
+Rendered layouts/_header.html.erb (22.1ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/about.html.erb within layouts/sessions (26.6ms)
+Completed 200 OK in 30ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index.html" for 127.0.0.1 at 2011-09-17 18:44:31 +0530
+
+ActionController::RoutingError (No route matches "/index.html"):
+  
+
+Rendered /home/jyothi/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-09-17 18:44:38 +0530
+  Processing by GeneralController#about as HTML
+Rendered layouts/_header.html.erb (32.9ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Rendered general/about.html.erb within layouts/sessions (39.2ms)
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-17 18:44:40 +0530
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered general/index.html.erb within layouts/sessions (6.0ms)
+Completed 200 OK in 28ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pricing" for 127.0.0.1 at 2011-09-17 18:44:43 +0530
+  Processing by GeneralController#pricing as HTML
+Rendered layouts/_header.html.erb (84.3ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/pricing.html.erb within layouts/sessions (91.7ms)
+Completed 200 OK in 100ms (Views: 98.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-09-17 18:44:45 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/registrations/new.html.erb within layouts/sessions (20.8ms)
+Completed 200 OK in 63ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-09-17 18:44:52 +0530
+  Processing by GeneralController#contact as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_general_contact_html_erb___560184092_84848620__193275624 at /home/jyothi/projects/paypal_newui/app/views/general/contact.html.erb:18)
+Rendered layouts/_header.html.erb (20.9ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/contact.html.erb within layouts/sessions (34.7ms)
+Completed 200 OK in 53ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-17 18:44:55 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.1ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (13.1ms)
+Completed 200 OK in 56ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pricing" for 127.0.0.1 at 2011-09-17 18:44:58 +0530
+  Processing by GeneralController#pricing as HTML
+Rendered layouts/_header.html.erb (73.7ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/pricing.html.erb within layouts/sessions (78.1ms)
+Completed 200 OK in 81ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-09-17 18:44:59 +0530
+  Processing by GeneralController#about as HTML
+Rendered layouts/_header.html.erb (69.7ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered general/about.html.erb within layouts/sessions (80.2ms)
+Completed 200 OK in 89ms (Views: 87.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-09-17 18:45:01 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered layouts/_header.html.erb (1.5ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/registrations/new.html.erb within layouts/sessions (22.1ms)
+Completed 200 OK in 53ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-09-17 18:45:03 +0530
+  Processing by GeneralController#about as HTML
+Rendered layouts/_header.html.erb (102.4ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/about.html.erb within layouts/sessions (109.8ms)
+Completed 200 OK in 118ms (Views: 116.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-09-17 18:45:05 +0530
+  Processing by GeneralController#contact as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_general_contact_html_erb___560184092_84413270__193275624 at /home/jyothi/projects/paypal_newui/app/views/general/contact.html.erb:18)
+Rendered layouts/_header.html.erb (21.0ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/contact.html.erb within layouts/sessions (50.9ms)
+Completed 200 OK in 94ms (Views: 58.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tour" for 127.0.0.1 at 2011-09-17 18:45:09 +0530
+  Processing by GeneralController#tour as HTML
+Rendered layouts/_header.html.erb (22.2ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/tour.html.erb within layouts/sessions (26.6ms)
+Completed 200 OK in 30ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pricing" for 127.0.0.1 at 2011-09-17 18:45:11 +0530
+  Processing by GeneralController#pricing as HTML
+Rendered layouts/_header.html.erb (23.7ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Rendered general/pricing.html.erb within layouts/sessions (28.2ms)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-09-17 18:45:13 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/registrations/new.html.erb within layouts/sessions (21.5ms)
+Completed 200 OK in 51ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-09-17 18:45:14 +0530
+  Processing by GeneralController#contact as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_general_contact_html_erb___560184092_88476630__193275624 at /home/jyothi/projects/paypal_newui/app/views/general/contact.html.erb:18)
+Rendered layouts/_header.html.erb (21.4ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/contact.html.erb within layouts/sessions (35.4ms)
+Completed 200 OK in 117ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-09-17 18:45:17 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered layouts/_header.html.erb (1.5ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered devise/registrations/new.html.erb within layouts/sessions (22.7ms)
+Completed 200 OK in 107ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-09-17 18:45:18 +0530
+  Processing by GeneralController#contact as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_general_contact_html_erb___560184092_78152730__193275624 at /home/jyothi/projects/paypal_newui/app/views/general/contact.html.erb:18)
+Rendered layouts/_header.html.erb (88.0ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/contact.html.erb within layouts/sessions (118.0ms)
+Completed 200 OK in 161ms (Views: 125.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-17 18:45:22 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (12.8ms)
+Completed 200 OK in 76ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-09-17 18:45:28 +0530
+  Processing by GeneralController#about as HTML
+Rendered layouts/_header.html.erb (24.9ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/about.html.erb within layouts/sessions (30.0ms)
+Completed 200 OK in 34ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-09-17 18:45:34 +0530
+  Processing by GeneralController#contact as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_general_contact_html_erb___560184092_74215460__193275624 at /home/jyothi/projects/paypal_newui/app/views/general/contact.html.erb:18)
+Rendered layouts/_header.html.erb (22.0ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/contact.html.erb within layouts/sessions (150.7ms)
+Completed 200 OK in 194ms (Views: 158.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-17 18:45:44 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.2ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (13.6ms)
+Completed 200 OK in 109ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-09-17 18:45:57 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lpKfyWG+nXpnJrthyq6J/9h/oX5VwNcd93d4+tvt6Vw=", "user"=>{"login"=>"phani.rubyonrails@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'phani.rubyonrails@gmail.com' LIMIT 1
+  [1m[36mAREL (0.5ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2011-09-17 11:47:37.891398', "current_sign_in_at" = '2011-09-17 13:15:57.615224', "sign_in_count" = 3, "updated_at" = '2011-09-17 13:15:57.615915' WHERE "users"."id" = 31[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 322ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-17 18:45:57 +0530
+  Processing by GeneralController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1
+Redirected to http://localhost:3000/surveys
+Completed 302 Found in 102ms
+
+
+Started GET "/surveys" for 127.0.0.1 at 2011-09-17 18:45:57 +0530
+  Processing by SurveysController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1[0m
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 100ms
+
+
+Started GET "/welcome" for 127.0.0.1 at 2011-09-17 18:45:58 +0530
+  Processing by WelcomesController#show as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1
+Redirected to http://localhost:3000/orders/coupons_form
+Completed 302 Found in 46ms
+
+
+Started GET "/orders/coupons_form" for 127.0.0.1 at 2011-09-17 18:45:58 +0530
+  Processing by OrdersController#coupons_form as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1[0m
+  [1m[35mPaymentOption Load (0.3ms)[0m  SELECT "payment_options".* FROM "payment_options"
+  [1m[36mPaymentOption Load (0.3ms)[0m  [1mSELECT "payment_options".* FROM "payment_options" LIMIT 1[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders_coupons_form_html_erb__667527386_77490320__193275624 at /home/jyothi/projects/paypal_newui/app/views/orders/coupons_form.html.erb:9)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered orders/coupons_form.html.erb within layouts/sessions (89.6ms)
+Completed 200 OK in 140ms (Views: 92.1ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/orders/calculate_amount" for 127.0.0.1 at 2011-09-17 18:46:02 +0530
+  Processing by OrdersController#calculate_amount as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lpKfyWG+nXpnJrthyq6J/9h/oX5VwNcd93d4+tvt6Vw=", "duration"=>"49.95", "coupon"=>"123"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1
+  [1m[36mPaymentOption Load (0.3ms)[0m  [1mSELECT "payment_options".* FROM "payment_options" WHERE "payment_options"."amount" = 49.95 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "payment_options".* FROM "payment_options" WHERE "payment_options"."amount" = 49.95 LIMIT 1
+  [1m[36mCoupon Load (12.4ms)[0m  [1mSELECT "coupons".* FROM "coupons" WHERE "coupons"."code" = '123' LIMIT 1[0m
+Redirected to http://localhost:3000/orders/new
+Completed 302 Found in 153ms
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2011-09-17 18:46:03 +0530
+  Processing by OrdersController#new as HTML
+  [1m[35mUser Load (5.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:11)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders__form_html_erb___796303408_83652860__385590228 at /home/jyothi/projects/paypal_newui/app/views/orders/_form.html.erb:18)
+Rendered orders/_form.html.erb (81.7ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered orders/new.html.erb within layouts/sessions (89.0ms)
+Completed 200 OK in 243ms (Views: 92.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2011-09-17 18:46:32 +0530
+  Processing by OrdersController#new as HTML
+  [1m[36mUser Load (2.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1[0m
+DEPRECATION WARNING: validate_on_create is deprecated. Please use validate(args, :on => :create). (called from <class:Order> at /home/jyothi/projects/paypal_newui/app/models/order.rb:11)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_orders__form_html_erb___796303408_87207630__385590228 at /home/jyothi/projects/paypal_newui/app/views/orders/_form.html.erb:18)
+Rendered orders/_form.html.erb (30.9ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered orders/new.html.erb within layouts/sessions (38.4ms)
+Completed 200 OK in 218ms (Views: 41.5ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-09-17 18:50:05 +0530
+  Processing by GeneralController#contact as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_general_contact_html_erb___560184092_84911350__193275624 at /home/jyothi/projects/paypal_newui/app/views/general/contact.html.erb:18)
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1
+Rendered layouts/_header.html.erb (111.1ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/contact.html.erb within layouts/sessions (124.9ms)
+Completed 200 OK in 143ms (Views: 126.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-09-17 18:50:09 +0530
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 31 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 122ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-17 18:50:09 +0530
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered general/index.html.erb within layouts/sessions (5.5ms)
+Completed 200 OK in 27ms (Views: 8.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-17 18:50:11 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.1ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (13.3ms)
+Completed 200 OK in 56ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2011-09-17 18:50:13 +0530
+  Processing by Devise::PasswordsController#new as HTML
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/passwords/new.html.erb within layouts/sessions (22.3ms)
+Completed 200 OK in 52ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 127.0.0.1 at 2011-09-17 18:50:24 +0530
+  Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9tJ2gkAa1+edUCNqSs1dr24/kI5Iph2VAkknQThP9XI=", "user"=>{"email"=>"phani.rubyonrails@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'phani.rubyonrails@gmail.com' LIMIT 1
+Rendered devise/mailer/reset_password_instructions.html.erb (1.0ms)
+
+Sent mail to phani.rubyonrails@gmail.com (6566ms)
+Date: Sat, 17 Sep 2011 18:50:25 +0530
+From: fpalmas@yahoo.com
+To: phani.rubyonrails@gmail.com
+Message-ID: <4e749e9947b0_145746d49cc175a8@shashipreetham-M61PME-S2.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+tag: password-reset
+
+<p>Hello phani.rubyonrails@gmail.com!</p>
+
+<p>Someone has requested a link to change your password, and you can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/users/password/edit?reset_password_token=ouzkJ5B8RCBLzv4JnZzQ">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 6928ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-17 18:50:31 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.1ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (13.0ms)
+Completed 200 OK in 55ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2011-09-17 18:51:21 +0530
+  Processing by Devise::PasswordsController#new as HTML
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/passwords/new.html.erb within layouts/sessions (22.8ms)
+Completed 200 OK in 52ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2011-09-17 18:53:33 +0530
+  Processing by Devise::PasswordsController#new as HTML
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/passwords/new.html.erb within layouts/sessions (22.2ms)
+Completed 200 OK in 51ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2011-09-17 18:53:48 +0530
+  Processing by Devise::PasswordsController#new as HTML
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/passwords/new.html.erb within layouts/sessions (22.9ms)
+Completed 200 OK in 52ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2011-09-17 18:53:59 +0530
+  Processing by Devise::PasswordsController#new as HTML
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/passwords/new.html.erb within layouts/sessions (29.1ms)
+Completed 200 OK in 68ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2011-09-17 18:54:08 +0530
+  Processing by Devise::PasswordsController#new as HTML
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/passwords/new.html.erb within layouts/sessions (23.1ms)
+Completed 200 OK in 53ms (Views: 26.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-09-17 18:54:10 +0530
+  Processing by GeneralController#contact as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_general_contact_html_erb___560184092_84923110__193275624 at /home/jyothi/projects/paypal_newui/app/views/general/contact.html.erb:18)
+Rendered layouts/_header.html.erb (20.2ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered general/contact.html.erb within layouts/sessions (33.4ms)
+Completed 200 OK in 55ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 127.0.0.1 at 2011-09-17 18:54:29 +0530
+  Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9tJ2gkAa1+edUCNqSs1dr24/kI5Iph2VAkknQThP9XI=", "user"=>{"email"=>"phani.rubyonrails@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'phani.rubyonrails@gmail.com' LIMIT 1[0m
+Rendered devise/mailer/reset_password_instructions.html.erb (1.0ms)
+
+Sent mail to phani.rubyonrails@gmail.com (3952ms)
+Date: Sat, 17 Sep 2011 18:54:30 +0530
+From: fpalmas@yahoo.com
+To: phani.rubyonrails@gmail.com
+Message-ID: <4e749f8e1a384_1457470bc241763a@shashipreetham-M61PME-S2.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+tag: password-reset
+
+<p>Hello phani.rubyonrails@gmail.com!</p>
+
+<p>Someone has requested a link to change your password, and you can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/users/password/edit?reset_password_token=ouzkJ5B8RCBLzv4JnZzQ">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 4036ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-17 18:54:34 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.1ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (13.1ms)
+Completed 200 OK in 53ms (Views: 16.1ms | ActiveRecord: 0.0ms)

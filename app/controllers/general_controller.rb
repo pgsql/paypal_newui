@@ -3,7 +3,7 @@ class GeneralController < ApplicationController
   skip_before_filter :check_for_terms_acceptance
   skip_before_filter :check_for_access_period
   skip_before_filter :check_user_status
-
+  layout "sessions"
 
   def index
     if user_signed_in? 
@@ -22,15 +22,11 @@ class GeneralController < ApplicationController
       if @contact.save
         UserMailer.contact_confirmation(@contact).deliver
         flash[:notice] = "Thanks for contact us. We will contact you soon."
-        format.html {redirect_to(contact_url, :notice => 'Thanks for contact us. We will contact you soon.') }
+        format.html {redirect_to(general_contact_url, :notice => 'Thanks for contact us. We will contact you soon.') }
       else
         format.html { render :action => "contact" }
       end
- 
-     
     end
-
-   
   end
 
   def aboutus

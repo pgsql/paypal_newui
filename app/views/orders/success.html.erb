@@ -3,9 +3,15 @@
 
 <%session[:order].inspect%>
 
-Congrats !!  <br />
+Dear Customer,
 
-Your Transaction is successful!!   <br />
+Thanks for your order. Your Transaction is successful!
+
+We hope that you enjoy the all of the tools available from <%=link_to "myfinancialfit.com", '/welcome' %>myfinancialfit.com
+
+  <br />
+
+   <br />
 
 <%  unless @order.blank? %>
   Transaction ID : <%= @order.tran %> <br />

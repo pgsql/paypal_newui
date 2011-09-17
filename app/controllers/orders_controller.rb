@@ -6,6 +6,8 @@ class OrdersController < ApplicationController
 
   skip_before_filter :check_user_status, :only => [:new,:create,:sucess,:failure,:calculate_amount,:coupons_form]
 #  skip_before_filter :check_for_access_period
+  layout "sessions"
+  
   def index
     @orders = Order.all
 
@@ -47,9 +49,8 @@ class OrdersController < ApplicationController
   def create
    
     params[:order][:amount] = params[:amount]
-     params[:order][:duration] = params[:duration]
-    params[:order][:first_name] = "first"
-    params[:order][:last_name] = "last"
+    params[:order][:duration] = params[:duration]
+    
     @order = Order.new(params[:order])
     @order.user = current_user
 

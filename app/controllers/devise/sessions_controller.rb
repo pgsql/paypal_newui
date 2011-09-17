@@ -1,11 +1,10 @@
 class Devise::SessionsController < ApplicationController
   prepend_before_filter :require_no_authentication, :only => [ :new, :create ]
   include Devise::Controllers::InternalHelpers
-
+  layout "sessions"
   # GET /resource/sign_in
   def new
     resource = build_resource
-    resource.access_until = "2026-09-10"
     clean_up_passwords(resource)
     respond_with_navigational(resource, stub_options(resource)){ render_with_scope :new }
   end
@@ -45,5 +44,4 @@ class Devise::SessionsController < ApplicationController
     { :methods => methods, :only => [:password] }
   end
 end
-
 
