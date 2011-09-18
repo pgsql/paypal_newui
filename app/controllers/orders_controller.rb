@@ -56,8 +56,6 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
        if @order.save
-
-         @order.purchase
          session[:order] = @order.id
         if @order.purchase
           session[:order] = @order.id
