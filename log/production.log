@@ -1,96 +1,1511 @@
 
 
-Started GET "/orders" for 122.178.210.55 at Sat Sep 03 07:39:42 +0000 2011
-  Processing by OrdersController#index as HTML
-Completed   in 3ms
-
-ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1):
-  
-
-
-
-Started GET "/favicon.ico" for 122.178.210.55 at Sat Sep 03 07:39:42 +0000 2011
-
-ActionController::RoutingError (No route matches "/favicon.ico"):
-  
-
-
-
-Started GET "/orders" for 122.178.210.55 at Sat Sep 03 07:39:48 +0000 2011
-  Processing by OrdersController#index as HTML
-Completed   in 1ms
-
-ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1):
-  
-
-
-
-Started GET "/favicon.ico" for 122.178.210.55 at Sat Sep 03 07:39:48 +0000 2011
-
-ActionController::RoutingError (No route matches "/favicon.ico"):
-  
-
-
-
-Started GET "/" for 122.178.210.55 at Sat Sep 03 07:39:52 +0000 2011
+Started GET "/surveys/new" for 122.167.218.171 at 2011-09-18 06:39:33 +0000
   Processing by SurveysController#new as HTML
-Completed   in 2ms
-
-ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1):
-  
-
-
-
-Started GET "/favicon.ico" for 122.178.210.55 at Sat Sep 03 07:39:52 +0000 2011
-
-ActionController::RoutingError (No route matches "/favicon.ico"):
-  
+Rendered surveys/_form.html.haml (21.8ms)
+Rendered layouts/_header.html.erb (1.0ms)
+Rendered layouts/_footer.html.erb (0.2ms)
+Rendered surveys/new.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 61ms (Views: 29.0ms | ActiveRecord: 1.4ms)
 
 
+Started GET "/surveys/new" for 122.167.218.171 at 2011-09-18 06:50:49 +0000
+  Processing by SurveysController#new as HTML
+Rendered surveys/_form.html.haml (21.8ms)
+Rendered layouts/_footer.html.erb (0.3ms)
+Rendered surveys/new.html.erb within layouts/application1 (33.0ms)
+Completed 200 OK in 67ms (Views: 34.8ms | ActiveRecord: 1.4ms)
 
-Started GET "/users/sign_out" for 122.178.210.55 at Sat Sep 03 08:17:56 +0000 2011
+
+Started GET "/admin/dashboard" for 122.167.218.171 at 2011-09-18 06:50:55 +0000
+  Processing by Admin::DashboardController#index as HTML
+Rendered admin/dashboard/index.html.erb within layouts/admin (2.0ms)
+Completed 200 OK in 45ms (Views: 4.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_out" for 122.167.218.171 at 2011-09-18 06:51:09 +0000
   Processing by Devise::SessionsController#destroy as HTML
-Completed   in 2ms
-
-ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1):
-  app/controllers/devise/sessions_controller.rb:23:in `destroy'
+Redirected to http://66.135.33.230:3000/
+Completed 302 Found in 11ms
 
 
+Started GET "/" for 122.167.218.171 at 2011-09-18 06:51:09 +0000
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (0.8ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered general/index.html.erb within layouts/sessions (2.3ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms)
 
-Started GET "/favicon.ico" for 122.178.210.55 at Sat Sep 03 08:17:57 +0000 2011
 
-ActionController::RoutingError (No route matches "/favicon.ico"):
-  
+Started GET "/pricing" for 122.167.218.171 at 2011-09-18 06:51:12 +0000
+  Processing by GeneralController#pricing as HTML
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered general/pricing.html.erb within layouts/sessions (1.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/contact" for 122.167.218.171 at 2011-09-18 06:51:15 +0000
+  Processing by GeneralController#contact as HTML
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered general/contact.html.erb within layouts/sessions (16.6ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.0ms)
 
-Started GET "/" for 111.92.17.114 at 2011-09-03 13:45:01 +0000
+
+Started GET "/about" for 122.167.218.171 at 2011-09-18 06:51:16 +0000
+  Processing by GeneralController#about as HTML
+Rendered layouts/_header.html.erb (0.4ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered general/about.html.erb within layouts/sessions (1.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 122.167.218.171 at 2011-09-18 06:51:19 +0000
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.4ms)
+Rendered layouts/_header.html.erb (0.4ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (6.4ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 122.167.218.171 at 2011-09-18 06:51:35 +0000
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JGEpCBw8tVMMKl1CuwrINx58qU0A8gQRlfouil+vC98=", "user"=>{"login"=>"phani.rubyonrails@gmail.com", "password"=>"[FILTERED]"}}
+Redirected to http://66.135.33.230:3000/
+Completed 302 Found in 99ms
+
+
+Started GET "/" for 122.167.218.171 at 2011-09-18 06:51:35 +0000
+  Processing by GeneralController#index as HTML
+Redirected to http://66.135.33.230:3000/surveys
+Completed 302 Found in 1ms
+
+
+Started GET "/surveys" for 122.167.218.171 at 2011-09-18 06:51:36 +0000
+  Processing by SurveysController#index as HTML
+Redirected to http://66.135.33.230:3000/welcome
+Completed 302 Found in 2ms
+
+
+Started GET "/welcome" for 122.167.218.171 at 2011-09-18 06:51:36 +0000
+  Processing by WelcomesController#show as HTML
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered welcomes/show.html.haml within layouts/welcomes (15.2ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders/coupons_form" for 122.167.218.171 at 2011-09-18 06:51:50 +0000
+  Processing by OrdersController#coupons_form as HTML
+Rendered layouts/_header.html.erb (0.4ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered orders/coupons_form.html.erb within layouts/sessions (7.5ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/orders/calculate_amount" for 122.167.218.171 at 2011-09-18 06:51:54 +0000
+  Processing by OrdersController#calculate_amount as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JGEpCBw8tVMMKl1CuwrINx58qU0A8gQRlfouil+vC98=", "duration"=>"29.95", "coupon"=>""}
+Redirected to http://66.135.33.230:3000/orders/new
+Completed 302 Found in 2ms
+
+
+Started GET "/orders/new" for 122.167.218.171 at 2011-09-18 06:51:54 +0000
+  Processing by OrdersController#new as HTML
+Rendered orders/_form.html.erb (19.5ms)
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered orders/new.html.erb within layouts/sessions (21.3ms)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/orders/coupons_form" for 122.167.218.171 at 2011-09-18 06:51:58 +0000
+  Processing by OrdersController#coupons_form as HTML
+Rendered layouts/_header.html.erb (0.2ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered orders/coupons_form.html.erb within layouts/sessions (2.2ms)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 99.14.232.193 at 2011-09-18 15:17:03 +0000
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered general/index.html.erb within layouts/sessions (0.6ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 99.14.232.193 at 2011-09-18 15:21:10 +0000
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (0.4ms)
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (3.6ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 99.14.232.193 at 2011-09-18 15:21:12 +0000
+  Processing by Devise::PasswordsController#new as HTML
+Rendered layouts/_header.html.erb (0.4ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/passwords/new.html.erb within layouts/sessions (3.1ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 99.14.232.193 at 2011-09-18 15:21:17 +0000
+  Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2AOxyMfdzUsd+3nVtj7cIf/CvyGDwo5FYBf0MGTPf4M=", "user"=>{"email"=>"justin@acapella360.com"}, "commit"=>"Send me reset password instructions"}
+Rendered devise/mailer/reset_password_instructions.html.erb (0.7ms)
+
+Sent mail to justin@acapella360.com (4016ms)
+Redirected to http://66.135.33.230:3000/users/sign_in
+Completed 302 Found in 4190ms
+
+
+Started GET "/users/sign_in" for 99.14.232.193 at 2011-09-18 15:21:22 +0000
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (0.4ms)
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (3.8ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 99.14.232.193 at 2011-09-18 15:23:22 +0000
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered layouts/_header.html.erb (0.4ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/registrations/new.html.erb within layouts/sessions (2.8ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 99.14.232.193 at 2011-09-18 15:23:56 +0000
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2AOxyMfdzUsd+3nVtj7cIf/CvyGDwo5FYBf0MGTPf4M=", "user"=>{"email"=>"justin@acapellamedia.com", "login"=>"justinmedia", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Rendered layouts/_header.html.erb (0.4ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/registrations/new.html.erb within layouts/sessions (4.1ms)
+Completed 200 OK in 138ms (Views: 4.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 99.14.232.193 at 2011-09-18 15:24:15 +0000
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2AOxyMfdzUsd+3nVtj7cIf/CvyGDwo5FYBf0MGTPf4M=", "user"=>{"email"=>"justin@acapellacreative.com", "login"=>"justincreates", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/registrations/new.html.erb within layouts/sessions (3.5ms)
+Completed 200 OK in 86ms (Views: 3.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 99.14.232.193 at 2011-09-18 15:24:40 +0000
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2AOxyMfdzUsd+3nVtj7cIf/CvyGDwo5FYBf0MGTPf4M=", "user"=>{"email"=>"management@acapella360.com", "login"=>"acapella", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/registrations/new.html.erb within layouts/sessions (3.3ms)
+Completed 200 OK in 85ms (Views: 3.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 99.14.232.193 at 2011-09-18 15:25:16 +0000
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2AOxyMfdzUsd+3nVtj7cIf/CvyGDwo5FYBf0MGTPf4M=", "user"=>{"email"=>"management@acapella360.com", "login"=>"acapellamgmt", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Redirected to http://66.135.33.230:3000/
+Completed 302 Found in 88ms
+
+
+Started GET "/" for 99.14.232.193 at 2011-09-18 15:25:16 +0000
+  Processing by GeneralController#index as HTML
+Redirected to http://66.135.33.230:3000/surveys
+Completed 302 Found in 1ms
+
+
+Started GET "/surveys" for 99.14.232.193 at 2011-09-18 15:25:17 +0000
+  Processing by SurveysController#index as HTML
+Redirected to http://66.135.33.230:3000/welcome
+Completed 302 Found in 1ms
+
+
+Started GET "/welcome" for 99.14.232.193 at 2011-09-18 15:25:17 +0000
+  Processing by WelcomesController#show as HTML
+Redirected to http://66.135.33.230:3000/orders/coupons_form
+Completed 302 Found in 1ms
+
+
+Started GET "/orders/coupons_form" for 99.14.232.193 at 2011-09-18 15:25:17 +0000
+  Processing by OrdersController#coupons_form as HTML
+Rendered layouts/_header.html.erb (0.2ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered orders/coupons_form.html.erb within layouts/sessions (2.3ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/orders/calculate_amount" for 99.14.232.193 at 2011-09-18 15:25:26 +0000
+  Processing by OrdersController#calculate_amount as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2AOxyMfdzUsd+3nVtj7cIf/CvyGDwo5FYBf0MGTPf4M=", "duration"=>"29.95", "coupon"=>"acapella"}
+Redirected to http://66.135.33.230:3000/orders/new
+Completed 302 Found in 3ms
+
+
+Started GET "/orders/new" for 99.14.232.193 at 2011-09-18 15:25:26 +0000
+  Processing by OrdersController#new as HTML
+Rendered orders/_form.html.erb (4.1ms)
+Rendered layouts/_header.html.erb (0.2ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered orders/new.html.erb within layouts/sessions (4.9ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/orders" for 99.14.232.193 at 2011-09-18 15:26:37 +0000
+  Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2AOxyMfdzUsd+3nVtj7cIf/CvyGDwo5FYBf0MGTPf4M=", "order"=>{"first_name"=>"Justin", "last_name"=>"Kempiak", "email"=>"management@acapella360.com", "address1"=>"700 N Green St.", "address2"=>"sadg", "city"=>"Chicago", "state"=>"IL", "country"=>"USA", "zip"=>"60642", "card_type"=>"visa", "card_number"=>"[FILTERED]", "card_expires_on(1i)"=>"2012", "card_expires_on(2i)"=>"9", "card_expires_on(3i)"=>"1", "card_verification"=>"[FILTERED]"}, "amount"=>"29.95", "duration"=>"3"}
+{"utf8"=>"✓", "authenticity_token"=>"2AOxyMfdzUsd+3nVtj7cIf/CvyGDwo5FYBf0MGTPf4M=", "order"=>{"first_name"=>"Justin", "last_name"=>"Kempiak", "email"=>"management@acapella360.com", "address1"=>"700 N Green St.", "address2"=>"sadg", "city"=>"Chicago", "state"=>"IL", "country"=>"USA", "zip"=>"60642", "card_type"=>"visa", "card_number"=>"4635810000288121", "card_expires_on(1i)"=>"2012", "card_expires_on(2i)"=>"9", "card_expires_on(3i)"=>"1", "card_verification"=>"272", "amount"=>"29.95", "duration"=>"3", "name"=>"Justin Kempiak"}, "amount"=>"29.95", "duration"=>"3", "action"=>"create", "controller"=>"orders"}
+Rendered orders/_form.html.erb (3.9ms)
+Rendered layouts/_header.html.erb (0.2ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered orders/new.html.erb within layouts/sessions (4.7ms)
+Completed 200 OK in 10ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/orders" for 99.14.232.193 at 2011-09-18 15:26:57 +0000
+  Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2AOxyMfdzUsd+3nVtj7cIf/CvyGDwo5FYBf0MGTPf4M=", "order"=>{"first_name"=>"Justin", "last_name"=>"Kempiak", "email"=>"management@acapella360.com", "address1"=>"700 N Green St.", "address2"=>"sadg", "city"=>"Chicago", "state"=>"IL", "country"=>"USA", "zip"=>"60642", "card_type"=>"visa", "card_number"=>"[FILTERED]", "card_expires_on(1i)"=>"2012", "card_expires_on(2i)"=>"8", "card_expires_on(3i)"=>"1", "card_verification"=>"[FILTERED]"}, "amount"=>"29.95", "duration"=>"3"}
+{"utf8"=>"✓", "authenticity_token"=>"2AOxyMfdzUsd+3nVtj7cIf/CvyGDwo5FYBf0MGTPf4M=", "order"=>{"first_name"=>"Justin", "last_name"=>"Kempiak", "email"=>"management@acapella360.com", "address1"=>"700 N Green St.", "address2"=>"sadg", "city"=>"Chicago", "state"=>"IL", "country"=>"USA", "zip"=>"60642", "card_type"=>"visa", "card_number"=>"4635810000288123", "card_expires_on(1i)"=>"2012", "card_expires_on(2i)"=>"8", "card_expires_on(3i)"=>"1", "card_verification"=>"272", "amount"=>"29.95", "duration"=>"3", "name"=>"Justin Kempiak"}, "amount"=>"29.95", "duration"=>"3", "action"=>"create", "controller"=>"orders"}
+#<ActiveMerchant::Billing::Response:0x0000000593f9b8 @params={"timestamp"=>"2011-09-18T15:27:43Z", "ack"=>"Success", "correlation_id"=>"e52c54cbd68eb", "version"=>"59.0", "build"=>"2075688", "amount"=>"29.95", "amount_currency_id"=>"USD", "avs_code"=>"Y", "cvv2_code"=>"M", "transaction_id"=>"03W475044J504340S"}, @message="Success", @success=true, @test=false, @authorization="03W475044J504340S", @fraud_review=false, @avs_result={"code"=>"Y", "message"=>"Street address and 5-digit postal code match.", "street_match"=>"Y", "postal_match"=>"Y"}, @cvv_result={"code"=>"M", "message"=>"Match"}>
+#<ActiveMerchant::Billing::Response:0x000000051ba3f0 @params={"timestamp"=>"2011-09-18T15:27:45Z", "ack"=>"Success", "correlation_id"=>"cf41260fb723d", "version"=>"59.0", "build"=>"2075688", "amount"=>"29.95", "amount_currency_id"=>"USD", "avs_code"=>"Y", "cvv2_code"=>"M", "transaction_id"=>"4AH38496UV9537147"}, @message="Success", @success=true, @test=false, @authorization="4AH38496UV9537147", @fraud_review=false, @avs_result={"code"=>"Y", "message"=>"Street address and 5-digit postal code match.", "street_match"=>"Y", "postal_match"=>"Y"}, @cvv_result={"code"=>"M", "message"=>"Match"}>
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered orders/success.html.erb within layouts/sessions (1.2ms)
+Completed 200 OK in 6369ms (Views: 2.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/welcome" for 99.14.232.193 at 2011-09-18 15:27:13 +0000
+  Processing by WelcomesController#show as HTML
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered welcomes/show.html.haml within layouts/welcomes (3.5ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_out" for 99.14.232.193 at 2011-09-18 15:27:19 +0000
+  Processing by Devise::SessionsController#destroy as HTML
+Redirected to http://66.135.33.230:3000/
+Completed 302 Found in 3ms
+
+
+Started GET "/" for 99.14.232.193 at 2011-09-18 15:27:19 +0000
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered general/index.html.erb within layouts/sessions (0.6ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_in" for 99.14.232.193 at 2011-09-18 15:27:21 +0000
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (0.4ms)
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (3.7ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 99.14.232.193 at 2011-09-18 15:27:29 +0000
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XfH3CmqItTjOK8+WNcd7G8o/vjSeXbzI+nKq9g44iLA=", "user"=>{"login"=>"admin@example.com", "password"=>"[FILTERED]"}}
+Redirected to http://66.135.33.230:3000/
+Completed 302 Found in 84ms
+
+
+Started GET "/" for 99.14.232.193 at 2011-09-18 15:27:29 +0000
+  Processing by GeneralController#index as HTML
+Redirected to http://66.135.33.230:3000/surveys
+Completed 302 Found in 1ms
+
+
+Started GET "/surveys" for 99.14.232.193 at 2011-09-18 15:27:29 +0000
+  Processing by SurveysController#index as HTML
+Redirected to http://66.135.33.230:3000/surveys/new
+Completed 302 Found in 1ms
+
+
+Started GET "/surveys/new" for 99.14.232.193 at 2011-09-18 15:27:30 +0000
   Processing by SurveysController#new as HTML
+Rendered surveys/_form.html.haml (3.1ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered surveys/new.html.erb within layouts/application1 (6.0ms)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/dashboard" for 99.14.232.193 at 2011-09-18 15:27:34 +0000
+  Processing by Admin::DashboardController#index as HTML
+Rendered admin/dashboard/index.html.erb within layouts/admin (0.9ms)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/users" for 99.14.232.193 at 2011-09-18 15:27:37 +0000
+  Processing by Admin::UsersController#index as HTML
+Rendered admin/users/index.html.erb within layouts/admin (60.9ms)
+Completed 200 OK in 67ms (Views: 63.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/users/32/edit" for 99.14.232.193 at 2011-09-18 15:27:43 +0000
+  Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"32"}
+Rendered admin/users/_form.html.erb (4.2ms)
+Rendered admin/users/edit.html.erb within layouts/admin (6.3ms)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_out" for 99.14.232.193 at 2011-09-18 15:31:04 +0000
+  Processing by Devise::SessionsController#destroy as HTML
+Redirected to http://66.135.33.230:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 99.14.232.193 at 2011-09-18 15:31:04 +0000
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered general/index.html.erb within layouts/sessions (0.6ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_up" for 99.14.232.193 at 2011-09-18 15:31:14 +0000
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/registrations/new.html.erb within layouts/sessions (1.8ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 99.14.232.193 at 2011-09-18 15:31:24 +0000
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rEax1h+nZg2Cnxc+domU5HLPFl1J4s3Zu+dfIdqqrPc=", "user"=>{"email"=>"amy@amy.com", "login"=>"amy", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/registrations/new.html.erb within layouts/sessions (3.4ms)
+Completed 200 OK in 86ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 99.14.232.193 at 2011-09-18 15:31:33 +0000
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rEax1h+nZg2Cnxc+domU5HLPFl1J4s3Zu+dfIdqqrPc=", "user"=>{"email"=>"amy@amy.com", "login"=>"amy", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Redirected to http://66.135.33.230:3000/
+Completed 302 Found in 86ms
+
+
+Started GET "/" for 99.14.232.193 at 2011-09-18 15:31:34 +0000
+  Processing by GeneralController#index as HTML
+Redirected to http://66.135.33.230:3000/surveys
+Completed 302 Found in 1ms
+
+
+Started GET "/surveys" for 99.14.232.193 at 2011-09-18 15:31:34 +0000
+  Processing by SurveysController#index as HTML
+Redirected to http://66.135.33.230:3000/welcome
+Completed 302 Found in 1ms
+
+
+Started GET "/welcome" for 99.14.232.193 at 2011-09-18 15:31:34 +0000
+  Processing by WelcomesController#show as HTML
+Redirected to http://66.135.33.230:3000/orders/coupons_form
+Completed 302 Found in 1ms
+
+
+Started GET "/orders/coupons_form" for 99.14.232.193 at 2011-09-18 15:31:34 +0000
+  Processing by OrdersController#coupons_form as HTML
+Rendered layouts/_header.html.erb (0.2ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered orders/coupons_form.html.erb within layouts/sessions (2.3ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/orders/calculate_amount" for 99.14.232.193 at 2011-09-18 15:31:38 +0000
+  Processing by OrdersController#calculate_amount as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rEax1h+nZg2Cnxc+domU5HLPFl1J4s3Zu+dfIdqqrPc=", "duration"=>"29.95", "coupon"=>""}
+Redirected to http://66.135.33.230:3000/orders/new
+Completed 302 Found in 2ms
+
+
+Started GET "/orders/new" for 99.14.232.193 at 2011-09-18 15:31:38 +0000
+  Processing by OrdersController#new as HTML
+Rendered orders/_form.html.erb (4.1ms)
+Rendered layouts/_header.html.erb (0.2ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered orders/new.html.erb within layouts/sessions (4.8ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/orders" for 99.14.232.193 at 2011-09-18 15:31:42 +0000
+  Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rEax1h+nZg2Cnxc+domU5HLPFl1J4s3Zu+dfIdqqrPc=", "order"=>{"first_name"=>"adsg", "last_name"=>"", "email"=>"", "address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "country"=>"", "zip"=>"", "card_type"=>"visa", "card_number"=>"[FILTERED]", "card_expires_on(1i)"=>"2011", "card_expires_on(2i)"=>"9", "card_expires_on(3i)"=>"1", "card_verification"=>"[FILTERED]"}, "amount"=>"29.95", "duration"=>"3"}
+{"utf8"=>"✓", "authenticity_token"=>"rEax1h+nZg2Cnxc+domU5HLPFl1J4s3Zu+dfIdqqrPc=", "order"=>{"first_name"=>"adsg", "last_name"=>"", "email"=>"", "address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "country"=>"", "zip"=>"", "card_type"=>"visa", "card_number"=>"", "card_expires_on(1i)"=>"2011", "card_expires_on(2i)"=>"9", "card_expires_on(3i)"=>"1", "card_verification"=>"", "amount"=>"29.95", "duration"=>"3", "name"=>"adsg "}, "amount"=>"29.95", "duration"=>"3", "action"=>"create", "controller"=>"orders"}
+Rendered orders/_form.html.erb (11.0ms)
+Rendered layouts/_header.html.erb (0.2ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered orders/new.html.erb within layouts/sessions (11.8ms)
+Completed 200 OK in 23ms (Views: 12.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 99.14.232.193 at 2011-09-18 15:31:55 +0000
+  Processing by GeneralController#index as HTML
+Redirected to http://66.135.33.230:3000/surveys
+Completed 302 Found in 1ms
+
+
+Started GET "/surveys" for 99.14.232.193 at 2011-09-18 15:31:55 +0000
+  Processing by SurveysController#index as HTML
+Redirected to http://66.135.33.230:3000/welcome
+Completed 302 Found in 1ms
+
+
+Started GET "/welcome" for 99.14.232.193 at 2011-09-18 15:31:55 +0000
+  Processing by WelcomesController#show as HTML
+Redirected to http://66.135.33.230:3000/orders/coupons_form
+Completed 302 Found in 1ms
+
+
+Started GET "/orders/coupons_form" for 99.14.232.193 at 2011-09-18 15:31:55 +0000
+  Processing by OrdersController#coupons_form as HTML
+Rendered layouts/_header.html.erb (0.2ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered orders/coupons_form.html.erb within layouts/sessions (2.1ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_out" for 99.14.232.193 at 2011-09-18 15:31:58 +0000
+  Processing by Devise::SessionsController#destroy as HTML
+Redirected to http://66.135.33.230:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 99.14.232.193 at 2011-09-18 15:31:58 +0000
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered general/index.html.erb within layouts/sessions (0.5ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tour" for 99.14.232.193 at 2011-09-18 15:32:00 +0000
+  Processing by GeneralController#tour as HTML
+Rendered layouts/_header.html.erb (0.4ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered general/tour.html.erb within layouts/sessions (1.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 99.14.232.193 at 2011-09-18 15:32:02 +0000
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (0.2ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered general/index.html.erb within layouts/sessions (0.5ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 99.14.232.193 at 2011-09-18 15:37:28 +0000
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/registrations/new.html.erb within layouts/sessions (1.9ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 99.14.232.193 at 2011-09-18 15:37:31 +0000
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (0.4ms)
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (3.5ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 99.14.232.193 at 2011-09-18 15:38:43 +0000
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FPIdbVjSJdpT1fxMHBjZnAQq7JC3vcT355iM6oYFyuI=", "user"=>{"login"=>"admin@example.com", "password"=>"[FILTERED]"}}
+Completed   in 80ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FPIdbVjSJdpT1fxMHBjZnAQq7JC3vcT355iM6oYFyuI=", "user"=>{"login"=>"admin@example.com", "password"=>"[FILTERED]"}}
+Rendered devise/shared/_links.erb (0.3ms)
+Rendered layouts/_header.html.erb (0.2ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (3.2ms)
+Completed 200 OK in 82ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users/sign_in" for 99.14.232.193 at 2011-09-18 15:38:48 +0000
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FPIdbVjSJdpT1fxMHBjZnAQq7JC3vcT355iM6oYFyuI=", "user"=>{"login"=>"admin@example.com", "password"=>"[FILTERED]"}}
+Redirected to http://66.135.33.230:3000/
+Completed 302 Found in 84ms
+
+
+Started GET "/" for 99.14.232.193 at 2011-09-18 15:38:48 +0000
+  Processing by GeneralController#index as HTML
+Redirected to http://66.135.33.230:3000/surveys
+Completed 302 Found in 1ms
+
+
+Started GET "/surveys" for 99.14.232.193 at 2011-09-18 15:38:49 +0000
+  Processing by SurveysController#index as HTML
+Redirected to http://66.135.33.230:3000/surveys/new
+Completed 302 Found in 1ms
+
+
+Started GET "/surveys/new" for 99.14.232.193 at 2011-09-18 15:38:49 +0000
+  Processing by SurveysController#new as HTML
+Rendered surveys/_form.html.haml (3.2ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered surveys/new.html.erb within layouts/application1 (6.1ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/dashboard" for 99.14.232.193 at 2011-09-18 15:38:58 +0000
+  Processing by Admin::DashboardController#index as HTML
+Rendered admin/dashboard/index.html.erb within layouts/admin (1.0ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/users" for 99.14.232.193 at 2011-09-18 15:39:00 +0000
+  Processing by Admin::UsersController#index as HTML
+Rendered admin/users/index.html.erb within layouts/admin (13.3ms)
+Completed 200 OK in 17ms (Views: 13.8ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/admin/users/33" for 99.14.232.193 at 2011-09-18 15:39:05 +0000
+  Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FPIdbVjSJdpT1fxMHBjZnAQq7JC3vcT355iM6oYFyuI=", "id"=>"33"}
+Redirected to http://66.135.33.230:3000/admin/users
+Completed 302 Found in 4ms
+
+
+Started GET "/admin/users" for 99.14.232.193 at 2011-09-18 15:39:05 +0000
+  Processing by Admin::UsersController#index as HTML
+Rendered admin/users/index.html.erb within layouts/admin (12.9ms)
+Completed 200 OK in 16ms (Views: 13.4ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/admin/users/32" for 99.14.232.193 at 2011-09-18 15:39:11 +0000
+  Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FPIdbVjSJdpT1fxMHBjZnAQq7JC3vcT355iM6oYFyuI=", "id"=>"32"}
+Redirected to http://66.135.33.230:3000/admin/users
+Completed 302 Found in 4ms
+
+
+Started GET "/admin/users" for 99.14.232.193 at 2011-09-18 15:39:11 +0000
+  Processing by Admin::UsersController#index as HTML
+Rendered admin/users/index.html.erb within layouts/admin (12.9ms)
+Completed 200 OK in 16ms (Views: 13.4ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/admin/users/26" for 99.14.232.193 at 2011-09-18 15:39:18 +0000
+  Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FPIdbVjSJdpT1fxMHBjZnAQq7JC3vcT355iM6oYFyuI=", "id"=>"26"}
+Redirected to http://66.135.33.230:3000/admin/users
+Completed 302 Found in 4ms
+
+
+Started GET "/admin/users" for 99.14.232.193 at 2011-09-18 15:39:18 +0000
+  Processing by Admin::UsersController#index as HTML
+Rendered admin/users/index.html.erb within layouts/admin (11.6ms)
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/admin/users/25" for 99.14.232.193 at 2011-09-18 15:39:25 +0000
+  Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FPIdbVjSJdpT1fxMHBjZnAQq7JC3vcT355iM6oYFyuI=", "id"=>"25"}
+Redirected to http://66.135.33.230:3000/admin/users
+Completed 302 Found in 4ms
+
+
+Started GET "/admin/users" for 99.14.232.193 at 2011-09-18 15:39:25 +0000
+  Processing by Admin::UsersController#index as HTML
+Rendered admin/users/index.html.erb within layouts/admin (12.0ms)
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/admin/users/24" for 99.14.232.193 at 2011-09-18 15:39:35 +0000
+  Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FPIdbVjSJdpT1fxMHBjZnAQq7JC3vcT355iM6oYFyuI=", "id"=>"24"}
+Redirected to http://66.135.33.230:3000/admin/users
+Completed 302 Found in 4ms
+
+
+Started GET "/admin/users" for 99.14.232.193 at 2011-09-18 15:39:35 +0000
+  Processing by Admin::UsersController#index as HTML
+Rendered admin/users/index.html.erb within layouts/admin (10.6ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/admin/users/23" for 99.14.232.193 at 2011-09-18 15:39:40 +0000
+  Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FPIdbVjSJdpT1fxMHBjZnAQq7JC3vcT355iM6oYFyuI=", "id"=>"23"}
+Redirected to http://66.135.33.230:3000/admin/users
+Completed 302 Found in 4ms
+
+
+Started GET "/admin/users" for 99.14.232.193 at 2011-09-18 15:39:40 +0000
+  Processing by Admin::UsersController#index as HTML
+Rendered admin/users/index.html.erb within layouts/admin (55.5ms)
+Completed 200 OK in 58ms (Views: 55.9ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/admin/users/18" for 99.14.232.193 at 2011-09-18 15:39:48 +0000
+  Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FPIdbVjSJdpT1fxMHBjZnAQq7JC3vcT355iM6oYFyuI=", "id"=>"18"}
+Redirected to http://66.135.33.230:3000/admin/users
+Completed 302 Found in 4ms
+
+
+Started GET "/admin/users" for 99.14.232.193 at 2011-09-18 15:39:48 +0000
+  Processing by Admin::UsersController#index as HTML
+Rendered admin/users/index.html.erb within layouts/admin (10.3ms)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/admin/users/16" for 99.14.232.193 at 2011-09-18 15:39:54 +0000
+  Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FPIdbVjSJdpT1fxMHBjZnAQq7JC3vcT355iM6oYFyuI=", "id"=>"16"}
+Redirected to http://66.135.33.230:3000/admin/users
+Completed 302 Found in 4ms
+
+
+Started GET "/admin/users" for 99.14.232.193 at 2011-09-18 15:39:54 +0000
+  Processing by Admin::UsersController#index as HTML
+Rendered admin/users/index.html.erb within layouts/admin (9.3ms)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/admin/users/9" for 99.14.232.193 at 2011-09-18 15:39:59 +0000
+  Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FPIdbVjSJdpT1fxMHBjZnAQq7JC3vcT355iM6oYFyuI=", "id"=>"9"}
+Redirected to http://66.135.33.230:3000/admin/users
+Completed 302 Found in 4ms
+
+
+Started GET "/admin/users" for 99.14.232.193 at 2011-09-18 15:39:59 +0000
+  Processing by Admin::UsersController#index as HTML
+Rendered admin/users/index.html.erb within layouts/admin (9.6ms)
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/admin/users/14" for 99.14.232.193 at 2011-09-18 15:40:08 +0000
+  Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FPIdbVjSJdpT1fxMHBjZnAQq7JC3vcT355iM6oYFyuI=", "id"=>"14"}
+Redirected to http://66.135.33.230:3000/admin/users
+Completed 302 Found in 4ms
+
+
+Started GET "/admin/users" for 99.14.232.193 at 2011-09-18 15:40:08 +0000
+  Processing by Admin::UsersController#index as HTML
+Rendered admin/users/index.html.erb within layouts/admin (8.4ms)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/admin/users/15" for 99.14.232.193 at 2011-09-18 15:40:12 +0000
+  Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FPIdbVjSJdpT1fxMHBjZnAQq7JC3vcT355iM6oYFyuI=", "id"=>"15"}
+Redirected to http://66.135.33.230:3000/admin/users
+Completed 302 Found in 4ms
+
+
+Started GET "/admin/users" for 99.14.232.193 at 2011-09-18 15:40:12 +0000
+  Processing by Admin::UsersController#index as HTML
+Rendered admin/users/index.html.erb within layouts/admin (9.5ms)
+Completed 200 OK in 56ms (Views: 10.1ms | ActiveRecord: 45.2ms)
+
+
+Started GET "/admin/dashboard" for 99.14.232.193 at 2011-09-18 15:40:16 +0000
+  Processing by Admin::DashboardController#index as HTML
+Rendered admin/dashboard/index.html.erb within layouts/admin (0.9ms)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/coupons" for 99.14.232.193 at 2011-09-18 15:40:17 +0000
+  Processing by Admin::CouponsController#index as HTML
+Rendered admin/coupons/index.html.erb within layouts/admin (10.2ms)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/coupons/new" for 99.14.232.193 at 2011-09-18 15:40:20 +0000
+  Processing by Admin::CouponsController#new as HTML
+Rendered admin/coupons/_form.html.erb (7.3ms)
+Rendered admin/coupons/new.html.erb within layouts/admin (9.3ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/admin/coupons" for 99.14.232.193 at 2011-09-18 15:40:44 +0000
+  Processing by Admin::CouponsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FPIdbVjSJdpT1fxMHBjZnAQq7JC3vcT355iM6oYFyuI=", "coupon"=>{"name"=>"Final", "code"=>"final", "max_users"=>"100", "value"=>"90", "validity(1i)"=>"2011", "validity(2i)"=>"9", "validity(3i)"=>"18"}, "commit"=>"Create Coupon"}
+Redirected to http://66.135.33.230:3000/admin/coupons/4
+Completed 302 Found in 6ms
+
+
+Started GET "/admin/coupons/4" for 99.14.232.193 at 2011-09-18 15:40:44 +0000
+  Processing by Admin::CouponsController#show as HTML
+  Parameters: {"id"=>"4"}
+Rendered admin/coupons/show.html.erb within layouts/admin (1.8ms)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_up" for 99.14.232.193 at 2011-09-18 15:40:59 +0000
+  Processing by Devise::RegistrationsController#new as HTML
+Redirected to http://66.135.33.230:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 99.14.232.193 at 2011-09-18 15:41:00 +0000
+  Processing by GeneralController#index as HTML
+Redirected to http://66.135.33.230:3000/surveys
+Completed 302 Found in 1ms
+
+
+Started GET "/surveys" for 99.14.232.193 at 2011-09-18 15:41:00 +0000
+  Processing by SurveysController#index as HTML
+Redirected to http://66.135.33.230:3000/surveys/new
+Completed 302 Found in 1ms
+
+
+Started GET "/surveys/new" for 99.14.232.193 at 2011-09-18 15:41:00 +0000
+  Processing by SurveysController#new as HTML
+Rendered surveys/_form.html.haml (3.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered surveys/new.html.erb within layouts/application1 (6.2ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/sign_out" for 99.14.232.193 at 2011-09-18 15:41:05 +0000
+  Processing by Devise::SessionsController#destroy as HTML
+Redirected to http://66.135.33.230:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 99.14.232.193 at 2011-09-18 15:41:05 +0000
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered general/index.html.erb within layouts/sessions (0.6ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_up" for 99.14.232.193 at 2011-09-18 15:41:07 +0000
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/registrations/new.html.erb within layouts/sessions (1.9ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 99.14.232.193 at 2011-09-18 15:41:28 +0000
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v4Y8+vjg8+Fxe+cc+j++z/qmFoX+w3Bs9mkwnW8le7k=", "user"=>{"email"=>"justin@acapellamedia.com", "login"=>"justinmedia", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Redirected to http://66.135.33.230:3000/
+Completed 302 Found in 87ms
+
+
+Started GET "/" for 99.14.232.193 at 2011-09-18 15:41:28 +0000
+  Processing by GeneralController#index as HTML
+Redirected to http://66.135.33.230:3000/surveys
+Completed 302 Found in 1ms
+
+
+Started GET "/surveys" for 99.14.232.193 at 2011-09-18 15:41:28 +0000
+  Processing by SurveysController#index as HTML
+Redirected to http://66.135.33.230:3000/welcome
+Completed 302 Found in 1ms
+
+
+Started GET "/welcome" for 99.14.232.193 at 2011-09-18 15:41:28 +0000
+  Processing by WelcomesController#show as HTML
+Redirected to http://66.135.33.230:3000/orders/coupons_form
+Completed 302 Found in 1ms
+
+
+Started GET "/orders/coupons_form" for 99.14.232.193 at 2011-09-18 15:41:29 +0000
+  Processing by OrdersController#coupons_form as HTML
+Rendered layouts/_header.html.erb (0.2ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered orders/coupons_form.html.erb within layouts/sessions (2.3ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/orders/calculate_amount" for 99.14.232.193 at 2011-09-18 15:41:34 +0000
+  Processing by OrdersController#calculate_amount as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v4Y8+vjg8+Fxe+cc+j++z/qmFoX+w3Bs9mkwnW8le7k=", "duration"=>"29.95", "coupon"=>"final"}
+Redirected to http://66.135.33.230:3000/orders/new
+Completed 302 Found in 2ms
+
+
+Started GET "/orders/new" for 99.14.232.193 at 2011-09-18 15:41:35 +0000
+  Processing by OrdersController#new as HTML
+Rendered orders/_form.html.erb (3.9ms)
+Rendered layouts/_header.html.erb (0.2ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered orders/new.html.erb within layouts/sessions (4.6ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/orders" for 99.14.232.193 at 2011-09-18 15:42:23 +0000
+  Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v4Y8+vjg8+Fxe+cc+j++z/qmFoX+w3Bs9mkwnW8le7k=", "order"=>{"first_name"=>"Justin", "last_name"=>"Kempiak", "email"=>"justin@acapellamedia.com", "address1"=>"700 N Green St.", "address2"=>"#501", "city"=>"Chicago", "state"=>"IL", "country"=>"USA", "zip"=>"60642", "card_type"=>"visa", "card_number"=>"[FILTERED]", "card_expires_on(1i)"=>"2012", "card_expires_on(2i)"=>"8", "card_expires_on(3i)"=>"1", "card_verification"=>"[FILTERED]"}, "amount"=>"3.00", "duration"=>"3"}
+{"utf8"=>"✓", "authenticity_token"=>"v4Y8+vjg8+Fxe+cc+j++z/qmFoX+w3Bs9mkwnW8le7k=", "order"=>{"first_name"=>"Justin", "last_name"=>"Kempiak", "email"=>"justin@acapellamedia.com", "address1"=>"700 N Green St.", "address2"=>"#501", "city"=>"Chicago", "state"=>"IL", "country"=>"USA", "zip"=>"60642", "card_type"=>"visa", "card_number"=>"4635810000288123", "card_expires_on(1i)"=>"2012", "card_expires_on(2i)"=>"8", "card_expires_on(3i)"=>"1", "card_verification"=>"272", "amount"=>"3.00", "duration"=>"3", "name"=>"Justin Kempiak"}, "amount"=>"3.00", "duration"=>"3", "action"=>"create", "controller"=>"orders"}
+#<ActiveMerchant::Billing::Response:0x007f086c1284e8 @params={"timestamp"=>"2011-09-18T15:43:09Z", "ack"=>"Success", "correlation_id"=>"23e5743670ee5", "version"=>"59.0", "build"=>"2075688", "amount"=>"3.00", "amount_currency_id"=>"USD", "avs_code"=>"Y", "cvv2_code"=>"M", "transaction_id"=>"0CG99745SF383721H"}, @message="Success", @success=true, @test=false, @authorization="0CG99745SF383721H", @fraud_review=false, @avs_result={"code"=>"Y", "message"=>"Street address and 5-digit postal code match.", "street_match"=>"Y", "postal_match"=>"Y"}, @cvv_result={"code"=>"M", "message"=>"Match"}>
+#<ActiveMerchant::Billing::Response:0x00000006786468 @params={"timestamp"=>"2011-09-18T15:43:12Z", "ack"=>"Success", "correlation_id"=>"382954ede71d9", "version"=>"59.0", "build"=>"2075688", "amount"=>"3.00", "amount_currency_id"=>"USD", "avs_code"=>"Y", "cvv2_code"=>"M", "transaction_id"=>"3WH515536A229543P"}, @message="Success", @success=true, @test=false, @authorization="3WH515536A229543P", @fraud_review=false, @avs_result={"code"=>"Y", "message"=>"Street address and 5-digit postal code match.", "street_match"=>"Y", "postal_match"=>"Y"}, @cvv_result={"code"=>"M", "message"=>"Match"}>
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered orders/success.html.erb within layouts/sessions (0.7ms)
+Completed 200 OK in 7427ms (Views: 1.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 111.92.30.65 at 2011-09-18 16:00:37 +0000
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered general/index.html.erb within layouts/sessions (0.6ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 111.92.30.65 at 2011-09-18 16:00:43 +0000
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (0.4ms)
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (3.8ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 111.92.30.65 at 2011-09-18 16:00:44 +0000
+  Processing by Devise::PasswordsController#new as HTML
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/passwords/new.html.erb within layouts/sessions (2.2ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 111.92.30.65 at 2011-09-18 16:00:50 +0000
+  Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R/lUm6W3x/qFYOsuNwqsMiOZ6k/ssigL2vT3YOIEPIo=", "user"=>{"email"=>"dipinkrishna@gmail.com"}, "commit"=>"Send me reset password instructions"}
+Rendered devise/mailer/reset_password_instructions.html.erb (0.3ms)
+
+Sent mail to dipinkrishna@gmail.com (3070ms)
+Redirected to http://66.135.33.230:3000/users/sign_in
+Completed 302 Found in 3077ms
+
+
+Started GET "/users/sign_in" for 111.92.30.65 at 2011-09-18 16:00:53 +0000
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (0.4ms)
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (3.6ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 76.30.92.84 at 2011-09-18 16:01:07 +0000
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered general/index.html.erb within layouts/sessions (0.6ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 76.30.92.84 at 2011-09-18 16:01:11 +0000
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (0.3ms)
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (3.3ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 76.30.92.84 at 2011-09-18 16:01:14 +0000
+  Processing by Devise::PasswordsController#new as HTML
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/passwords/new.html.erb within layouts/sessions (2.2ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 76.30.92.84 at 2011-09-18 16:01:33 +0000
+  Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jFPCwq+6Of1sivmmJV4KPR9VQs488Y3GfDgkEuX2CCg=", "user"=>{"email"=>"ranji_pm@yahoo.co.in"}, "commit"=>"Send me reset password instructions"}
+Rendered devise/mailer/reset_password_instructions.html.erb (0.3ms)
+
+Sent mail to ranji_pm@yahoo.co.in (2242ms)
+Redirected to http://66.135.33.230:3000/users/sign_in
+Completed 302 Found in 2250ms
+
+
+Started GET "/users/sign_in" for 76.30.92.84 at 2011-09-18 16:01:36 +0000
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (0.4ms)
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (3.7ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 111.92.30.65 at 2011-09-18 16:04:24 +0000
+  Processing by Devise::PasswordsController#new as HTML
+Rendered layouts/_header.html.erb (0.9ms)
+Rendered layouts/_footer.html.erb (0.2ms)
+Rendered devise/passwords/new.html.erb within layouts/sessions (17.7ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 76.30.92.84 at 2011-09-18 16:04:27 +0000
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.4ms)
+Rendered layouts/_header.html.erb (0.4ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (6.3ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 76.30.92.84 at 2011-09-18 16:04:30 +0000
+  Processing by Devise::PasswordsController#new as HTML
+Rendered layouts/_header.html.erb (0.4ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/passwords/new.html.erb within layouts/sessions (2.5ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 111.92.30.65 at 2011-09-18 16:04:33 +0000
+  Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R/lUm6W3x/qFYOsuNwqsMiOZ6k/ssigL2vT3YOIEPIo=", "user"=>{"email"=>"ranji_pm@yahoo.co.in"}, "commit"=>"Send me reset password instructions"}
+Rendered devise/mailer/reset_password_instructions.html.erb (0.7ms)
+
+Sent mail to ranji_pm@yahoo.co.in (2571ms)
+Redirected to http://66.135.33.230:3000/users/sign_in
+Completed 302 Found in 2741ms
+
+
+Started GET "/users/sign_in" for 111.92.30.65 at 2011-09-18 16:04:36 +0000
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (0.4ms)
+Rendered layouts/_header.html.erb (0.4ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (4.0ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 76.30.92.84 at 2011-09-18 16:04:43 +0000
+  Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jFPCwq+6Of1sivmmJV4KPR9VQs488Y3GfDgkEuX2CCg=", "user"=>{"email"=>"ranji_pm@yahoo.co.in"}, "commit"=>"Send me reset password instructions"}
+Rendered devise/mailer/reset_password_instructions.html.erb (0.4ms)
+
+Sent mail to ranji_pm@yahoo.co.in (2023ms)
+Redirected to http://66.135.33.230:3000/users/sign_in
+Completed 302 Found in 2031ms
+
+
+Started GET "/users/sign_in" for 76.30.92.84 at 2011-09-18 16:04:45 +0000
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (0.4ms)
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (3.8ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for 76.30.92.84 at 2011-09-18 16:05:29 +0000
+  Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+Rendered devise/shared/_links.erb (0.4ms)
+Rendered layouts/_header.html.erb (0.4ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/passwords/edit.html.erb within layouts/sessions (3.1ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for 111.92.30.65 at 2011-09-18 16:05:33 +0000
+  Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+Rendered devise/shared/_links.erb (0.3ms)
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/passwords/edit.html.erb within layouts/sessions (2.1ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 76.30.92.84 at 2011-09-18 16:06:05 +0000
+  Processing by Devise::PasswordsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jFPCwq+6Of1sivmmJV4KPR9VQs488Y3GfDgkEuX2CCg=", "user"=>{"reset_password_token"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Change my password"}
+Redirected to http://66.135.33.230:3000/
+Completed 302 Found in 132ms
+
+
+Started GET "/" for 76.30.92.84 at 2011-09-18 16:06:05 +0000
+  Processing by GeneralController#index as HTML
+Redirected to http://66.135.33.230:3000/surveys
+Completed 302 Found in 1ms
+
+
+Started GET "/surveys" for 76.30.92.84 at 2011-09-18 16:06:05 +0000
+  Processing by SurveysController#index as HTML
+Redirected to http://66.135.33.230:3000/welcome
+Completed 302 Found in 2ms
+
+
+Started GET "/welcome" for 76.30.92.84 at 2011-09-18 16:06:05 +0000
+  Processing by WelcomesController#show as HTML
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered welcomes/show.html.haml within layouts/welcomes (15.9ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 111.92.30.65 at 2011-09-18 16:12:47 +0000
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (0.4ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered general/index.html.erb within layouts/sessions (1.1ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 111.92.30.65 at 2011-09-18 16:12:49 +0000
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered general/index.html.erb within layouts/sessions (0.5ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 111.92.30.65 at 2011-09-18 16:13:20 +0000
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (1.0ms)
+Rendered layouts/_footer.html.erb (0.2ms)
+Rendered general/index.html.erb within layouts/sessions (3.6ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 111.92.30.65 at 2011-09-18 16:13:30 +0000
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.4ms)
+Rendered layouts/_header.html.erb (0.4ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (9.1ms)
+Completed 200 OK in 24ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 111.92.30.65 at 2011-09-18 16:13:33 +0000
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (0.4ms)
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (3.5ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 111.92.30.65 at 2011-09-18 16:14:48 +0000
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (1.0ms)
+Rendered layouts/_footer.html.erb (0.2ms)
+Rendered general/index.html.erb within layouts/sessions (3.5ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 111.92.30.65 at 2011-09-18 16:14:51 +0000
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.4ms)
+Rendered layouts/_header.html.erb (0.4ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (8.6ms)
+Completed 200 OK in 23ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 111.92.30.65 at 2011-09-18 16:14:54 +0000
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R/lUm6W3x/qFYOsuNwqsMiOZ6k/ssigL2vT3YOIEPIo=", "user"=>{"login"=>"admin", "password"=>"[FILTERED]"}}
 Completed   in 8ms
-
-ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1):
-  
-
-
-
-Started GET "/favicon.ico" for 111.92.17.114 at 2011-09-03 13:45:02 +0000
-
-ActionController::RoutingError (No route matches "/favicon.ico"):
-  
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R/lUm6W3x/qFYOsuNwqsMiOZ6k/ssigL2vT3YOIEPIo=", "user"=>{"login"=>"admin", "password"=>"[FILTERED]"}}
+Rendered devise/shared/_links.erb (0.4ms)
+Rendered layouts/_header.html.erb (0.2ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (3.8ms)
+Completed 200 OK in 84ms (Views: 4.1ms | ActiveRecord: 0.4ms)
 
 
+Started POST "/users/sign_in" for 111.92.30.65 at 2011-09-18 16:15:02 +0000
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R/lUm6W3x/qFYOsuNwqsMiOZ6k/ssigL2vT3YOIEPIo=", "user"=>{"login"=>"dipin", "password"=>"[FILTERED]"}}
+Redirected to http://66.135.33.230:3000/
+Completed 302 Found in 98ms
 
-Started GET "/" for 111.92.17.114 at 2011-09-03 16:53:33 +0000
+
+Started GET "/" for 111.92.30.65 at 2011-09-18 16:15:02 +0000
+  Processing by GeneralController#index as HTML
+Redirected to http://66.135.33.230:3000/surveys
+Completed 302 Found in 1ms
+
+
+Started GET "/surveys" for 111.92.30.65 at 2011-09-18 16:15:03 +0000
+  Processing by SurveysController#index as HTML
+Redirected to http://66.135.33.230:3000/welcome
+Completed 302 Found in 2ms
+
+
+Started GET "/welcome" for 111.92.30.65 at 2011-09-18 16:15:05 +0000
+  Processing by WelcomesController#show as HTML
+Redirected to http://66.135.33.230:3000/orders/coupons_form
+Completed 302 Found in 1ms
+
+
+Started GET "/orders/coupons_form" for 111.92.30.65 at 2011-09-18 16:15:05 +0000
+  Processing by OrdersController#coupons_form as HTML
+Rendered layouts/_header.html.erb (0.4ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered orders/coupons_form.html.erb within layouts/sessions (7.3ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/sign_out" for 99.14.232.193 at 2011-09-18 16:33:27 +0000
+  Processing by Devise::SessionsController#destroy as HTML
+Redirected to http://66.135.33.230:3000/
+Completed 302 Found in 8ms
+
+
+Started GET "/" for 99.14.232.193 at 2011-09-18 16:33:27 +0000
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered general/index.html.erb within layouts/sessions (0.6ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 99.14.232.193 at 2011-09-18 16:33:45 +0000
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (0.2ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered general/index.html.erb within layouts/sessions (0.5ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 99.14.232.193 at 2011-09-18 16:33:52 +0000
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered general/index.html.erb within layouts/sessions (0.6ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_out" for 99.14.232.193 at 2011-09-18 16:35:35 +0000
+  Processing by Devise::SessionsController#destroy as HTML
+Redirected to http://66.135.33.230:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 99.14.232.193 at 2011-09-18 16:35:35 +0000
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered general/index.html.erb within layouts/sessions (0.5ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 99.14.232.193 at 2011-09-18 16:35:43 +0000
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (41.1ms)
+Rendered layouts/_header.html.erb (0.4ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (45.0ms)
+Completed 200 OK in 46ms (Views: 45.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 99.14.232.193 at 2011-09-18 16:35:46 +0000
+  Processing by Devise::PasswordsController#new as HTML
+Rendered layouts/_header.html.erb (0.4ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/passwords/new.html.erb within layouts/sessions (3.3ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 99.14.232.193 at 2011-09-18 16:35:51 +0000
+  Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cBl1EJEI6sae9NndV9UNWHoew13nI0ZEmj/4XARWCXI=", "user"=>{"email"=>"justin@acapella360.com"}, "commit"=>"Send me reset password instructions"}
+Rendered devise/mailer/reset_password_instructions.html.erb (0.7ms)
+
+Sent mail to justin@acapella360.com (3643ms)
+Redirected to http://66.135.33.230:3000/users/sign_in
+Completed 302 Found in 3768ms
+
+
+Started GET "/users/sign_in" for 99.14.232.193 at 2011-09-18 16:35:55 +0000
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (0.4ms)
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (3.7ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for 99.14.232.193 at 2011-09-18 16:36:06 +0000
+  Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+Rendered devise/shared/_links.erb (0.3ms)
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/passwords/edit.html.erb within layouts/sessions (2.9ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 99.14.232.193 at 2011-09-18 16:36:17 +0000
+  Processing by Devise::PasswordsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cBl1EJEI6sae9NndV9UNWHoew13nI0ZEmj/4XARWCXI=", "user"=>{"reset_password_token"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Change my password"}
+Redirected to http://66.135.33.230:3000/
+Completed 302 Found in 107ms
+
+
+Started GET "/" for 99.14.232.193 at 2011-09-18 16:36:17 +0000
+  Processing by GeneralController#index as HTML
+Redirected to http://66.135.33.230:3000/surveys
+Completed 302 Found in 1ms
+
+
+Started GET "/surveys" for 99.14.232.193 at 2011-09-18 16:36:17 +0000
+  Processing by SurveysController#index as HTML
+Redirected to http://66.135.33.230:3000/welcome
+Completed 302 Found in 1ms
+
+
+Started GET "/welcome" for 99.14.232.193 at 2011-09-18 16:36:17 +0000
+  Processing by WelcomesController#show as HTML
+Redirected to http://66.135.33.230:3000/orders/coupons_form
+Completed 302 Found in 1ms
+
+
+Started GET "/orders/coupons_form" for 99.14.232.193 at 2011-09-18 16:36:17 +0000
+  Processing by OrdersController#coupons_form as HTML
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered orders/coupons_form.html.erb within layouts/sessions (3.0ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 122.178.255.179 at 2011-09-18 17:47:54 +0000
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered general/index.html.erb within layouts/sessions (0.6ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 122.178.255.179 at 2011-09-18 17:47:59 +0000
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (0.4ms)
+Rendered layouts/_header.html.erb (0.4ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (3.8ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 122.178.255.179 at 2011-09-18 17:48:29 +0000
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered layouts/_header.html.erb (0.4ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/registrations/new.html.erb within layouts/sessions (2.6ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 122.178.255.179 at 2011-09-18 17:52:19 +0000
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oUkKhMSGz20KJIoythd9ScMtuLXHFmJuMDA5GL1I9eM=", "user"=>{"email"=>"phani.ruby1@gmail.com", "login"=>"phani.ruby1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Redirected to http://66.135.33.230:3000/
+Completed 302 Found in 105ms
+
+
+Started GET "/" for 122.178.255.179 at 2011-09-18 17:52:19 +0000
+  Processing by GeneralController#index as HTML
+Redirected to http://66.135.33.230:3000/surveys
+Completed 302 Found in 1ms
+
+
+Started GET "/surveys" for 122.178.255.179 at 2011-09-18 17:52:20 +0000
+  Processing by SurveysController#index as HTML
+Redirected to http://66.135.33.230:3000/welcome
+Completed 302 Found in 1ms
+
+
+Started GET "/welcome" for 122.178.255.179 at 2011-09-18 17:52:20 +0000
+  Processing by WelcomesController#show as HTML
+Redirected to http://66.135.33.230:3000/orders/coupons_form
+Completed 302 Found in 1ms
+
+
+Started GET "/orders/coupons_form" for 122.178.255.179 at 2011-09-18 17:52:21 +0000
+  Processing by OrdersController#coupons_form as HTML
+Rendered layouts/_header.html.erb (0.2ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered orders/coupons_form.html.erb within layouts/sessions (2.3ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/sign_out" for 122.178.255.179 at 2011-09-18 17:52:31 +0000
+  Processing by Devise::SessionsController#destroy as HTML
+Redirected to http://66.135.33.230:3000/
+Completed 302 Found in 2ms
+
+
+Started GET "/" for 122.178.255.179 at 2011-09-18 17:52:32 +0000
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered general/index.html.erb within layouts/sessions (0.5ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 122.178.255.179 at 2011-09-18 17:52:56 +0000
+  Processing by GeneralController#index as HTML
+Rendered layouts/_header.html.erb (0.2ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered general/index.html.erb within layouts/sessions (0.5ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 122.178.255.179 at 2011-09-18 17:53:04 +0000
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (0.4ms)
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (3.6ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 122.178.255.179 at 2011-09-18 17:53:42 +0000
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (0.4ms)
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (3.8ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 122.178.255.179 at 2011-09-18 17:53:46 +0000
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/registrations/new.html.erb within layouts/sessions (1.8ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 122.178.255.179 at 2011-09-18 17:53:49 +0000
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (0.3ms)
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/sessions/new.html.erb within layouts/sessions (3.4ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 122.178.255.179 at 2011-09-18 17:53:58 +0000
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IM9Kkrou5PL/OsYIWJkqqvAAtcrgJo8gy+9vWNBk2TA=", "user"=>{"login"=>"admin@example.com", "password"=>"[FILTERED]"}}
+Redirected to http://66.135.33.230:3000/
+Completed 302 Found in 84ms
+
+
+Started GET "/" for 122.178.255.179 at 2011-09-18 17:53:59 +0000
+  Processing by GeneralController#index as HTML
+Redirected to http://66.135.33.230:3000/surveys
+Completed 302 Found in 1ms
+
+
+Started GET "/surveys" for 122.178.255.179 at 2011-09-18 17:53:59 +0000
+  Processing by SurveysController#index as HTML
+Redirected to http://66.135.33.230:3000/surveys/new
+Completed 302 Found in 4ms
+
+
+Started GET "/surveys/new" for 122.178.255.179 at 2011-09-18 17:54:00 +0000
   Processing by SurveysController#new as HTML
-Completed   in 1ms
+Rendered surveys/_form.html.haml (21.4ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered surveys/new.html.erb within layouts/application1 (31.2ms)
+Completed 200 OK in 43ms (Views: 32.9ms | ActiveRecord: 1.1ms)
 
-ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1):
-  
+
+Started GET "/users/sign_up" for 122.178.255.179 at 2011-09-18 17:54:10 +0000
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered layouts/_header.html.erb (0.4ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered devise/registrations/new.html.erb within layouts/sessions (2.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
 
 
+Started POST "/users" for 122.178.255.179 at 2011-09-18 17:54:35 +0000
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UGpb/JU3vezcJ1i6ycVFDFs/XMl6q6LVO28BrEQxrNs=", "user"=>{"email"=>"pahni.rubyonrails23456@gmail.com", "login"=>"pahni.rubyonrails23456@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Redirected to http://66.135.33.230:3000/
+Completed 302 Found in 103ms
 
-Started GET "/favicon.ico" for 111.92.17.114 at 2011-09-03 16:53:34 +0000
 
-ActionController::RoutingError (No route matches "/favicon.ico"):
-  
+Started GET "/" for 122.178.255.179 at 2011-09-18 17:54:35 +0000
+  Processing by GeneralController#index as HTML
+Redirected to http://66.135.33.230:3000/surveys
+Completed 302 Found in 1ms
 
+
+Started GET "/surveys" for 122.178.255.179 at 2011-09-18 17:54:35 +0000
+  Processing by SurveysController#index as HTML
+Redirected to http://66.135.33.230:3000/welcome
+Completed 302 Found in 1ms
+
+
+Started GET "/welcome" for 122.178.255.179 at 2011-09-18 17:54:36 +0000
+  Processing by WelcomesController#show as HTML
+Redirected to http://66.135.33.230:3000/orders/coupons_form
+Completed 302 Found in 1ms
+
+
+Started GET "/orders/coupons_form" for 122.178.255.179 at 2011-09-18 17:54:36 +0000
+  Processing by OrdersController#coupons_form as HTML
+Rendered layouts/_header.html.erb (0.2ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered orders/coupons_form.html.erb within layouts/sessions (2.3ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/dashboard" for 122.178.255.179 at 2011-09-18 17:54:42 +0000
+  Processing by Admin::DashboardController#index as HTML
+Rendered admin/dashboard/index.html.erb within layouts/admin (1.9ms)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/payment_options" for 122.178.255.179 at 2011-09-18 17:54:55 +0000
+  Processing by Admin::PaymentOptionsController#index as HTML
+Rendered admin/payment_options/index.html.erb within layouts/admin (4.2ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/coupons" for 122.178.255.179 at 2011-09-18 17:54:59 +0000
+  Processing by Admin::CouponsController#index as HTML
+Rendered admin/coupons/index.html.erb within layouts/admin (10.7ms)
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/orders/calculate_amount" for 122.178.255.179 at 2011-09-18 17:55:17 +0000
+  Processing by OrdersController#calculate_amount as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UGpb/JU3vezcJ1i6ycVFDFs/XMl6q6LVO28BrEQxrNs=", "duration"=>"29.95", "coupon"=>"DSC10"}
+Redirected to http://66.135.33.230:3000/orders/new
+Completed 302 Found in 3ms
+
+
+Started GET "/orders/new" for 122.178.255.179 at 2011-09-18 17:55:17 +0000
+  Processing by OrdersController#new as HTML
+Rendered orders/_form.html.erb (62.0ms)
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered orders/new.html.erb within layouts/sessions (63.8ms)
+Completed 200 OK in 67ms (Views: 64.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/orders" for 122.178.255.179 at 2011-09-18 17:59:10 +0000
+  Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UGpb/JU3vezcJ1i6ycVFDFs/XMl6q6LVO28BrEQxrNs=", "order"=>{"first_name"=>"Ranji", "last_name"=>"Pillai", "email"=>"ranji_pm@yahoo.co.in", "address1"=>"2020 Business Center Dr", "address2"=>"", "city"=>"Pearland", "state"=>"Texas", "country"=>"US", "zip"=>"77584", "card_type"=>"visa", "card_number"=>"[FILTERED]", "card_expires_on(1i)"=>"2015", "card_expires_on(2i)"=>"2", "card_expires_on(3i)"=>"1", "card_verification"=>"[FILTERED]"}, "amount"=>"26.95", "duration"=>"3"}
+{"utf8"=>"✓", "authenticity_token"=>"UGpb/JU3vezcJ1i6ycVFDFs/XMl6q6LVO28BrEQxrNs=", "order"=>{"first_name"=>"Ranji", "last_name"=>"Pillai", "email"=>"ranji_pm@yahoo.co.in", "address1"=>"2020 Business Center Dr", "address2"=>"", "city"=>"Pearland", "state"=>"Texas", "country"=>"US", "zip"=>"77584", "card_type"=>"visa", "card_number"=>"4635720008806646", "card_expires_on(1i)"=>"2015", "card_expires_on(2i)"=>"2", "card_expires_on(3i)"=>"1", "card_verification"=>"194", "amount"=>"26.95", "duration"=>"3", "name"=>"Ranji Pillai"}, "amount"=>"26.95", "duration"=>"3", "action"=>"create", "controller"=>"orders"}
+#<ActiveMerchant::Billing::Response:0x00000004046218 @params={"timestamp"=>"2011-09-18T17:59:55Z", "ack"=>"Success", "correlation_id"=>"36859c93d6e17", "version"=>"59.0", "build"=>"2075688", "amount"=>"26.95", "amount_currency_id"=>"USD", "avs_code"=>"Y", "cvv2_code"=>"M", "transaction_id"=>"7ST557892L970484W"}, @message="Success", @success=true, @test=false, @authorization="7ST557892L970484W", @fraud_review=false, @avs_result={"code"=>"Y", "message"=>"Street address and 5-digit postal code match.", "street_match"=>"Y", "postal_match"=>"Y"}, @cvv_result={"code"=>"M", "message"=>"Match"}>
+#<ActiveMerchant::Billing::Response:0x00000003a9bb38 @params={"timestamp"=>"2011-09-18T17:59:58Z", "ack"=>"Success", "correlation_id"=>"2e0c66c8d7129", "version"=>"59.0", "build"=>"2075688", "amount"=>"26.95", "amount_currency_id"=>"USD", "avs_code"=>"Y", "cvv2_code"=>"M", "transaction_id"=>"7WC24088K1946950K"}, @message="Success", @success=true, @test=false, @authorization="7WC24088K1946950K", @fraud_review=false, @avs_result={"code"=>"Y", "message"=>"Street address and 5-digit postal code match.", "street_match"=>"Y", "postal_match"=>"Y"}, @cvv_result={"code"=>"M", "message"=>"Match"}>
+Rendered layouts/_header.html.erb (0.3ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered orders/success.html.erb within layouts/sessions (1.3ms)
+Completed 200 OK in 5774ms (Views: 2.3ms | ActiveRecord: 1.4ms)

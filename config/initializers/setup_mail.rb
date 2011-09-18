@@ -1,7 +1,7 @@
 ActionMailer::Base.smtp_settings = {
   :address              => "smtp.gmail.com",
   :port                 => 587,
-  :domain               => "66.135.33.230:6666",
+  :domain               => "66.135.33.230:3000",
   :user_name            => "mfftest.ranjit@gmail.com",
   :password             => "#123mff$",
   :authentication       => "plain",
@@ -9,4 +9,4 @@ ActionMailer::Base.smtp_settings = {
 }
 
 
-ActionMailer::Base.default_url_options[:host] = "66.135.33.230:6666"
+ActionMailer::Base.default_url_options[:host] = "66.135.33.230:3000"

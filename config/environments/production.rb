@@ -31,6 +31,7 @@ Calculator::Application.configure do
   # In production, Apache or nginx will already do this
   config.serve_static_assets = true
 
+
   # Enable serving of images, stylesheets, and javascripts from an asset server
   # config.action_controller.asset_host = "http://assets.example.com"
 
@@ -48,9 +49,29 @@ Calculator::Application.configure do
   config.active_support.deprecation = :notify
 end
 
+#
+#]
+#
+#ActiveMerchant::Billing::Base.mode = :production
+#  paypal_options = {
+#    :login => "seller_1229899173_biz_api1.railscasts.com",
+#    :password => "FXWU58S7KXFC6HBE",
+#    :signature => "AGjv6SW.mTiKxtkm6L9DcSUCUgePAUDQ3L-kTdszkPG8mRfjaRZDYtSu"
+#  }
+#  ::STANDARD_GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(paypal_options)
+#  ::EXPRESS_GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new(paypal_options)
+
 
 GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
-   :login => "seller_1229899173_biz_api1.railscasts.com",
-   :password => "FXWU58S7KXFC6HBE",
-   :signature => "AGjv6SW.mTiKxtkm6L9DcSUCUgePAUDQ3L-kTdszkPG8mRfjaRZDYtSu"
+    # API Credential
+   :login => "fp_api1.managingcollegecost.com",
+   :password => "XWDAT4H8TVY7GA44",
+   :signature => "Aa59XIloKHq.H93nnzorYJToE2DPAB-ow7ylfokN4DOgqsauo4Toi-SL"
  )
+##ActiveMerchant::Billing::Base.gateway_mode = :test
+# ActiveMerchant::Billing::PaypalGateway.pem_file = File.read(RAILS_ROOT + '/config/cert_key_pem_production.txt')
+#$PAYPAL_LOGIN = 'fp_api1.managingcollegecost.com'
+#$PAYPAL_PASSWORD = 'B6P9C49RTKAGR4M3'
+#
+#GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(:login=>$PAYPAL_LOGIN, :password=>$PAYPAL_PASSWORD)
+

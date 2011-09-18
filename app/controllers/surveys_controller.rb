@@ -1,7 +1,7 @@
 class SurveysController < ApplicationController
 
   skip_before_filter  :check_user_status, :only => [:new]
-  layout "application1"
+ layout "application1"
   # GET /surveys
   # GET /surveys.xml
   def index
@@ -31,10 +31,11 @@ class SurveysController < ApplicationController
   # GET /surveys/new
   # GET /surveys/new.xml
   def new
+
     @survey = Survey.new(:loan_option_id => 0)
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html
       format.xml  { render :xml => @survey }
     end
   end

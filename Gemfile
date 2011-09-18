@@ -8,7 +8,7 @@ gem "rake", "!= 0.9.0"
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'haml'
-gem 'mysql2'
+gem 'sqlite3'
 gem 'compass'
 gem 'jquery-rails'
 
