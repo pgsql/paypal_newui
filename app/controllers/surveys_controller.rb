@@ -1,7 +1,7 @@
 class SurveysController < ApplicationController
 
   skip_before_filter  :check_user_status, :only => [:new]
-
+  layout "application1"
   # GET /surveys
   # GET /surveys.xml
   def index
