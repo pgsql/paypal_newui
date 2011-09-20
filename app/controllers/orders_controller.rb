@@ -58,9 +58,11 @@ class OrdersController < ApplicationController
        if @order.save
          session[:order] = @order.id
         if @order.purchase
+          UserMailer.payment_confirmation(@order).deliver
           session[:order] = @order.id
           format.html { render :action => "success"}
         else
+          UserMailer.order_failure_confirmation(@order).deliver
           format.html { render :action => "failure"}
         end
       else

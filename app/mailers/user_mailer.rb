@@ -13,4 +13,20 @@ class UserMailer < ActionMailer::Base
       format.html { render "devise/mailer/reset_password_instructions" }
     end
   end
+
+  def payment_confirmation(order)
+    @subject = "[#{'Payment Confirmation'} Do Not Reply] Payment Success!."
+    @user = order.user
+    @order = order
+    mail(:to => "phani.rubyonrails@gmail.com", :subject => subject)
+    headers["X-SMTPAPI"] = '{"category": "Payment confimration message"}'
+  end
+
+  def order_failure_confirmation(order)
+    @subject = "[#{'Payment Confirmation'} Do Not Reply] Payment Failed!."
+    @user = order.user
+    @order = order
+    mail(:to => "phani.rubyonrails@gmail.com", :subject => subject)
+    headers["X-SMTPAPI"] = '{"category": "Payment confimration message"}'
+  end
 end

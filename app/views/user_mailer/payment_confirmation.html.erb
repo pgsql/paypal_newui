@@ -1,0 +1,40 @@
+<div id="page">
+  <div class="top"></div>
+  <div class="content">
+    <div class="header page">
+      <h1>Payment Confirmation</h1>
+    </div>
+    <div id="contact" class="padding">
+      <br />
+
+        Dear Customer,<br /> <br />
+
+        Thanks for your order. Your Transaction is successful! <br /> <br />
+
+        We hope that you enjoy the all of the tools available from  <%=link_to "myfinancialfit.com", '/welcome' %>
+
+        <br /><br />
+
+        <% unless @order.blank? %>
+          Transaction ID : <%= @order.tran %> <br />
+          Paypal Order message ID : <%= @order.tran %><br />
+        <% end  %>
+
+        <br />
+        Click here to go to your <%=link_to "Welcome Page", '/welcome' %>
+
+
+
+    </div>
+
+
+
+  </div>
+
+  <div class="bottom"></div>
+
+</div>
+
+
+
+

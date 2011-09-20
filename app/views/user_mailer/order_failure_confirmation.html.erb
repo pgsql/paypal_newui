@@ -7,17 +7,14 @@
     <div id="contact" class="padding">
       <br />
 
-<%
-@order = Order.find(session[:order]) %>
-
 Hello customer.  I'm sorry but your transaction has failed.  Please try again or contact support@managingcollegecost.com  <br />
 
 <%  unless @order.blank? %>
   Message ID : <%= @order.message %> <br />
 <% end  %>
 
-  <br /> Click here for new transaction <%=  link_to "New Payment", coupons_form_orders_path %>
-      
+  <br /> Click here for new transaction <% link_to "New Payment", coupons_form_orders_path %>
+
     </div>
   </div>
   <div class="bottom"></div>
