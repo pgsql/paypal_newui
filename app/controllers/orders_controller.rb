@@ -83,7 +83,7 @@ class OrdersController < ApplicationController
     session[:duration_price] = ""
     session[:duration_price] = ""
     session[:actual_price] = ""
-
+    path_url = new_order_path
     session[:duration_price] = params[:duration]
     session[:actual_price] = params[:duration]
     session[:duration] = PaymentOption.find_by_amount(session[:duration_price]).name
@@ -93,9 +93,14 @@ class OrdersController < ApplicationController
       if @coupon
         session[:coupon] = @coupon.value
         session[:duration_price] = params["duration"].to_f - params["duration"].to_f  * @coupon.value.to_f/100
+        if @coupon.value == 100
+          current_user.update_attributes({:status => "active",:access_until => Date.today.next_month(session[:duration_months])})
+          path_url = "/welcome"
+        end
       end
     end
-    redirect_to new_order_path
+
+    redirect_to path_url
   end
 
   def coupons_form
