@@ -105,8 +105,9 @@ class Admin::CollegesController < ApplicationController
           
           @lines_count += 1
           college_type_constant, college_name, college_state_name, college_url = line.split(@colsep).map{ |a| a.gsub(/^\"|\"?$/, '').strip }
-          
-          state = State.find_by_name(college_state_name)
+
+          Rails.logger.info college_state_name.inspect
+          state = State.find_or_create_by_name(college_state_name)
           if state
             state_id = state.id
           else
@@ -114,11 +115,12 @@ class Admin::CollegesController < ApplicationController
           end
           
           category_id = begin
-            Category.find_by_type_id(college_type_constant.constantize).id
-          rescue 
+            Category.find_or_create_by_type_id(college_type_constant.constantize).id
+          rescue
+
             nil
           end
-          
+           raise line  if !category_id
           
           college = College.unscoped.find_by_name_and_category_id_and_state_id college_name, category_id, state_id
           
@@ -140,10 +142,10 @@ class Admin::CollegesController < ApplicationController
           end
         end
         
-        logger.info '---------------'
-        logger.info "Lines: #{@lines_count}"
-        logger.info @colleges
-        logger.info '---------------'
+#        logger.info '---------------'
+#        logger.info "Lines: #{@lines_count}"
+#        logger.info @colleges
+#        logger.info '---------------'
         
       rescue
         @global_error = true
