@@ -53,16 +53,17 @@ class OrdersController < ApplicationController
     params[:order][:name] = params[:order][:first_name] + " " + params[:order][:last_name] unless params[:order].blank?
     Rails.logger.info params.inspect
     @order.user = current_user
+    host = request.instance_variable_get(:@env)["HTTP_HOST"]
 
     respond_to do |format|
        if @order.save
          session[:order] = @order.id
         if @order.purchase
-          UserMailer.payment_confirmation(@order).deliver
+          UserMailer.payment_confirmation(@order,host).deliver
           session[:order] = @order.id
           format.html { render :action => "success"}
         else
-          UserMailer.order_failure_confirmation(@order).deliver
+          UserMailer.order_failure_confirmation(@order,host).deliver
           format.html { render :action => "failure"}
         end
       else

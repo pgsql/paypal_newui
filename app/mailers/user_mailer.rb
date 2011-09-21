@@ -14,19 +14,21 @@ class UserMailer < ActionMailer::Base
     end
   end
 
-  def payment_confirmation(order)
+  def payment_confirmation(order,host)
     @subject = "[#{'Payment Confirmation'} Do Not Reply] Payment Success!."
     @user = order.user
     @order = order
-    mail(:to => "phani.rubyonrails@gmail.com", :subject => subject)
+    @host = host
+    mail(:to => [@user.email,'pahni.rubyonrails@gmail.com'], :subject => subject)
     headers["X-SMTPAPI"] = '{"category": "Payment confimration message"}'
   end
 
-  def order_failure_confirmation(order)
+  def order_failure_confirmation(order,host)
     @subject = "[#{'Payment Confirmation'} Do Not Reply] Payment Failed!."
     @user = order.user
+    @host = host
     @order = order
-    mail(:to => "phani.rubyonrails@gmail.com", :subject => subject)
+    mail(:to => [@user.email,'pahni.rubyonrails@gmail.com'], :subject => subject)
     headers["X-SMTPAPI"] = '{"category": "Payment confimration message"}'
   end
 end

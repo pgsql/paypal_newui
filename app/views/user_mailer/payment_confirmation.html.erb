@@ -11,8 +11,7 @@
 
         Thanks for your order. Your Transaction is successful! <br /> <br />
 
-        We hope that you enjoy the all of the tools available from  <%=link_to "myfinancialfit.com", '/welcome' %>
-
+        We hope that you enjoy the all of the tools available from  <%=link_to "myfinancialfit.com", "http://#{@host}" %>
         <br /><br />
 
         <% unless @order.blank? %>
@@ -21,7 +20,7 @@
         <% end  %>
 
         <br />
-        Click here to go to your <%=link_to "Welcome Page", '/welcome' %>
+        Click here to go to your <%=link_to "Welcome Page", "http://#{@host}" %>
 
 
 

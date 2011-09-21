@@ -13,7 +13,7 @@ Hello customer.  I'm sorry but your transaction has failed.  Please try again or
   Message ID : <%= @order.message %> <br />
 <% end  %>
 
-  <br /> Click here for new transaction <% link_to "New Payment", coupons_form_orders_path %>
+  <br /> Click here for new transaction <% link_to "New Payment", "http://#{@host}" %>
 
     </div>
   </div>
