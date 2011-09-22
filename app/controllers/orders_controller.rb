@@ -85,12 +85,12 @@ class OrdersController < ApplicationController
     session[:duration_price] = ""
     session[:actual_price] = ""
     path_url = new_order_path
-    session[:duration_price] = params[:duration]
-    session[:actual_price] = params[:duration]
+    session[:duration_price] = params["duration"]
+    session[:actual_price] = params["duration"]
     session[:duration] = PaymentOption.find_by_amount(session[:duration_price]).name
     session[:duration_months] = PaymentOption.find_by_amount(session[:duration_price]).duration
-    unless params[:coupon].blank?
-      @coupon = Coupon.find_by_code(params[:coupon])
+    unless params["coupon"].blank?
+      @coupon = Coupon.find_by_code(params["coupon"])
       if @coupon
         session[:coupon] = @coupon.value
         session[:duration_price] = params["duration"].to_f - params["duration"].to_f  * @coupon.value.to_f/100

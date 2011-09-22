@@ -20439,3 +20439,85 @@ Rendered layouts/_header.html.erb (3.3ms)
 Rendered layouts/_footer.html.erb (1.1ms)
 Rendered orders/success.html.erb within layouts/sessions (15.7ms)
 Completed 200 OK in 20579ms (Views: 43.5ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-22 01:52:27 +0530
+  Processing by GeneralController#index as HTML
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/surveys
+Completed 302 Found in 98ms
+
+
+Started GET "/surveys" for 127.0.0.1 at 2011-09-22 01:52:27 +0530
+  Processing by SurveysController#index as HTML
+  [1m[36mUser Load (55.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/surveys/new
+Completed 302 Found in 124ms
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2011-09-22 01:52:27 +0530
+  Processing by SurveysController#new as HTML
+  [1m[36mUser Load (54.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1
+  [1m[36mLoanOption Load (0.3ms)[0m  [1mSELECT "loan_options".* FROM "loan_options"[0m
+Rendered surveys/_form.html.haml (104.4ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered surveys/new.html.erb within layouts/application1 (122.9ms)
+Completed 200 OK in 279ms (Views: 125.6ms | ActiveRecord: 113.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-22 01:52:56 +0530
+  Processing by GeneralController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/surveys
+Completed 302 Found in 46ms
+
+
+Started GET "/surveys" for 127.0.0.1 at 2011-09-22 01:52:56 +0530
+  Processing by SurveysController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/surveys/new
+Completed 302 Found in 61ms
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2011-09-22 01:52:56 +0530
+  Processing by SurveysController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1
+  [1m[36mLoanOption Load (0.3ms)[0m  [1mSELECT "loan_options".* FROM "loan_options"[0m
+Rendered surveys/_form.html.haml (50.9ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Rendered surveys/new.html.erb within layouts/application1 (69.1ms)
+Completed 200 OK in 218ms (Views: 71.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-22 01:53:06 +0530
+  Processing by GeneralController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/surveys
+Completed 302 Found in 47ms
+
+
+Started GET "/surveys" for 127.0.0.1 at 2011-09-22 01:53:06 +0530
+  Processing by SurveysController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/surveys/new
+Completed 302 Found in 61ms
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2011-09-22 01:53:06 +0530
+  Processing by SurveysController#new as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1
+  [1m[36mLoanOption Load (0.3ms)[0m  [1mSELECT "loan_options".* FROM "loan_options"[0m
+Rendered surveys/_form.html.haml (51.4ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Rendered surveys/new.html.erb within layouts/application1 (69.5ms)
+Completed 200 OK in 233ms (Views: 72.2ms | ActiveRecord: 2.0ms)
