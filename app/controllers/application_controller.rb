@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   end
 
   def check_user_status
-    if current_user && !current_user.admin? && current_user.status != "active"
+    if current_user && !current_user.admin? && current_user.status != "active" &&  Time.now <= current_user.access_until
       redirect_to coupons_form_orders_path
     end
   end
