@@ -94,7 +94,7 @@ class OrdersController < ApplicationController
       if @coupon
         session[:coupon] = @coupon.value
         session[:duration_price] = params["duration"].to_f - params["duration"].to_f  * @coupon.value.to_f/100
-        if @coupon.value == 100
+        if session[:duration_price] == 0
           current_user.update_attributes({:status => "active",:access_until => Date.today.next_month(session[:duration_months])})
           path_url = "/welcome"
         end
